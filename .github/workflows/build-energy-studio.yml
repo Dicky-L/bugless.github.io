@@ -1,0 +1,49 @@
+name: Build and publish Energy Studio (Vue 3)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'energy-studio-src/**'
+      - '.github/workflows/build-energy-studio.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: energy-studio-pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install, test, typecheck, and build
+        working-directory: energy-studio-src
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+          npm run build
+      - name: Replace only the Energy Studio demo directory
+        run: |
+          mkdir -p energy-visual-editor
+          rsync -a --delete energy-studio-src/dist/ energy-visual-editor/
+          python3 - <<'PYCODE'
+          from pathlib import Path
+          home=Path('index.html')
+          text=home.read_text()
+          text=text.replace('Energy Studio · Vanilla JavaScript · SVG', 'Vue 3 · TypeScript · Pinia · SVG')
+          home.write_text(text)
+          PYCODE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add energy-visual-editor index.html
+          if ! git diff --staged --quiet; then
+            git commit -m 'deploy: rebuild Energy Studio Vue 3 static assets [skip ci]'
+            git push
+          fi
