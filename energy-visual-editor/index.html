@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="能源可视化组态编辑器 - 独立脱敏交互演示，支持自由拖拽、能源管线、设备绑定、发布与实时预览。" />
+  <title>Energy Studio · 能源可视化组态编辑器</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="brand-icon">E<span>↗</span></div><div><strong>Energy Studio</strong><small>能源组态 · 工程演示</small></div></div>
+    <div class="top-divider"></div><div class="breadcrumbs">工作台 <span>/</span> 厂区能源拓扑 <span>/</span> <strong>可视化编辑器</strong></div>
+    <div class="top-actions"><span class="demo-badge">SANITIZED DEMO</span><button class="btn subtle" data-action="reset">重置示例</button><button class="btn subtle" data-action="export">导出 JSON</button><label class="btn subtle file-label" for="import-file">导入 JSON</label><input id="import-file" type="file" accept="application/json,.json" hidden /><a class="home-link" href="../">案例首页 ↗</a></div>
+  </header>
+  <main class="workspace">
+    <aside class="sidebar left-sidebar">
+      <div class="side-title"><span>组件资源库</span><span class="side-meta">PALETTE</span></div>
+      <div class="intro">点击添加，或拖拽至中央画布</div>
+      <h3>基本组件 <span>04</span></h3>
+      <div class="palette-grid">
+        <button class="palette-item" draggable="true" data-type="text"><span class="palette-icon">T</span><span>文本</span></button>
+        <button class="palette-item" draggable="true" data-type="label"><span class="palette-icon">▣</span><span>标签</span></button>
+        <button class="palette-item" draggable="true" data-type="card"><span class="palette-icon">▥</span><span>数据卡</span></button>
+        <button class="palette-item" draggable="true" data-type="meter"><span class="palette-icon">◉</span><span>仪表</span></button>
+      </div>
+      <h3>工业能源 <span>02</span></h3>
+      <div class="palette-grid"><button class="palette-item" draggable="true" data-type="device"><span class="palette-icon">⬡</span><span>设备</span></button><button class="palette-item" draggable="true" data-type="pipe"><span class="palette-icon">⌁</span><span>能源管线</span></button></div>
+      <div class="side-rule"></div>
+      <div class="side-title small">能源分类 <span class="side-meta">FILTER</span></div>
+      <div id="energy-filters" class="filter-stack"></div>
+      <div class="side-rule"></div>
+      <div class="side-title small">逻辑图层 <span class="side-meta">LAYER</span></div>
+      <div id="layer-filters" class="filter-stack"></div>
+      <div class="sidebar-bottom"><span class="status-dot"></span><div>本地沙盒模式<strong>不连接任何生产服务</strong></div></div>
+    </aside>
+    <section class="editor-area">
+      <div class="editor-toolbar"><div class="editor-heading"><span class="heading-icon">▦</span><div><strong id="page-name">能源组态演示场景</strong><small id="save-status">当前为编辑态 · 本地模拟数据</small></div></div><div class="toolbar-controls"><div class="segmented"><button class="active" data-mode="edit">编辑态</button><button data-mode="runtime">运行预览</button></div><div class="mini-divider"></div><button class="icon-btn" data-action="undo" title="撤销 (⌘/Ctrl+Z)">↶</button><button class="icon-btn" data-action="redo" title="重做">↷</button><span class="mini-divider"></span><button class="btn primary" data-action="save">保存草稿</button><button class="btn dark" data-action="publish">发布页面 ↗</button></div></div>
+      <div class="canvas-subbar"><div><span class="cyan-dot"></span><strong>工艺能源拓扑</strong><span class="sub-muted">逻辑坐标 · 自由画布 · 支持元素重叠</span></div><div class="view-tools"><span id="count-label">12 个元素</span><span class="mini-divider"></span><button class="icon-btn" data-action="zoom-out">−</button><span id="zoom-text">100%</span><button class="icon-btn" data-action="zoom-in">＋</button><button class="icon-btn fit" data-action="zoom-reset">适配</button></div></div>
+      <div class="canvas-viewport" id="viewport"><div id="canvas-size"><div id="scene" class="scene"></div></div></div>
+      <div class="canvas-footer"><span>画布 <strong>1120 × 660</strong> px</span><span id="cursor-coords">X: — / Y: —</span><span id="mode-label">EDITOR · 自由定位</span></div>
+    </section>
+    <aside class="sidebar right-sidebar"><div class="side-title"><span>属性配置</span><span class="side-meta">INSPECTOR</span></div><div id="inspector"></div></aside>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal" class="modal-overlay" hidden><div class="modal-card"><button id="close-modal" class="modal-close" aria-label="关闭">×</button><span class="modal-kicker">REALTIME · MOCK DATA</span><h2 id="modal-title">设备详情</h2><div id="modal-body"></div><button class="btn primary" id="modal-ok">我知道了</button></div></div>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
