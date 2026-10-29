@@ -139,7 +139,7 @@ export function createPipeEditor(ctx) {
       color:palette[pipe.energy]||palette.water,
       metalness:.45,roughness:.34,
       emissive:ctx.getSelectedId()===pipe.id?0x124557:0x000000,
-      emissiveIntensity:ctx.getSelectedId()===pipe.id?.3:0
+      emissiveIntensity:ctx.getSelectedId()===pipe.id ? .3 : 0
     });
     const tube=new THREE.Mesh(
       new THREE.TubeGeometry(curve,Math.round(limit(total*4,20,128)),radius,10,false),
@@ -189,10 +189,10 @@ export function createPipeEditor(ctx) {
     ctx.invalidate();
   }
   function attachHandle(){
+    const pipe=selectedPipe();
+    if(!pipe)return; // Preserve the equipment transform gizmo when no pipe is selected.
     transform.detach();
     if(ctx.getMode()==='select')return;
-    const pipe=selectedPipe();
-    if(!pipe)return;
     const handle=handles.find(h=>h.userData.pipeId===pipe.id&&h.userData.pointIndex===activeIndex);
     if(!handle)return;
     transform.setMode('translate');
