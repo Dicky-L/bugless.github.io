@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { TransformControls } from 'three/addons/controls/TransformControls.js';
+import { createPipeEditor } from './pipes-v2.2.js';
 
 const $ = id => document.getElementById(id);
 const STORAGE = 'energy-studio-demo-v2';
@@ -61,7 +62,7 @@ const transform=new TransformControls(camera,renderer.domElement);
 world.add(transform.getHelper());
 transform.setSize(.75);
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
-let raf=0,animateUntil=0,lastDraw=0,mode='select',dragSnapshot=null,toastTimer=0;
+let raf=0,animateUntil=0,lastDraw=0,mode='select',dragSnapshot=null,toastTimer=0,pipeEditor=null;
 function invalidate(active=false){
   if(active)animateUntil=performance.now()+500;
   if(!raf)raf=requestAnimationFrame(frame);
@@ -85,13 +86,15 @@ orbit.addEventListener('change',()=>invalidate(true));
 transform.addEventListener('dragging-changed',event=>{orbit.enabled=!event.value;invalidate(true)});
 transform.addEventListener('mouseDown',()=>{dragSnapshot=clone(scene)});
 transform.addEventListener('objectChange',()=>{
+  if(pipeEditor?.onTransformChanged())return;
   const obj=selected(),group=meshes.get(selectedId);
   if(!obj||!group)return;
   group.position.y=clamp(group.position.y,0,15);
   group.scale.set(clamp(group.scale.x,.2,4),clamp(group.scale.y,.2,4),clamp(group.scale.z,.2,4));
-  updateFromGroup(obj,group);dirty=true;updateStatus();updateInspector();invalidate(true);
+  updateFromGroup(obj,group);pipeEditor?.onEquipmentChanged();dirty=true;updateStatus();updateInspector();invalidate(true);
 });
 transform.addEventListener('mouseUp',()=>{
+  pipeEditor?.finalizeConnections();
   if(dragSnapshot&&JSON.stringify(dragSnapshot)!==JSON.stringify(scene)){
     history.push(dragSnapshot);if(history.length>60)history.shift();future=[];dirty=true;
   }
@@ -179,15 +182,18 @@ function rebuild(){
     const group=buildEquipment(obj);updateGroup(group,obj);
     world.add(group);meshes.set(obj.id,group);
   }
-  if(!meshes.has(selectedId))selectedId='';
-  if(selectedId&&mode!=='select')transform.attach(meshes.get(selectedId));
+  pipeEditor?.rebuild();
+  if(!meshes.has(selectedId)&&!pipeEditor?.has(selectedId))selectedId='';
+  if(meshes.has(selectedId)&&mode!=='select')transform.attach(meshes.get(selectedId));
+  pipeEditor?.onSelect();
   updateList();updateInspector();updateStatus();invalidate();
 }
 function selected(){return scene.objects.find(obj=>obj.id===selectedId)}
 function select(id){
-  selectedId=meshes.has(id)?id:'';
+  selectedId=(meshes.has(id)||pipeEditor?.has(id))?id:'';
   transform.detach();
-  if(selectedId&&mode!=='select')transform.attach(meshes.get(selectedId));
+  if(meshes.has(selectedId)&&mode!=='select')transform.attach(meshes.get(selectedId));
+  pipeEditor?.onSelect();
   updateList();updateInspector();invalidate();
 }
 function updateList(){
@@ -201,9 +207,13 @@ function updateList(){
     button.append(name,tag);button.addEventListener('click',()=>select(obj.id));
     $('objects').append(button);
   }
+  pipeEditor?.appendList($('objects'));
+  pipeEditor?.updateList();
 }
 function updateInspector(){
   const obj=selected(),group=meshes.get(selectedId);
+  if(obj?.type==='pipe'){pipeEditor?.showInspector(obj);return}
+  $('pipe-inspector').hidden=true;
   $('empty').hidden=!!obj;$('inspector').hidden=!obj;
   $('selected-label').textContent=obj?'已选择：'+obj.name:'未选中设备';
   if(!obj||!group)return;
@@ -242,8 +252,9 @@ function setMode(value){
   mode=value;
   for(const button of document.querySelectorAll('[data-mode]'))button.classList.toggle('active',button.dataset.mode===value);
   transform.detach();
-  if(value!=='select'&&selectedId)transform.attach(meshes.get(selectedId));
+  if(value!=='select'&&meshes.has(selectedId))transform.attach(meshes.get(selectedId));
   transform.setMode(value==='select'?'translate':value);
+  pipeEditor?.onModeChange();
   invalidate();
 }
 const down={x:0,y:0};
@@ -254,6 +265,7 @@ renderer.domElement.addEventListener('pointerup',event=>{
   pointer.x=((event.clientX-rect.left)/rect.width)*2-1;
   pointer.y=-((event.clientY-rect.top)/rect.height)*2+1;
   raycaster.setFromCamera(pointer,camera);
+  if(pipeEditor?.handlePick(pipeEditor.pick(raycaster)))return;
   const hits=raycaster.intersectObjects([...meshes.values()],true);
   const hit=hits.find(item=>item.object.userData.deviceId);
   if(hit)select(hit.object.userData.deviceId);else if(mode==='select')select('');
@@ -268,6 +280,11 @@ function add(type,energy){
 function duplicate(){
   const obj=selected();if(!obj)return;
   const copy=clone(obj);copy.id=uid();copy.name+=' 副本';
+  if(obj.type==='pipe'){
+    if(copy.threeD){delete copy.threeD.from;delete copy.threeD.to;copy.threeD.points=copy.threeD.points.map(p=>({...p,id:uid(),x:p.x+1,z:p.z+1}));}
+    copy.points=copy.points.map(p=>({...p,id:uid(),x:clamp(p.x+35,0,1120),y:clamp(p.y+35,0,660)}));
+    mutate(()=>scene.objects.push(copy),{rebuildScene:true});select(copy.id);return;
+  }
   copy.x=clamp(copy.x+24,0,1120-copy.w);copy.y=clamp(copy.y+24,0,660-copy.h);
   const p=positionOf(obj);copy.threeD={position:[p[0]+1,p[1],p[2]+1],rotation:obj.threeD?.rotation||[0,0,0],scale:obj.threeD?.scale||[1,1,1]};
   mutate(()=>scene.objects.push(copy),{rebuildScene:true});select(copy.id);
@@ -293,6 +310,7 @@ $('undo').addEventListener('click',()=>restore('undo'));
 $('redo').addEventListener('click',()=>restore('redo'));
 $('duplicate').addEventListener('click',duplicate);
 $('delete').addEventListener('click',remove);
+$('pipe-delete').addEventListener('click',remove);
 $('view-reset').addEventListener('click',()=>fit(false));
 $('view-top').addEventListener('click',()=>fit(true));
 $('grid').addEventListener('click',event=>{
@@ -338,5 +356,13 @@ window.addEventListener('beforeunload',event=>{
   if(!dirty)return;
   event.preventDefault();event.returnValue='';
 });
+pipeEditor=createPipeEditor({
+  THREE,world,camera,renderer,transform,meshes,raycaster,palette,
+  getScene:()=>scene,getSelectedId:()=>selectedId,getMode:()=>mode,
+  select,setMode,toast,invalidate,
+  mutate:fn=>mutate(fn,{rebuildScene:true}),
+  markDirty:()=>{dirty=true;updateStatus()},
+  refreshUI:()=>{updateList();updateInspector();updateStatus();invalidate()}
+});
 rebuild();resize();fit();
-console.info('[Energy Studio] V2.1 3D editor ready, draft isolated from published schema');
+console.info('[Energy Studio] V2.2 3D pipe editor loaded; published version remains isolated');
