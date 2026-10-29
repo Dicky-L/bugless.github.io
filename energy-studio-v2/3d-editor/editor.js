@@ -281,7 +281,7 @@ function duplicate(){
   const obj=selected();if(!obj)return;
   const copy=clone(obj);copy.id=uid();copy.name+=' 副本';
   if(obj.type==='pipe'){
-    if(copy.threeD){delete copy.threeD.from;delete copy.threeD.to;copy.threeD.points=copy.threeD.points.map(p=>({...p,id:uid(),x:p.x+1,z:p.z+1}));}
+    if(copy.threeD){delete copy.threeD.from;delete copy.threeD.to;if(Array.isArray(copy.threeD.points))copy.threeD.points=copy.threeD.points.map(p=>({...p,id:uid(),x:p.x+1,z:p.z+1}));}
     copy.points=copy.points.map(p=>({...p,id:uid(),x:clamp(p.x+35,0,1120),y:clamp(p.y+35,0,660)}));
     mutate(()=>scene.objects.push(copy),{rebuildScene:true});select(copy.id);return;
   }
