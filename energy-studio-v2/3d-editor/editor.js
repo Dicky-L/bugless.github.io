@@ -64,7 +64,7 @@ world.add(transform.getHelper());
 transform.setSize(.75);
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
 let raf=0,animateUntil=0,lastDraw=0,lastAnimation=0,mode='select',dragSnapshot=null,toastTimer=0,pipeEditor=null,modelCatalog=null;
-let simulationRunning=true,simulationFps=15;
+let simulationRunning=true,simulationFps=15,orbitActive=false;
 function invalidate(active=false){
   if(active)animateUntil=performance.now()+500;
   if(!raf)raf=requestAnimationFrame(frame);
@@ -72,7 +72,7 @@ function invalidate(active=false){
 function frame(time){
   raf=0;
   if(document.hidden)return;
-  const minInterval=transform.dragging?32:1000/simulationFps;
+  const minInterval=(transform.dragging||orbitActive)?32:1000/simulationFps;
   if(time-lastDraw<minInterval){raf=requestAnimationFrame(frame);return}
   const delta=Math.min(.08,Math.max(.001,lastAnimation?(time-lastAnimation)/1000:.033));
   lastDraw=time;lastAnimation=time;
@@ -93,6 +93,8 @@ function resize(){
 }
 new ResizeObserver(resize).observe(viewport);
 orbit.addEventListener('change',()=>invalidate(true));
+orbit.addEventListener('start',()=>{orbitActive=true;invalidate(true)});
+orbit.addEventListener('end',()=>{orbitActive=false;invalidate(true)});
 transform.addEventListener('dragging-changed',event=>{orbit.enabled=!event.value;invalidate(true)});
 transform.addEventListener('mouseDown',()=>{dragSnapshot=clone(scene)});
 transform.addEventListener('objectChange',()=>{
