@@ -191,10 +191,10 @@ export function createModelCatalog({world,getScene,invalidate,onError=()=>{}}){
   function clear(){for(const id of nodes.keys())unmount(id)}
   function update(time,delta){
     let changed=false;
-    const scene=getScene();
+    const objects=new Map(getScene().objects.map(item=>[item.id,item]));
     for(const [id,state] of nodes){
       if(!state.active||state.pending)continue;
-      const object=scene.objects.find(obj=>obj.id===id);
+      const object=objects.get(id);
       if(!object)continue;
       const settings=object.threeD||{},status=settings.runState||'running';
       const speed=clamp(safeNumber(settings.animationSpeed,1),0,3);
