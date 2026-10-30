@@ -178,8 +178,9 @@ export function createPipeEditor(ctx) {
   }
   function animateFlow(time,delta){
     let changed=false;
+    const objects=new Map(ctx.getScene().objects.map(item=>[item.id,item]));
     for(const [id,group] of groups){
-      const pipe=ctx.getScene().objects.find(o=>o.id===id);
+      const pipe=objects.get(id);
       if(!pipe)continue;
       const flow=group.userData.flow;
       if(!flow)continue;
