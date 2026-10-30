@@ -158,7 +158,39 @@ export function createPipeEditor(ctx) {
       ring.userData.pipeId=pipe.id;
       group.add(ring);
     }
+    const markerCount=4;
+    const markerGeometry=new THREE.SphereGeometry(radius*.72,8,6);
+    const markerMaterial=new THREE.MeshBasicMaterial({color:0xe5fcff,transparent:true,opacity:.96,depthWrite:false});
+    const markers=[];
+    for(let i=0;i<markerCount;i++){
+      const marker=new THREE.Mesh(markerGeometry.clone(),markerMaterial.clone());
+      marker.userData.pipeId=pipe.id;
+      marker.visible=false;marker.position.copy(curve.getPoint(i/markerCount));
+      group.add(marker);markers.push(marker);
+    }
+    group.userData.flow={curve,markers};
     return group;
+  }
+  function animateFlow(time,delta){
+    let changed=false;
+    for(const [id,group] of groups){
+      const pipe=ctx.getScene().objects.find(o=>o.id===id);
+      if(!pipe)continue;
+      const flow=group.userData.flow;
+      if(!flow)continue;
+      const enabled=pipe.threeD?.flowState!=='off'&&pipe.threeD?.flowState!=='stopped';
+      const speed=Math.max(0,Math.min(3,Number(pipe.threeD?.flowSpeed??1)||0));
+      const animate=enabled&&speed>0;
+      for(let i=0;i<flow.markers.length;i++){
+        const marker=flow.markers[i];
+        if(marker.visible!==animate){marker.visible=animate;changed=true}
+        if(!animate)continue;
+        const progress=((time*.00018*speed+i/flow.markers.length)%1+1)%1;
+        marker.position.copy(flow.curve.getPoint(progress));
+        changed=true;
+      }
+    }
+    return changed;
   }
   function renderPipes() {
     for(const group of groups.values()){world.remove(group);destroyObject(group)}
@@ -341,6 +373,8 @@ export function createPipeEditor(ctx) {
     $('pipe-name').value=pipe.name;
     $('pipe-energy').value=pipe.energy;
     $('pipe-dn').value=pipe.threeD?.diameter||'DN100';
+    $('pipe-flow-state').value=pipe.threeD?.flowState||'running';
+    $('pipe-flow-speed').value=String(pipe.threeD?.flowSpeed??1);
     const devices=availableDevices();
     for(const side of ['from','to']){
       const select=$('pipe-'+side+'-device'),current=pipe.threeD?.[side]?.deviceId||'';
@@ -388,6 +422,8 @@ export function createPipeEditor(ctx) {
       if(field==='name')pipe.name=String(value).slice(0,80);
       else if(field==='energy'){pipe.energy=value;pipe.layer=value}
       else if(field==='diameter')pipe.threeD={...pipe.threeD,diameter:value};
+      else if(field==='flowState')pipe.threeD={...pipe.threeD,flowState:value};
+      else if(field==='flowSpeed')pipe.threeD={...pipe.threeD,flowSpeed:limit(Number(value)||0,0,3)};
       else {
         const [side,part]=field.split(':');
         pipe.threeD={...pipe.threeD,[side]:{...pipe.threeD?.[side],[part]:value}};
@@ -433,6 +469,8 @@ export function createPipeEditor(ctx) {
     $('pipe-name').addEventListener('change',e=>updateField('name',e.target.value));
     $('pipe-energy').addEventListener('change',e=>updateField('energy',e.target.value));
     $('pipe-dn').addEventListener('change',e=>updateField('diameter',e.target.value));
+    $('pipe-flow-state').addEventListener('change',e=>updateField('flowState',e.target.value));
+    $('pipe-flow-speed').addEventListener('change',e=>updateField('flowSpeed',e.target.value));
     for(const side of ['from','to']){
       $('pipe-'+side+'-device').addEventListener('change',e=>updateField(side+':deviceId',e.target.value));
       $('pipe-'+side+'-port').addEventListener('change',e=>updateField(side+':port',e.target.value));
@@ -460,6 +498,6 @@ export function createPipeEditor(ctx) {
     rebuild,appendList,showInspector,onSelect,pick,handlePick,
     onEquipmentChanged:refreshConnections,
     finalizeConnections,onTransformChanged:updateNodeFromGizmo,
-    onModeChange:attachHandle,updateList
+    onModeChange:attachHandle,updateList,animateFlow
   };
 }
