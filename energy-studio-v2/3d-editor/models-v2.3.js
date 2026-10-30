@@ -28,9 +28,13 @@ async function dbOp(mode,callback){
   const db=await openDB();
   try{
     return await new Promise((resolve,reject)=>{
-      const tx=db.transaction(STORE_NAME,mode),request=callback(tx.objectStore(STORE_NAME));
-      request.onsuccess=()=>resolve(request.result);
+      const tx=db.transaction(STORE_NAME,mode);
+      let result;
+      const request=callback(tx.objectStore(STORE_NAME));
+      request.onsuccess=()=>{result=request.result};
       request.onerror=()=>reject(request.error);
+      tx.oncomplete=()=>resolve(result);
+      tx.onabort=()=>reject(tx.error||new Error('本地模型存储事务中止'));
       tx.onerror=()=>reject(tx.error);
     });
   }finally{db.close()}
@@ -234,8 +238,17 @@ export function createModelCatalog({world,getScene,invalidate,onError=()=>{}}){
     const buffer=await file.arrayBuffer(),view=new DataView(buffer);
     if(view.getUint32(0,true)!==0x46546c67||view.getUint32(4,true)!==2||view.getUint32(8,true)!==buffer.byteLength)
       throw new Error('无效或不支持的 glTF 2.0 GLB 文件');
-    // Validate geometry before storing to avoid persisting broken assets.
-    await new Promise((resolve,reject)=>loader.parse(buffer.slice(0),'',resolve,reject));
+    // Validate geometry and geometric complexity before storing.
+    const preview=await new Promise((resolve,reject)=>loader.parse(buffer.slice(0),'',resolve,reject));
+    let triangles=0,meshes=0;
+    preview.scene.traverse(node=>{
+      if(!node.isMesh)return;
+      meshes++;
+      const geometry=node.geometry;
+      triangles+=Math.ceil((geometry?.index?.count||geometry?.attributes?.position?.count||0)/3);
+    });
+    if(!meshes)throw new Error('GLB 不包含可显示的网格模型');
+    if(triangles>200000)throw new Error('模型超过 20 万三角面，可能导致笔记本过热，请先减面优化');
     const id='custom:'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7);
     const name=file.name.slice(0,70);
     await dbOp('readwrite',store=>store.put({id,name,buffer,createdAt:Date.now()}));
