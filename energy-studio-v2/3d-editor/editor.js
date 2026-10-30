@@ -63,17 +63,26 @@ const transform=new TransformControls(camera,renderer.domElement);
 world.add(transform.getHelper());
 transform.setSize(.75);
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
-let raf=0,animateUntil=0,lastDraw=0,lastAnimation=0,mode='select',dragSnapshot=null,toastTimer=0,pipeEditor=null,modelCatalog=null;
+let raf=0,throttleTimer=0,animateUntil=0,lastDraw=0,lastAnimation=0,mode='select',dragSnapshot=null,toastTimer=0,pipeEditor=null,modelCatalog=null;
 let simulationRunning=true,simulationFps=15,orbitActive=false;
 function invalidate(active=false){
-  if(active)animateUntil=performance.now()+500;
-  if(!raf)raf=requestAnimationFrame(frame);
+  if(active){
+    animateUntil=performance.now()+500;
+    if(throttleTimer){clearTimeout(throttleTimer);throttleTimer=0}
+  }
+  if(!raf&&!throttleTimer)raf=requestAnimationFrame(frame);
 }
 function frame(time){
   raf=0;
   if(document.hidden)return;
   const minInterval=(transform.dragging||orbitActive)?32:1000/simulationFps;
-  if(time-lastDraw<minInterval){raf=requestAnimationFrame(frame);return}
+  const remaining=minInterval-(time-lastDraw);
+  if(remaining>2){
+    if(!throttleTimer)throttleTimer=window.setTimeout(()=>{
+      throttleTimer=0;invalidate();
+    },Math.ceil(remaining));
+    return;
+  }
   const delta=Math.min(.08,Math.max(.001,lastAnimation?(time-lastAnimation)/1000:.033));
   lastDraw=time;lastAnimation=time;
   const moving=orbit.update();
