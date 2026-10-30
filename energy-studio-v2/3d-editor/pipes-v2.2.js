@@ -250,6 +250,7 @@ export function createPipeEditor(ctx) {
     ctx.invalidate();
   }
   function onSelect() {
+    renderPipes(); // Refresh selection highlight without rebuilding unchanged pipe geometry.
     const pipe=selectedPipe();
     if(!pipe){activeIndex=-1;drawHandles();showPorts();return}
     const path=getPath(pipe);
