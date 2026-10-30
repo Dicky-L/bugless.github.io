@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { TransformControls } from 'three/addons/controls/TransformControls.js';
 import { createPipeEditor } from './pipes-v2.2.js';
+import { createModelCatalog } from './models-v2.3.js';
 
 const $ = id => document.getElementById(id);
 const STORAGE = 'energy-studio-demo-v2';
@@ -62,7 +63,8 @@ const transform=new TransformControls(camera,renderer.domElement);
 world.add(transform.getHelper());
 transform.setSize(.75);
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
-let raf=0,animateUntil=0,lastDraw=0,mode='select',dragSnapshot=null,toastTimer=0,pipeEditor=null;
+let raf=0,animateUntil=0,lastDraw=0,lastAnimation=0,mode='select',dragSnapshot=null,toastTimer=0,pipeEditor=null,modelCatalog=null;
+let simulationRunning=true,simulationFps=15;
 function invalidate(active=false){
   if(active)animateUntil=performance.now()+500;
   if(!raf)raf=requestAnimationFrame(frame);
@@ -70,12 +72,20 @@ function invalidate(active=false){
 function frame(time){
   raf=0;
   if(document.hidden)return;
-  if(time-lastDraw<32){raf=requestAnimationFrame(frame);return}
-  lastDraw=time;
+  const minInterval=transform.dragging?32:1000/simulationFps;
+  if(time-lastDraw<minInterval){raf=requestAnimationFrame(frame);return}
+  const delta=Math.min(.08,Math.max(.001,lastAnimation?(time-lastAnimation)/1000:.033));
+  lastDraw=time;lastAnimation=time;
   const moving=orbit.update();
+  const modelChanged=simulationRunning&&!!modelCatalog?.update(time,delta);
+  const pipeChanged=simulationRunning&&!!pipeEditor?.animateFlow(time,delta);
   renderer.render(world,camera);
-  if(moving||transform.dragging||time<animateUntil)invalidate();
+  if(moving||transform.dragging||time<animateUntil||modelChanged||pipeChanged)invalidate();
 }
+document.addEventListener('visibilitychange',()=>{
+  lastAnimation=0;
+  if(!document.hidden)invalidate();
+});
 function resize(){
   const w=Math.max(1,viewport.clientWidth),h=Math.max(1,viewport.clientHeight);
   camera.aspect=w/h;camera.updateProjectionMatrix();
@@ -110,6 +120,7 @@ function cylinder(parent,r,h,x,y,z,color,rotate=false){
   mesh.position.set(x,y,z);if(rotate)mesh.rotation.z=Math.PI/2;parent.add(mesh);return mesh;
 }
 function buildEquipment(obj){
+  if(modelCatalog)return modelCatalog.build(obj);
   const group=new THREE.Group();
   group.userData.id=obj.id;
   const color=palette[obj.energy]||palette.electric;
@@ -156,7 +167,7 @@ function updateGroup(group,obj){
 }
 function updateFromGroup(obj,group){
   const p=group.position,r=group.rotation,s=group.scale;
-  obj.threeD={
+  obj.threeD={...obj.threeD,
     position:[p.x,p.y,p.z].map(v=>Number(v.toFixed(3))),
     rotation:[r.x,r.y,r.z].map(v=>Number(THREE.MathUtils.radToDeg(v).toFixed(2))),
     scale:[s.x,s.y,s.z].map(v=>Number(v.toFixed(3)))
@@ -175,6 +186,7 @@ function dispose(group){
 }
 function rebuild(){
   transform.detach();
+  modelCatalog?.clear();
   for(const group of meshes.values()){world.remove(group);dispose(group)}
   meshes.clear();
   for(const obj of scene.objects){
@@ -218,6 +230,14 @@ function updateInspector(){
   $('selected-label').textContent=obj?'已选择：'+obj.name:'未选中设备';
   if(!obj||!group)return;
   $('name').value=obj.name;$('energy').value=obj.energy;
+  const props=obj.threeD||{};
+  $('model-select').value=props.modelId||'builtin:auto';
+  $('device-run-state').value=props.runState||'running';
+  $('device-speed').value=String(props.animationSpeed??1);
+  $('device-speed-display').textContent=Number(props.animationSpeed??1).toFixed(2)+'×';
+  $('tank-level').value=String(props.level??65);
+  $('tank-level-display').textContent=String(props.level??65)+'%';
+  $('tank-level-row').hidden=modelCatalog?.resolveId(obj)!=='builtin:tank';
   for(const [prefix,values] of [
     ['p',[group.position.x,group.position.y,group.position.z]],
     ['r',[group.rotation.x,group.rotation.y,group.rotation.z].map(THREE.MathUtils.radToDeg)],
@@ -270,11 +290,12 @@ renderer.domElement.addEventListener('pointerup',event=>{
   const hit=hits.find(item=>item.object.userData.deviceId);
   if(hit)select(hit.object.userData.deviceId);else if(mode==='select')select('');
 });
-function add(type,energy){
+function add(type,energy,modelId='builtin:auto'){
   if(scene.objects.length>=500){toast('场景对象已达到 500 个上限');return}
   const count=scene.objects.filter(o=>o.type===type).length+1;
-  const name=type==='meter'?'智能仪表 M-'+count:energy==='water'?'循环水泵 P-'+count:energy==='gas'?'燃气阀门 G-'+count:'空调机组 A-'+count;
-  const obj={id:uid(),type,name,x:450+count*12,y:280+count*9,w:type==='meter'?168:206,h:type==='meter'?116:90,z:35,layer:energy,energy,binding:{deviceId:'',param:''},action:'popup'};
+  const name=modelId==='builtin:tank'?'储罐 T-'+count:type==='meter'?'智能仪表 M-'+count:energy==='water'?'循环水泵 P-'+count:energy==='gas'?'燃气阀门 G-'+count:'空调机组 A-'+count;
+  const obj={id:uid(),type,name,x:450+count*12,y:280+count*9,w:type==='meter'?168:206,h:type==='meter'?116:90,z:35,layer:energy,energy,binding:{deviceId:'',param:''},action:'popup',
+    threeD:{modelId,runState:'running',animationSpeed:1,level:65}};
   mutate(()=>scene.objects.push(obj),{rebuildScene:true});select(obj.id);setMode('translate');
 }
 function duplicate(){
@@ -286,7 +307,7 @@ function duplicate(){
     mutate(()=>scene.objects.push(copy),{rebuildScene:true});select(copy.id);return;
   }
   copy.x=clamp(copy.x+24,0,1120-copy.w);copy.y=clamp(copy.y+24,0,660-copy.h);
-  const p=positionOf(obj);copy.threeD={position:[p[0]+1,p[1],p[2]+1],rotation:obj.threeD?.rotation||[0,0,0],scale:obj.threeD?.scale||[1,1,1]};
+  const p=positionOf(obj);copy.threeD={...copy.threeD,position:[p[0]+1,p[1],p[2]+1],rotation:obj.threeD?.rotation||[0,0,0],scale:obj.threeD?.scale||[1,1,1]};
   mutate(()=>scene.objects.push(copy),{rebuildScene:true});select(copy.id);
 }
 function remove(){
@@ -303,7 +324,7 @@ function fit(top=false){
   camera.position.set(...(top?[0,48,.01]:[28,29,34]));
   orbit.update();invalidate(true);
 }
-for(const button of document.querySelectorAll('[data-add]'))button.addEventListener('click',()=>add(button.dataset.add,button.dataset.energy));
+for(const button of document.querySelectorAll('[data-add]'))button.addEventListener('click',()=>add(button.dataset.add,button.dataset.energy,button.dataset.model||'builtin:auto'));
 for(const button of document.querySelectorAll('[data-mode]'))button.addEventListener('click',()=>setMode(button.dataset.mode));
 $('save').addEventListener('click',save);
 $('undo').addEventListener('click',()=>restore('undo'));
@@ -319,7 +340,7 @@ $('grid').addEventListener('click',event=>{
 $('export').addEventListener('click',()=>{
   const blob=new Blob([JSON.stringify(scene,null,2)],{type:'application/json'});
   const url=URL.createObjectURL(blob),a=document.createElement('a');
-  a.href=url;a.download='energy-studio-v2.1-scene.json';a.click();
+  a.href=url;a.download='energy-studio-v2.3-scene.json';a.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 $('name').addEventListener('change',event=>{
@@ -327,6 +348,63 @@ $('name').addEventListener('change',event=>{
 });
 $('energy').addEventListener('change',event=>{
   mutate(()=>{if(selected()){selected().energy=event.target.value;selected().layer=event.target.value}}, {rebuildScene:true});
+});
+function refreshModelOptions(){
+  const control=$('model-select'),active=control.value;
+  control.replaceChildren();
+  for(const item of modelCatalog.options())control.add(new Option(item.label,item.id));
+  const current=selected()?.threeD?.modelId||active||'builtin:auto';
+  if(current&&!modelCatalog.options().some(x=>x.id===current))
+    control.add(new Option('本机未找到模型（需重新导入）',current));
+  control.value=current;
+}
+$('model-select').addEventListener('change',event=>{
+  const modelId=event.target.value;
+  mutate(()=>{if(selected())selected().threeD={...selected().threeD,modelId}}, {rebuildScene:true});
+});
+$('model-upload-trigger').addEventListener('click',()=>$('model-file').click());
+$('model-file').addEventListener('change',async event=>{
+  const file=event.target.files?.[0],objectId=selectedId;
+  event.target.value='';
+  if(!file||!meshes.has(objectId))return;
+  $('model-upload-trigger').disabled=true;
+  $('model-upload-trigger').textContent='正在校验 GLB...';
+  try {
+    const asset=await modelCatalog.importGLB(file);
+    refreshModelOptions();
+    if(scene.objects.some(o=>o.id===objectId)){
+      mutate(()=>{const obj=scene.objects.find(o=>o.id===objectId);obj.threeD={...obj.threeD,modelId:asset.id}}, {rebuildScene:true});
+      select(objectId);
+    }
+    toast('已导入本地 GLB：'+asset.label);
+  }catch(error){toast('GLB 导入失败：'+error.message)}
+  finally{$('model-upload-trigger').disabled=false;$('model-upload-trigger').textContent='＋ 导入本地 GLB 模型'}
+});
+$('device-run-state').addEventListener('change',event=>{
+  mutate(()=>{if(selected())selected().threeD={...selected().threeD,runState:event.target.value}});
+});
+$('device-speed').addEventListener('input',event=>{
+  $('device-speed-display').textContent=Number(event.target.value).toFixed(2)+'×';
+});
+$('device-speed').addEventListener('change',event=>{
+  mutate(()=>{if(selected())selected().threeD={...selected().threeD,animationSpeed:Number(event.target.value)}});
+});
+$('tank-level').addEventListener('input',event=>{
+  $('tank-level-display').textContent=event.target.value+'%';
+});
+$('tank-level').addEventListener('change',event=>{
+  mutate(()=>{if(selected())selected().threeD={...selected().threeD,level:Number(event.target.value)}});
+});
+$('sim-toggle').addEventListener('click',event=>{
+  simulationRunning=!simulationRunning;
+  event.currentTarget.classList.toggle('active',simulationRunning);
+  event.currentTarget.textContent=simulationRunning?'◉ 动画运行':'Ⅱ 动画暂停';
+  lastAnimation=0;invalidate();
+});
+$('motion-fps').addEventListener('change',event=>{
+  simulationFps=[15,24,30].includes(Number(event.target.value))?Number(event.target.value):15;
+  $('fps').textContent='节能渲染 · 动画最高 '+simulationFps+' FPS · 静止按需刷新';
+  invalidate();
 });
 for(const prefix of ['p','r','s']){
   for(const axis of ['x','y','z']){
@@ -356,6 +434,9 @@ window.addEventListener('beforeunload',event=>{
   if(!dirty)return;
   event.preventDefault();event.returnValue='';
 });
+modelCatalog=createModelCatalog({
+  world,getScene:()=>scene,invalidate,onError:message=>toast(message)
+});
 pipeEditor=createPipeEditor({
   THREE,world,camera,renderer,transform,meshes,raycaster,palette,
   getScene:()=>scene,getSelectedId:()=>selectedId,getMode:()=>mode,
@@ -364,5 +445,7 @@ pipeEditor=createPipeEditor({
   markDirty:()=>{dirty=true;updateStatus()},
   refreshUI:()=>{updateList();updateInspector();updateStatus();invalidate()}
 });
+refreshModelOptions();
+modelCatalog.listCustom().then(()=>{refreshModelOptions();updateInspector()});
 rebuild();resize();fit();
-console.info('[Energy Studio] V2.2 3D pipe editor loaded; published version remains isolated');
+console.info('[Energy Studio] V2.3 animated model library and pipeline flow ready; published scene isolated');
