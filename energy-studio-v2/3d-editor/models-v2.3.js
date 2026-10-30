@@ -238,6 +238,16 @@ export function createModelCatalog({world,getScene,invalidate,onError=()=>{}}){
     const buffer=await file.arrayBuffer(),view=new DataView(buffer);
     if(view.getUint32(0,true)!==0x46546c67||view.getUint32(4,true)!==2||view.getUint32(8,true)!==buffer.byteLength)
       throw new Error('无效或不支持的 glTF 2.0 GLB 文件');
+    // GLB resources must be embedded: never fetch external textures or buffers from a user asset.
+    const chunkLength=view.getUint32(12,true),chunkType=view.getUint32(16,true);
+    if(chunkType!==0x4e4f534a||chunkLength<=0||chunkLength>buffer.byteLength-20)
+      throw new Error('GLB JSON Chunk 无效');
+    let json;
+    try{json=JSON.parse(new TextDecoder().decode(new Uint8Array(buffer,20,chunkLength)))}
+    catch{throw new Error('GLB JSON 解析失败')}
+    const resources=[...(json.buffers||[]),...(json.images||[])];
+    if(resources.some(item=>typeof item.uri==='string'&&!item.uri.startsWith('data:')))
+      throw new Error('GLB 包含外部资源引用，请将贴图与缓冲区全部打包进 GLB');
     // Validate geometry and geometric complexity before storing.
     const preview=await new Promise((resolve,reject)=>loader.parse(buffer.slice(0),'',resolve,reject));
     let triangles=0,meshes=0;
