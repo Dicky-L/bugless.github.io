@@ -9,6 +9,7 @@ export function createPipeEditor(ctx) {
   const scale = 32 / 1120;
   const dn = { DN50:.105, DN80:.145, DN100:.19, DN125:.225, DN150:.265, DN200:.34 };
   const groups = new Map();
+  const geometrySignatures = new Map();
   const handles = [];
   const ports = [];
   let activeIndex = -1, linking = false, linkingStep = 0, lastId = '', pending = 0;
@@ -108,16 +109,20 @@ export function createPipeEditor(ctx) {
     return pts;
   }
   function destroyObject(object){
+    const disposed=new Set();
     object.traverse(child=>{
-      child.geometry?.dispose();
+      const geometry=child.geometry;
+      if(geometry&&!disposed.has(geometry)){geometry.dispose();disposed.add(geometry)}
       if(child.material){
-        for(const m of Array.isArray(child.material)?child.material:[child.material])m.dispose();
+        for(const mat of Array.isArray(child.material)?child.material:[child.material]){
+          if(!disposed.has(mat)){mat.dispose();disposed.add(mat)}
+        }
       }
     });
   }
   function clearRender(){
     for(const group of groups.values()){world.remove(group);destroyObject(group)}
-    groups.clear();
+    groups.clear();geometrySignatures.clear();
     for(const handle of handles){world.remove(handle);destroyObject(handle)}
     handles.length=0;
     for(const port of ports){world.remove(port);destroyObject(port)}
@@ -163,7 +168,7 @@ export function createPipeEditor(ctx) {
     const markerMaterial=new THREE.MeshBasicMaterial({color:0xe5fcff,transparent:true,opacity:.96,depthWrite:false});
     const markers=[];
     for(let i=0;i<markerCount;i++){
-      const marker=new THREE.Mesh(markerGeometry.clone(),markerMaterial.clone());
+      const marker=new THREE.Mesh(markerGeometry,markerMaterial);
       marker.userData.pipeId=pipe.id;
       marker.visible=false;marker.position.copy(curve.getPoint(i/markerCount));
       group.add(marker);markers.push(marker);
@@ -193,11 +198,24 @@ export function createPipeEditor(ctx) {
     return changed;
   }
   function renderPipes() {
-    for(const group of groups.values()){world.remove(group);destroyObject(group)}
-    groups.clear();
-    for(const pipe of ctx.getScene().objects.filter(o=>o.type==='pipe')){
+    const pipes=ctx.getScene().objects.filter(o=>o.type==='pipe');
+    const valid=new Set(pipes.map(p=>p.id));
+    for(const [id,group] of groups){
+      if(valid.has(id))continue;
+      world.remove(group);destroyObject(group);
+      groups.delete(id);geometrySignatures.delete(id);
+    }
+    for(const pipe of pipes){
+      const path=getPath(pipe);
+      const signature=JSON.stringify([
+        pipe.energy,pipe.threeD?.diameter||'DN100',
+        ctx.getSelectedId()===pipe.id,path
+      ]);
+      if(groups.has(pipe.id)&&geometrySignatures.get(pipe.id)===signature)continue;
+      const prior=groups.get(pipe.id);
+      if(prior){world.remove(prior);destroyObject(prior);groups.delete(pipe.id)}
       const group=makePipe(pipe);
-      if(group){world.add(group);groups.set(pipe.id,group)}
+      if(group){world.add(group);groups.set(pipe.id,group);geometrySignatures.set(pipe.id,signature)}
     }
     ctx.invalidate();
   }
