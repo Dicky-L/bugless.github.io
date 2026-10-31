@@ -30,13 +30,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:0 3
 <div id="app">
 <header><div class="brand"><div class="logo"><span>◇</span></div><div class="wordmark">ORIGIN <small>STARSHIP DESIGN LAB</small></div></div><div class="header-center">CONCEPT / ASSET 001</div><div class="header-right"><span class="live"><i class="dot"></i> REALTIME 3D</span><span class="edition">THREE.JS / 2026</span></div></header>
 <main><div class="viewer" id="viewer"><canvas id="scene" aria-label="可交互的星舰三维画布"></canvas><div id="error" class="status"></div>
-<div class="viewer-label"><div class="eyebrow">EXPLORATION CLASS · 01</div><h1>ORIGIN-01</h1><p>源于手工积木概念 · 重构为金属星舰<br/>非积木颗粒 · 模块化舰体 · 工业级科幻造型</p><div class="line"></div></div>
-<div class="top-float"><div class="tag">MODEL <b>V0.1</b></div><div class="tag">PROCEDURAL <b>3D</b></div></div>
-<div class="view-bottom"><div class="detail-hint"><div class="hint-title" id="module-title">◈ INTERACTIVE INSPECTOR</div><div class="hint-body" id="module-desc">拖动旋转 · 滚轮缩放 · 点击舰体检查部件</div></div><div class="view-presets"><button class="active" data-view="iso">透视</button><button data-view="top">俯视</button><button data-view="front">正面</button><button data-view="side">侧面</button></div></div>
+<div class="viewer-label"><div class="eyebrow">EXPLORATION CLASS · 01</div><h1>ORIGIN-01</h1><p>8 张照片校准 · 非对称开放式舰体<br/>双叉舰首 · 高位机械臂 · 单侧尾部组件</p><div class="line"></div></div>
+<div class="top-float"><div class="tag">MODEL <b>V0.2</b></div><div class="tag">PROCEDURAL <b>3D</b></div></div>
+<div class="view-bottom"><div class="detail-hint"><div class="hint-title" id="module-title">◈ INTERACTIVE INSPECTOR</div><div class="hint-body" id="module-desc">拖动旋转 · 滚轮缩放 · 点击舰体检查部件</div></div><div class="view-presets"><button class="active" data-view="iso">透视</button><button data-view="top">俯视</button><button data-view="front">正面</button><button data-view="side">侧面</button><button data-view="under">船底</button></div></div>
 </div>
 <aside class="panel"><section><div class="eyebrow">DESIGN DOSSIER</div><h2>舰体档案 / PROFILE</h2><div class="info-row"><span>分类</span><strong>重型多用途星舰</strong></div><div class="info-row"><span>结构</span><strong>非对称模块布局</strong></div><div class="info-row"><span>材质</span><strong>PBR 金属装甲</strong></div><div class="info-row"><span>建模方式</span><strong>程序化概念重建</strong></div><div class="paint"><i class="swatch" style="background:#285ca7"></i><i class="swatch" style="background:#c54540"></i><i class="swatch" style="background:#d2d8d8"></i><i class="swatch" style="background:#282e38"></i><i class="swatch" style="background:#89613e"></i><small>ORIGINAL PALETTE</small></div></section>
 <section><h3>展示控制 / VIEW</h3><div class="setting"><div><span>自动巡航</span><small>Auto orbit</small></div><button id="auto" class="switch on" aria-label="切换自动旋转" aria-pressed="true"></button></div><div class="setting"><div><span>推进器光效</span><small>Thruster effects</small></div><button id="engines" class="switch on" aria-label="切换推进器" aria-pressed="true"></button></div><div class="setting"><div><span>网格线框</span><small>Wireframe overlay</small></div><button id="wire" class="switch" aria-label="切换线框" aria-pressed="false"></button></div><div class="setting"><div><span>暗色涂装</span><small>Stealth paint</small></div><button id="stealth" class="switch" aria-label="切换暗色涂装" aria-pressed="false"></button></div><div class="slider-head"><span>模块拆解 / EXPLODE</span><output id="explode-val">0%</output></div><input id="explode" type="range" min="0" max="100" value="0" /><div class="range-labels"><span>ASSEMBLED</span><span>EXPLODED</span></div></section>
-<section><h3>交互热点 / MODULES</h3><div class="modules" id="modules"><button data-module="hull">核心舰体<small>CORE HULL</small></button><button data-module="bow">双叉船首<small>FORWARD PRONGS</small></button><button data-module="crane">机械臂<small>ARTICULATED ARM</small></button><button data-module="upper">后部升降平台<small>RAISED ARRAY</small></button><button data-module="sensor">舰桥与传感器<small>SENSOR TOWERS</small></button><button data-module="engine">推进动力<small>DRIVE SYSTEM</small></button></div></section>
+<section><h3>交互热点 / MODULES</h3><div class="modules" id="modules"><button data-module="hull">核心舰体<small>CORE HULL</small></button><button data-module="bow">双叉船首<small>FORWARD PRONGS</small></button><button data-module="crane">机械臂<small>ARTICULATED ARM</small></button><button data-module="upper">单侧尾部<small>RAISED ARRAY</small></button><button data-module="sensor">导航与侧翼<small>SENSOR TOWERS</small></button><button data-module="engine">推进动力<small>DRIVE SYSTEM</small></button></div></section>
 <section><h3>模型文件 / EXPORT</h3><button class="secondary primary" id="export">↓ 导出 GLB 模型</button><button class="secondary" id="capture">↗ 保存当前视角 PNG</button><button class="secondary" id="reset">↺ 重置相机及效果</button></section></aside></main>
 <footer><span><strong>ORIGIN-01</strong> &nbsp; / &nbsp; ORIGINAL BRICK CONCEPT → DIGITAL RECONSTRUCTION</span><span>鼠标拖动 / 单指旋转 &nbsp; · &nbsp; 滚轮 / 双指缩放 &nbsp; <span class="kbd">R</span> 复位</span></footer></div>
 <script type="module">
@@ -44,12 +44,12 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 const $=id=>document.getElementById(id);
-const info={hull:['CORE HULL / 核心舰体','多层装甲与中部主承力框架，保留原始积木的宽扁非对称结构。'],bow:['FORWARD PRONGS / 双叉船首','双蓝色前叉、辅助探针及侧向机动模块，来自原始积木造型。'],crane:['ARTICULATED ARM / 机械臂','左舷高位重型机械臂，设有旋转关节、液压套筒与工具端。'],upper:['RAISED ARRAY / 后部升降平台','后方上扬的集成模块平台，配置装甲舱体及远程作业单元。'],sensor:['SENSORS / 舰桥与传感器','舰桥、白色信标塔与通信阵列，兼具导航和姿态监测功能。'],engine:['DRIVE SYSTEM / 推进动力','主动力喷口、近距机动引擎与导航照明。']};
+const info={hull:['CORE HULL / 核心舰体','扁平开放式格栅甲板，保留底部三块灰色装甲，明确结构空隙与承力桁架。'],bow:['FORWARD PRONGS / 双叉船首','两条细长、平行且分离的蓝色前叉，不对称布置白色导航桅杆。'],crane:['ARTICULATED ARM / 机械臂','向舰首倾斜的黑色多关节机械臂，按照多角度照片修正高度与倾角。'],upper:['RAISED ARRAY / 后部升降平台','单侧细长上扬的红蓝尾部桁架，末端为小型红白蓝十字形组件。'],sensor:['SENSORS / 舰桥与传感器','左前叉奶白色导航桅杆、中部短塔、侧面黄色稳定翼与不对称工具舱。'],engine:['DRIVE SYSTEM / 推进动力','分散式小型姿态喷口及航行灯，避免错误地改成传统大型对称推进器。']};
 const groups={}, exploders=[], lights=[];let wire=false,stealth=false,enginesOn=true,activeSelection=null,selectedBox=null,frame=0;
 const scene=new THREE.Scene();scene.background=new THREE.Color(0x050b13);scene.fog=new THREE.FogExp2(0x050b13,.0065);
-const viewer=$('viewer'), canvas=$('scene');const camera=new THREE.PerspectiveCamera(42,1,.05,900); camera.position.set(-17.7,13.8,22);let renderer;
+const viewer=$('viewer'), canvas=$('scene');const camera=new THREE.PerspectiveCamera(42,1,.05,900); camera.position.set(-19.2,13.2,21);let renderer;
 try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance',preserveDrawingBuffer:true}); renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.55;renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<800?1.5:1.85));}catch(err){$('error').style.display='block';$('error').textContent='无法初始化 WebGL：'+err.message;throw err;}
-const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.06;controls.minDistance=10;controls.maxDistance=68;controls.maxPolarAngle=Math.PI*.91;controls.target.set(0,.4,0);controls.autoRotate=true;controls.autoRotateSpeed=.55;controls.update();
+const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.06;controls.minDistance=10;controls.maxDistance=68;controls.maxPolarAngle=Math.PI*.99;controls.target.set(-.1,.65,0);controls.autoRotate=true;controls.autoRotateSpeed=.55;controls.update();
 scene.add(new THREE.HemisphereLight(0xadcff7,0x1e2533,2.6));const key=new THREE.DirectionalLight(0xf2e9d9,3.8);key.position.set(-6,15,12);scene.add(key);const rim=new THREE.DirectionalLight(0x2c9fe9,3.4);rim.position.set(10,6,-11);scene.add(rim);const fill=new THREE.PointLight(0xffa256,70,33);fill.position.set(9,3,-4);scene.add(fill);
 const mats={navy:new THREE.MeshStandardMaterial({color:0x1c446b,metalness:.78,roughness:.38}),blue:new THREE.MeshStandardMaterial({color:0x2768a9,metalness:.76,roughness:.38}),red:new THREE.MeshStandardMaterial({color:0xb93732,metalness:.68,roughness:.48}),white:new THREE.MeshStandardMaterial({color:0xcbd5dc,metalness:.67,roughness:.38}),light:new THREE.MeshStandardMaterial({color:0x8896a5,metalness:.8,roughness:.36}),metal:new THREE.MeshStandardMaterial({color:0x303e4b,metalness:.86,roughness:.38}),dark:new THREE.MeshStandardMaterial({color:0x101c27,metalness:.82,roughness:.52}),brown:new THREE.MeshStandardMaterial({color:0x795137,metalness:.63,roughness:.57}),yellow:new THREE.MeshStandardMaterial({color:0xb58532,metalness:.57,roughness:.47}),glass:new THREE.MeshStandardMaterial({color:0x173e5c,metalness:.6,roughness:.16,emissive:0x082746,emissiveIntensity:.8}),cyan:new THREE.MeshStandardMaterial({color:0x64d6ff,emissive:0x149fff,emissiveIntensity:3,metalness:.2,roughness:.12}),amber:new THREE.MeshStandardMaterial({color:0xffaf66,emissive:0xff681c,emissiveIntensity:3,metalness:.18,roughness:.16}),dimred:new THREE.MeshStandardMaterial({color:0xff6250,emissive:0xff1e0b,emissiveIntensity:3}),trim:new THREE.MeshStandardMaterial({color:0x72889b,metalness:.86,roughness:.31})};
 const defaultColors=Object.fromEntries(Object.entries(mats).map(([k,v])=>[k,v.color.getHex()]));
@@ -61,44 +61,186 @@ function addCyl(parent,m,p,r1,r2,length,segments=12,rotation=[0,0,0]){const mesh
 function addSphere(parent,m,p,r=.12){const mesh=new THREE.Mesh(new THREE.SphereGeometry(r,10,8),mats[m]||m);mesh.position.set(...p);parent.add(mesh);return mesh;}
 function bar(parent,m,a,b,width,depth){const p1=new THREE.Vector3(...a),p2=new THREE.Vector3(...b);const mesh=new THREE.Mesh(new THREE.BoxGeometry(width,p1.distanceTo(p2),depth),mats[m]||m);mesh.position.copy(p1).add(p2).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),p2.clone().sub(p1).normalize());parent.add(mesh);return mesh;}
 function detailRows(parent,x1,x2,y,zs,shade='metal',count=7){for(const z of zs)for(let i=0;i<count;i++){const x=x1+(x2-x1)*i/(count-1);addBox(parent,shade,[x,y,z],[.16,.035,.48]);}}
-// Main load-bearing hull: smooth plate armor, intentionally no toy-brick studs.
-addBox(hull,'dark',[0,-.34,0],[10.4,.85,5.15]);addBox(hull,'metal',[-.15,-.67,0],[8.7,.34,5.8]);addBox(hull,'light',[-1.5,.17,0],[4.7,.25,2.9]);addBox(hull,'metal',[2.1,.14,0],[5.2,.4,4.8]);
-addBox(hull,'navy',[-.95,.47,-1.1],[4.4,.24,1.18]);addBox(hull,'brown',[-1.12,.49,1.15],[2.5,.23,1.6]);addBox(hull,'brown',[1.3,.49,1.15],[2.0,.23,1.6]);addBox(hull,'red',[2.9,.54,-.75],[2.35,.24,1.3]);
-addBox(hull,'white',[.7,.62,.05],[.52,.28,5.5]);addBox(hull,'dark',[-3.4,.16,-2.55],[3,.56,1]);addBox(hull,'dark',[-3.1,.2,2.58],[3.15,.62,.95]);
-// Smooth hull plates and inset grilles.
-for(let i=-2;i<4;i++){addBox(hull,i%2?'metal':'dark',[i*.85,.7,-2.33],[.67,.065,.24]);addBox(hull,'trim',[i*.84,.71,2.3],[.52,.045,.14]);}
-for(let i=0;i<7;i++){addBox(hull,'dark',[-1.7+i*.48,.7,1.0],[.025,.04,1.15]);}
-for(const z of [-2.05,2.05]){addBox(hull,'light',[.3,-.52,z],[7.4,.14,.055]);addBox(hull,'cyan',[3.4,-.3,z],[.48,.075,.06]);}
-for(const z of [-2.35,2.35])for(let i=0;i<5;i++)addBox(hull,'trim',[-1.7+i*1.13,-.04,z],[.64,.09,.16]);
-// Side-mounted armored pods; multiple asymmetrical colors from original model.
-for(const s of [-1,1]){addBox(hull,s<0?'blue':'red',[1.5,-.07,s*3.05],[4.6,.7,1.12]);addBox(hull,s<0?'red':'white',[2.55,.45,s*3.12],[2.2,.26,.82]);addBox(hull,'metal',[.2,-.15,s*3.63],[2.1,.28,.17]);addBox(hull,'dark',[1.8,.16,s*3.66],[.9,.25,.14]);for(let j=0;j<5;j++)addBox(hull,'trim',[.65+j*.52,.57,s*3.18],[.028,.032,.68]);}
-// Front twin fork structures.
-for(const z of [-1.67,1.67]){addBox(bow,'dark',[-4.85,-.25,z],[6.25,.75,1.05]);addBox(bow,'blue',[-5.43,.17,z],[4.98,.5,.93]);addBox(bow,'navy',[-5.65,-.2,z],[4.35,.27,1.13]);addBox(bow,'white',[-4.12,.52,z],[.75,.32,1.18]);addBox(bow,'dark',[-2.95,.36,z],[.42,.24,1.18]);addBox(bow,'cyan',[-6.6,.49,z],[.7,.085,.56]);addCyl(bow,'metal',[-8.17,.06,z],.12,.17,.88,12,[0,0,Math.PI/2]);addCyl(bow,'dimred',[-8.72,.06,z],.07,.06,.09,12,[0,0,Math.PI/2]);for(let i=0;i<4;i++)addBox(bow,'trim',[-6.2+i*.85,.46,z],[.035,.035,.78]);}
-addBox(bow,'metal',[-5.55,-.49,0],[3.5,.25,2.65]);addBox(bow,'dark',[-3.55,-.05,0],[1.5,.56,2.92]);
-// Extra right-forward side tool pod.
-addBox(bow,'red',[-3.65,-.01,3.32],[1.9,.58,.9]);addBox(bow,'white',[-4.05,.42,3.22],[1.1,.24,.83]);bar(bow,'white',[-4.3,.34,3.8],[-5.55,-.35,4.4],.72,.72);addCyl(bow,'metal',[-5.62,-.32,4.42],.16,.15,.38,12,[0,0,Math.PI/2]);
-// Mechanical crane: original elevated dark ribbed diagonal.
-const cranePts=[[-.45,.5,-1.7],[-1.25,1.5,-1.75],[-2.25,2.55,-1.8],[-3.48,3.75,-1.88],[-4.45,4.62,-1.95]];
-for(let i=0;i<cranePts.length-1;i++){bar(crane,'dark',cranePts[i],cranePts[i+1],.84,.63);bar(crane,'metal',cranePts[i].map((v,j)=>j===2?v+.35:v),cranePts[i+1].map((v,j)=>j===2?v+.35:v),.15,.15);if(i>0)addSphere(crane,'yellow',cranePts[i],.28);}
-addBox(crane,'metal',[-4.58,4.75,-1.93],[1.2,.7,.84],[0,0,-.27]);addBox(crane,'dark',[-4.97,4.87,-1.92],[.47,.9,.9]);for(let i=0;i<4;i++)addBox(crane,'yellow',[-3.7+i*.45,3.78-i*.47,-1.49],[.18,.11,.08]);
-// Central navigation bridge, signaling masts.
-addBox(sensor,'red',[.62,.85,-.16],[1.8,.42,1.7]);addBox(sensor,'white',[.36,1.12,-.1],[.75,.25,1.4]);addBox(sensor,'blue',[.55,1.58,-.1],[.65,.86,.58]);addBox(sensor,'white',[.53,2.12,-.1],[.92,.27,.9]);addBox(sensor,'glass',[.58,2.26,.15],[.52,.26,.08]);addCyl(sensor,'white',[.55,2.61,-.1],.105,.105,.68,8);addSphere(sensor,'amber',[.55,2.98,-.1],.11);
-// Tall white tower on front left in original photo.
-addBox(sensor,'white',[-3.58,.67,1.69],[.9,.36,1.12]);addCyl(sensor,'white',[-3.58,1.54,1.69],.29,.35,1.65,10);addBox(sensor,'light',[-3.58,2.31,1.69],[.73,.24,.72]);addCyl(sensor,'dark',[-3.58,2.52,1.69],.23,.23,.22,10);addBox(sensor,'cyan',[-3.58,1.82,2.01],[.3,.09,.055]);
-addCyl(sensor,'white',[2.02,1.18,1.75],.2,.24,.72,8);addSphere(sensor,'amber',[2.02,1.6,1.75],.14);
-// Raised right-rear array, slanted base and clustered terminal assembly.
-bar(upper,'white',[3.2,.5,-1.45],[5.95,3.28,-1.78],1.13,1.18);bar(upper,'blue',[3.53,.65,-1.43],[6.3,3.36,-1.76],.44,1.42);bar(upper,'red',[3.7,.67,-.72],[5.45,2.43,-1.0],.35,.43);
-const pod=new THREE.Group();pod.position.set(6.55,3.65,-1.78);pod.rotation.z=-.38;upper.add(pod);
-addBox(pod,'dark',[.2,0,0],[3.85,1.45,2.18]);addBox(pod,'blue',[-.1,.73,.25],[3.4,.21,1.9]);addBox(pod,'white',[-.28,.88,-.54],[3.05,.27,.68]);addBox(pod,'yellow',[-.4,-.68,-.53],[1.6,.25,.58]);addBox(pod,'red',[1.57,.4,-.7],[.82,.75,.72]);addBox(pod,'red',[1.57,.4,.7],[.82,.75,.72]);for(const z of [-.8,.8]){addCyl(pod,'metal',[2.07,.1,z],.36,.4,.53,12,[0,0,-Math.PI/2]);addCyl(pod,'amber',[2.38,.1,z],.23,.23,.08,12,[0,0,-Math.PI/2]);}
-for(let j=0;j<4;j++)addBox(pod,j%2?'dark':'trim',[-1.12+j*.69,.88,0],[.09,.045,1.65]);
-addBox(upper,'red',[3.54,.52,-2.45],[2.9,.36,.85]);addBox(upper,'blue',[2.72,.7,-2.2],[1.2,.17,.86]);
-// Main engine pods, exhaust luminescence is real geometry.
-function engineNozzle(parent,x,y,z,scale=1){addCyl(parent,'metal',[x,y,z],.46*scale,.59*scale,.68*scale,16,[0,0,-Math.PI/2]);const e=addCyl(parent,'amber',[x+.38*scale,y,z],.34*scale,.34*scale,.06*scale,16,[0,0,-Math.PI/2]);lights.push(e);addCyl(parent,'dark',[x-.38*scale,y,z],.41*scale,.41*scale,.4*scale,16,[0,0,-Math.PI/2]);for(let i=0;i<8;i++){const a=i*Math.PI/4;addBox(parent,'trim',[x+.05*scale,y+Math.cos(a)*.42*scale,z+Math.sin(a)*.42*scale],[.42*scale,.07*scale,.07*scale],[a,0,0]);}}
-for(const z of [-2.7,2.75]){addBox(engine,z<0?'red':'blue',[4.63,-.29,z],[1.6,.76,1.14]);engineNozzle(engine,5.56,-.29,z,.8);}
-engineNozzle(engine,4.7,-.52,-.72,.65);engineNozzle(engine,4.7,-.52,.72,.65);
-addBox(engine,'dark',[4.3,-.85,0],[1.8,.3,2.6]);for(const z of [-3.65,3.65])addSphere(engine,'dimred',[3.1,.1,z],.09);
-// Tiny illuminated windows aligned with armored sides.
-for(const z of [-3.63,3.63])for(let i=0;i<7;i++)addBox(hull,i%3===0?'cyan':'glass',[.35+i*.42,.23,z],[.18,.075,.065]);
+// V0.2 multi-view reconstruction: visual ratios based on seven additional photos.
+// The original is an asymmetric open-truss craft, not a symmetrical bulky cruiser.
+// Negative X: paired forward forks. Positive X: long elevated stern boom.
+// Positive Z: cream sensor mast and yellow lateral spar.
+// All outward surfaces are contiguous metal panels; no brick studs.
+function armor(parent, color, center, size, edgeColor='dark') {
+  addBox(parent, edgeColor, [center[0],center[1]-.055,center[2]],[size[0]+.035,size[1]+.085,size[2]+.035]);
+  return addBox(parent,color,center,size);
+}
+function inset(parent, color, center, size){return addBox(parent,color,center,size)}
+function tapered(parent, color, p, length, high, wide, front=.45){
+  // Four-sided streamlined plate, length is aligned with local X.
+  const f=front, l=length/2,w=wide/2,h=high/2;
+  const verts=[
+    -l,-h,-w*f, -l,-h,w*f, -l,h,w*f, -l,h,-w*f,
+    l,-h,-w,l,-h,w,l,h,w,l,h,-w
+  ];
+  const faces=[0,1,2,0,2,3, 4,7,6,4,6,5, 0,4,5,0,5,1, 3,2,6,3,6,7, 1,5,6,1,6,2, 0,3,7,0,7,4];
+  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));g.setIndex(faces);g.computeVertexNormals();
+  const mesh=new THREE.Mesh(g,mats[color]);mesh.position.set(...p);parent.add(mesh);return mesh;
+}
+function strut(parent,color,a,b,width=.17,depth=.15){return bar(parent,color,a,b,width,depth)}
+function joint(parent,x,y,z,r=.28){
+  addCyl(parent,'dark',[x,y,z],r*1.13,r*1.13,.32,12,[Math.PI/2,0,0]);
+  addCyl(parent,'trim',[x,y,z+.20],r*.61,r*.61,.04,12,[Math.PI/2,0,0]);
+}
+function panelRibs(parent,x0,x1,y,z,n=6){for(let i=0;i<n;i++){
+  const x=x0+(x1-x0)*i/Math.max(n-1,1);
+  inset(parent,'metal',[x,y,z],[.045,.065,.52]);
+}}
+function sideLamp(parent,x,y,z,color='cyan',scale=1){
+  addBox(parent,'dark',[x,y,z],[.33*scale,.11*scale,.21*scale]);
+  const b=addBox(parent,color,[x,y+.065*scale,z],[.20*scale,.035*scale,.11*scale]);
+  if(color==='amber')lights.push(b);
+}
+function vent(parent,p,width=.9){
+  addBox(parent,'dark',p,[width,.054,.44]);
+  for(let i=0;i<5;i++)addBox(parent,'trim',[p[0]-width*.39+i*width*.195,p[1]+.042,p[2]],[.036,.014,.34]);
+}
+function nozzle(parent,p,scale=1){
+  const [x,y,z]=p;
+  addCyl(parent,'metal',[x,y,z],.39*scale,.49*scale,.62*scale,20,[0,0,-Math.PI/2]);
+  addCyl(parent,'dark',[x-.31*scale,y,z],.38*scale,.38*scale,.20*scale,18,[0,0,-Math.PI/2]);
+  addCyl(parent,'trim',[x+.32*scale,y,z],.36*scale,.36*scale,.07*scale,18,[0,0,-Math.PI/2]);
+  const fire=addCyl(parent,'amber',[x+.37*scale,y,z],.28*scale,.28*scale,.065*scale,18,[0,0,-Math.PI/2]);lights.push(fire);
+}
+
+// A. Broad but very thin open lattice main deck; negative spaces remain visible.
+const ribsZ=[-2.25,-1.48,0,1.55,2.3];
+for(const z of ribsZ){
+  strut(hull,'dark',[-3.80,-.28,z],[3.56,-.28,z],.22,.22);
+  strut(hull,'metal',[-3.65,-.62,z],[3.30,-.62,z],.17,.16);
+}
+for(let x=-3.55;x<=3.55;x+=.78){
+  strut(hull,'dark',[x,-.31,-2.58],[x,-.31,2.48],.21,.17);
+}
+for(let z of [-2.55,2.50]){
+  strut(hull,'metal',[-3.85,-.49,z],[3.68,-.49,z],.12,.11);
+  for(let x=-3.4;x<3.4;x+=.85)addBox(hull,'trim',[x,-.21,z],[.33,.09,.14]);
+}
+// Dark central keel, visible bays, longitudinal reinforcing beams.
+armor(hull,'dark',[-.30,-.44,.06],[5.95,.27,2.35]);
+addBox(hull,'metal',[-1.78,-.17,.05],[3.34,.055,1.04]);
+addBox(hull,'dark',[1.60,-.16,-.20],[2.0,.08,1.24]);
+for(let z of [-.69,.71])strut(hull,'metal',[-3.05,-.05,z],[3.25,-.05,z],.10,.12);
+// Underbody: photographed underside has three conspicuous pale rectangular slabs.
+for(const [x,z,dx,dz] of [[-1.75,-.80,2.75,1.18],[-1.75,.72,2.75,1.16],[-3.17,-.05,1.0,2.1]]){
+  armor(hull,'light',[x,-.81,z],[dx,.13,dz]);
+  for(let q=0;q<4;q++)addBox(hull,'metal',[x-dx*.36+q*dx*.24,-.884,z],[.028,.018,dz*.70]);
+}
+// Distinctive sparse top deck color patches, not a continuous armored slab.
+armor(hull,'brown',[-2.00,.02,-1.43],[1.40,.25,.83]);
+armor(hull,'brown',[-.62,.07,1.12],[1.32,.25,1.03]);
+armor(hull,'brown',[1.71,.10,1.48],[1.31,.22,1.06]);
+armor(hull,'blue',[-.45,.08,-1.33],[1.19,.21,.85]);
+armor(hull,'navy',[1.34,.11,-1.18],[1.18,.21,.83]);
+armor(hull,'red',[1.89,.19,-2.10],[1.2,.29,.63]);
+armor(hull,'red',[-.99,.16,2.29],[1.12,.24,.68]);
+armor(hull,'white',[-1.33,.14,2.43],[.48,.22,.65]);
+armor(hull,'yellow',[-1.30,.16,-.21],[.59,.24,.42]);
+for(const [x,z] of [[-1.6,.35],[-1.08,-.3],[.38,1.88],[2.55,1.85]]){
+  vent(hull,[x,.22,z],.58);
+}
+// Extra exposed diagonal members: deliberately irregular, faithful to the photographed build.
+strut(hull,'brown',[-2.68,.17,-1.94],[-1.05,.17,-1.94],.26,.28);
+strut(hull,'brown',[-1.30,.24,2.04],[.32,.24,2.68],.20,.27);
+strut(hull,'dark',[.55,.16,-2.45],[1.95,.19,-2.10],.28,.22);
+// White perpendicular beam crossing the deck, well above the flat surface.
+strut(hull,'white',[.48,.62,-2.65],[.48,.62,2.48],.30,.39);
+for(const z of [-2.55,2.38])addBox(hull,'metal',[.48,.61,z],[.45,.34,.30]);
+
+// B. Two narrow parallel prow forks; leave an unobstructed gap between them.
+for(const z of [-1.75,1.65]){
+  strut(bow,'dark',[-6.55,-.15,z],[-3.42,-.15,z],.38,.55);
+  strut(bow,'blue',[-7.17,.07,z],[-3.89,.07,z],.28,.43);
+  addBox(bow,'navy',[-6.20,.12,z],[1.75,.15,.39]);
+  tapered(bow,'blue',[-7.50,.035,z],.96,.28,.45,.20);
+  for(const x of [-6.8,-5.65])addBox(bow,'trim',[x,.17,z],[.18,.035,.26]);
+  sideLamp(bow,-6.35,.21,z,'cyan',.65);
+}
+// Fork bracing and white transverse crosspiece located near the sensor mast.
+strut(bow,'dark',[-4.80,-.34,-2.18],[-4.80,-.34,2.12],.24,.28);
+strut(bow,'white',[-5.25,.29,-1.90],[-5.25,.29,2.18],.25,.26);
+addBox(bow,'white',[-4.92,.10,1.62],[1.02,.24,.48]);
+addBox(bow,'dark',[-3.90,-.05,-.13],[1.08,.32,2.20]);
+// The short side tool at mid-front is not mirrored.
+strut(bow,'red',[-2.80,-.24,2.40],[-2.52,-.24,3.47],.45,.39);
+addBox(bow,'white',[-2.55,-.21,3.61],[.85,.43,.60]);
+
+// C. Black high crane from the left-mid deck; articulated and diagonally forward.
+const cranePoints=[[-.52,.29,-.94],[-1.24,1.13,-1.31],[-2.15,2.15,-1.66],[-3.04,2.95,-1.93],[-3.89,3.64,-2.20]];
+for(let i=0;i<cranePoints.length-1;i++){
+  strut(crane,'dark',cranePoints[i],cranePoints[i+1],.42,.53);
+  const p=cranePoints[i],q=cranePoints[i+1];
+  strut(crane,'metal',[p[0],p[1]+.08,p[2]+.33],[q[0],q[1]+.08,q[2]+.33],.11,.12);
+  strut(crane,'trim',[p[0],p[1]-.09,p[2]-.30],[q[0],q[1]-.09,q[2]-.30],.07,.08);
+  if(i<3)joint(crane,p[0],p[1],p[2],.30);
+}
+addBox(crane,'dark',[-4.13,3.76,-2.23],[.85,.53,.65],[0,0,-.3]);
+addBox(crane,'metal',[-4.49,3.96,-2.25],[.43,.41,.52]);
+strut(crane,'yellow',[-1.20,.52,-1.14],[-1.83,1.23,-1.34],.16,.20);
+for(const p of [[-2.25,2.12,-1.66],[-3.10,2.94,-1.94]]){
+  addBox(crane,'trim',[p[0],p[1],p[2]-.37],[.20,.24,.10]);
+}
+
+// D. A conspicuously one-sided stern boom, raised above the deck.
+// In the photos the stern terminal is a small cross-shaped red / white / blue pod,
+// not a mirrored set of oversized fighter engines.
+strut(upper,'red',[2.45,.12,-1.60],[5.15,1.22,-1.50],.40,.66);
+strut(upper,'blue',[2.67,.33,-1.48],[5.34,1.48,-1.44],.34,.56);
+strut(upper,'metal',[3.03,-.02,-1.72],[5.00,1.16,-1.77],.16,.18);
+armor(upper,'blue',[3.42,.48,-1.55],[1.18,.22,.91]);
+armor(upper,'red',[4.55,.83,-1.52],[1.33,.19,.92]);
+const pod=new THREE.Group();pod.position.set(6.32,2.22,-1.46);pod.rotation.z=.34;upper.add(pod);
+armor(pod,'white',[-.17,.02,0],[2.44,.62,1.05]);
+armor(pod,'blue',[-.31,.28,-.17],[1.70,.29,.70]);
+armor(pod,'yellow',[.78,-.01,0],[.56,.55,.68]);
+armor(pod,'red',[1.08,.24,-.63],[.85,.48,.58]);
+armor(pod,'red',[1.08,.24,.64],[.85,.48,.56]);
+strut(pod,'white',[.62,.18,-1.15],[.62,.18,1.20],.19,.22);
+addBox(pod,'metal',[1.23,-.22,0],[.46,.34,.58]);
+addCyl(pod,'dark',[1.37,-.24,0],.20,.27,.40,16,[0,0,Math.PI/2]);
+for(const z of [-.7,.70])sideLamp(pod,1.25,.54,z,'dimred',.70);
+// Slender rear auxiliary boom below the terminal.
+strut(upper,'white',[3.47,-.33,-2.31],[4.38,-.13,-2.31],.26,.26);
+addBox(upper,'yellow',[3.83,.15,-2.42],[.35,.36,.39]);
+
+// E. Small visible bridge towers, yellow starboard fin and white bow mast.
+addBox(sensor,'dark',[.37,.36,.19],[.93,.30,.88]);
+addBox(sensor,'red',[.56,.59,.04],[.81,.24,.81]);
+addBox(sensor,'white',[.53,.91,.08],[.37,.48,.40]);
+addBox(sensor,'blue',[.53,1.25,.09],[.26,.34,.28]);
+addCyl(sensor,'white',[.54,1.58,.09],.075,.075,.36,10);
+addSphere(sensor,'amber',[.54,1.81,.09],.085);
+// Forward mast supported by cross-bracing, on ONE fork only.
+addBox(sensor,'white',[-5.15,.53,1.62],[.54,.46,.58]);
+addCyl(sensor,'white',[-5.15,1.20,1.62],.22,.22,1.17,10);
+addCyl(sensor,'trim',[-5.15,1.82,1.62],.18,.18,.12,12);
+strut(sensor,'white',[-5.15,.61,1.26],[-5.15,.61,2.30],.17,.17);
+// Thin cream angled blade and tall yellow/white lateral stabilizer on opposite side.
+strut(sensor,'yellow',[-.21,-.04,2.05],[-.27,-.04,4.62],.40,.28);
+strut(sensor,'white',[-.27,-.01,4.11],[-.37,-.01,5.06],.32,.28);
+tapered(sensor,'white',[-.39,-.00,5.31],.75,.26,.37,.15).rotation.y=-Math.PI/2;
+armor(sensor,'yellow',[-.20,.20,3.17],[.65,.29,.69]);
+// Aft side stabilizer and offset secondary maintenance pod.
+strut(sensor,'brown',[1.60,.06,2.10],[2.73,.06,3.25],.28,.28);
+armor(sensor,'brown',[2.49,.22,2.70],[1.13,.20,.70]);
+addBox(sensor,'white',[2.28,-.09,3.32],[1.31,.23,.32]);
+armor(sensor,'red',[1.12,.32,2.76],[.80,.29,.68]);
+armor(sensor,'blue',[1.34,-.06,3.18],[1.21,.22,.65]);
+addBox(sensor,'dark',[1.36,.18,3.20],[.22,.38,.26]);
+
+// F. Small auxiliary thrusters and orientation lights; nothing symmetrical by accident.
+nozzle(engine,[3.27,-.46,-.98],.44);
+nozzle(engine,[3.27,-.46,.86],.39);
+nozzle(engine,[4.92,.46,-1.51],.48);
+for(const [x,y,z,c] of [[-6.97,.16,-1.75,'cyan'],[-6.97,.16,1.65,'cyan'],[2.73,.48,2.85,'dimred'],[4.73,.84,-2.08,'dimred']]){
+  sideLamp(engine,x,y,z,c,.70);
+}
+
 // Starfield and horizon decoration; lightweight points, no image textures.
 const rand=(seed=>()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;})(83);
 const starPositions=[];for(let i=0;i<750;i++){const x=(rand()-.5)*180,y=(rand()-.5)*115,z=(rand()-.5)*180;if(x*x+y*y+z*z<1700)continue;starPositions.push(x,y,z);}const starGeo=new THREE.BufferGeometry();starGeo.setAttribute('position',new THREE.Float32BufferAttribute(starPositions,3));const stars=new THREE.Points(starGeo,new THREE.PointsMaterial({color:0x83b5d8,size:.26,sizeAttenuation:true,transparent:true,opacity:.67,depthWrite:false}));scene.add(stars);
@@ -112,11 +254,11 @@ $('wire').onclick=()=>{wire=!wire;Object.values(mats).forEach(m=>{if(!['cyan','a
 $('stealth').onclick=()=>{stealth=!stealth;const painting=stealth?{blue:0x344a60,navy:0x273444,red:0x5b616e,white:0x737e8c,brown:0x3c4653,yellow:0x656c63}:defaultColors;for(const [k,v] of Object.entries(painting))if(mats[k])mats[k].color.setHex(v);setToggle('stealth',stealth)};
 function inspect(key){activeSelection=key;document.querySelectorAll('[data-module]').forEach(el=>el.classList.toggle('active',el.dataset.module===key));if(selectedBox){scene.remove(selectedBox);selectedBox.geometry.dispose();selectedBox.material.dispose();selectedBox=null;}if(key && groups[key]){selectedBox=new THREE.BoxHelper(groups[key],0x69d6ff);scene.add(selectedBox);$('module-title').textContent=info[key][0];$('module-desc').textContent=info[key][1];}else{$('module-title').textContent='◈ INTERACTIVE INSPECTOR';$('module-desc').textContent='拖动旋转 · 滚轮缩放 · 点击舰体检查部件';}}
 document.querySelectorAll('[data-module]').forEach(el=>el.onclick=()=>{inspect(el.dataset.module);controls.autoRotate=false;setToggle('auto',false)});
-const presets={iso:[-17.7,13.8,22],top:[0,27,.001],front:[-28,4,.001],side:[0,6,29]};let cameraDest=null;
+const presets={iso:[-19.2,13.2,21],top:[0,28,.001],front:[-29,4,.001],side:[0,7,29],under:[0,-28,.001]};let cameraDest=null;
 function setView(name){cameraDest=new THREE.Vector3(...presets[name]);controls.autoRotate=false;setToggle('auto',false);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));}
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
 let pointerDown=null;canvas.addEventListener('pointerdown',e=>{pointerDown={x:e.clientX,y:e.clientY}});canvas.addEventListener('pointerup',e=>{if(!pointerDown||Math.hypot(e.clientX-pointerDown.x,e.clientY-pointerDown.y)>7)return;const point=new THREE.Vector2((e.clientX-canvas.getBoundingClientRect().left)/canvas.clientWidth*2-1,-(e.clientY-canvas.getBoundingClientRect().top)/canvas.clientHeight*2+1);const rc=new THREE.Raycaster();rc.setFromCamera(point,camera);let hits=rc.intersectObjects(Object.values(groups),true);if(hits.length){let o=hits[0].object;while(o&&!o.userData.moduleKey)o=o.parent;if(o)inspect(o.userData.moduleKey)}else inspect(null);});
-function reset(){camera.position.set(...presets.iso);controls.target.set(0,.4,0);controls.autoRotate=true;setToggle('auto',true);cameraDest=null;controls.update();$('explode').value=0;updateExplode(0);if(wire)$('wire').click();if(stealth)$('stealth').click();if(!enginesOn)$('engines').click();inspect(null);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view==='iso'));}
+function reset(){camera.position.set(...presets.iso);controls.target.set(-.1,.65,0);controls.autoRotate=true;setToggle('auto',true);cameraDest=null;controls.update();$('explode').value=0;updateExplode(0);if(wire)$('wire').click();if(stealth)$('stealth').click();if(!enginesOn)$('engines').click();inspect(null);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view==='iso'));}
 $('reset').onclick=reset;window.addEventListener('keydown',e=>{if(e.key.toLowerCase()==='r')reset()});
 $('capture').onclick=()=>{renderer.render(scene,camera);const link=document.createElement('a');link.href=canvas.toDataURL('image/png');link.download='ORIGIN-01-view.png';link.click();};
 $('export').onclick=async()=>{const btn=$('export'),old=btn.textContent;btn.disabled=true;btn.textContent='正在生成 GLB…';try{const exportRoot=ship.clone(true);exportRoot.traverse(obj=>{if(obj.isMesh){obj.material=obj.material.clone();obj.material.wireframe=false;}});const exporter=new GLTFExporter();const data=await exporter.parseAsync(exportRoot,{binary:true,onlyVisible:true,trs:true});const link=document.createElement('a'),url=URL.createObjectURL(new Blob([data],{type:'model/gltf-binary'}));link.href=url;link.download='ORIGIN-01-procedural.glb';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch(err){console.error(err);alert('GLB 导出失败，请查看控制台：'+err.message)}finally{btn.disabled=false;btn.textContent=old}};
