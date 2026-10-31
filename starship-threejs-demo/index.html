@@ -31,7 +31,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:0 3
 <header><div class="brand"><div class="logo"><span>◇</span></div><div class="wordmark">ORIGIN <small>STARSHIP DESIGN LAB</small></div></div><div class="header-center">CONCEPT / ASSET 001</div><div class="header-right"><span class="live"><i class="dot"></i> REALTIME 3D</span><span class="edition">THREE.JS / 2026</span></div></header>
 <main><div class="viewer" id="viewer"><canvas id="scene" aria-label="可交互的星舰三维画布"></canvas><div id="error" class="status"></div>
 <div class="viewer-label"><div class="eyebrow">EXPLORATION CLASS · 01</div><h1>ORIGIN-01</h1><p>9 张照片校准 · 俯视坐标重建<br/>窄距双叉舰首 · 中线高架尾臂 · 偏左机械臂</p><div class="line"></div></div>
-<div class="top-float"><div class="tag">MODEL <b>V0.3</b></div><div class="tag">PROCEDURAL <b>3D</b></div></div>
+<div class="top-float"><div class="tag">MODEL <b>V0.3.1</b></div><div class="tag">PROCEDURAL <b>3D</b></div></div>
 <div class="view-bottom"><div class="detail-hint"><div class="hint-title" id="module-title">◈ INTERACTIVE INSPECTOR</div><div class="hint-body" id="module-desc">拖动旋转 · 滚轮缩放 · 点击舰体检查部件</div></div><div class="view-presets"><button class="active" data-view="iso">透视</button><button data-view="top">俯视</button><button data-view="front">正面</button><button data-view="side">侧面</button><button data-view="under">船底</button></div></div>
 </div>
 <aside class="panel"><section><div class="eyebrow">DESIGN DOSSIER</div><h2>舰体档案 / PROFILE</h2><div class="info-row"><span>分类</span><strong>重型多用途星舰</strong></div><div class="info-row"><span>结构</span><strong>非对称模块布局</strong></div><div class="info-row"><span>材质</span><strong>PBR 金属装甲</strong></div><div class="info-row"><span>建模方式</span><strong>程序化概念重建</strong></div><div class="paint"><i class="swatch" style="background:#285ca7"></i><i class="swatch" style="background:#c54540"></i><i class="swatch" style="background:#d2d8d8"></i><i class="swatch" style="background:#282e38"></i><i class="swatch" style="background:#89613e"></i><small>ORIGINAL PALETTE</small></div></section>
@@ -39,6 +39,25 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:0 3
 <section><h3>交互热点 / MODULES</h3><div class="modules" id="modules"><button data-module="hull">核心舰体<small>CORE HULL</small></button><button data-module="bow">双叉船首<small>FORWARD PRONGS</small></button><button data-module="crane">机械臂<small>ARTICULATED ARM</small></button><button data-module="upper">中线高架尾臂<small>RAISED ARRAY</small></button><button data-module="sensor">导航与侧翼<small>SENSOR TOWERS</small></button><button data-module="engine">推进动力<small>DRIVE SYSTEM</small></button></div></section>
 <section><h3>模型文件 / EXPORT</h3><button class="secondary primary" id="export">↓ 导出 GLB 模型</button><button class="secondary" id="capture">↗ 保存当前视角 PNG</button><button class="secondary" id="reset">↺ 重置相机及效果</button></section></aside></main>
 <footer><span><strong>ORIGIN-01</strong> &nbsp; / &nbsp; ORIGINAL BRICK CONCEPT → DIGITAL RECONSTRUCTION</span><span>鼠标拖动 / 单指旋转 &nbsp; · &nbsp; 滚轮 / 双指缩放 &nbsp; <span class="kbd">R</span> 复位</span></footer></div>
+<script>
+window.__starshipStatus='loading';
+(function(){
+  let shown=false;
+  function showError(message){
+    if(window.__starshipStatus==='ready')return;
+    const el=document.getElementById('error'); if(!el)return;
+    el.style.display='block';
+    el.textContent='3D 模型加载失败：'+String(message||'未知错误')+'。可尝试刷新页面，或检查浏览器 WebGL 与网络连接。';
+    shown=true;
+  }
+  window.addEventListener('error',function(e){
+    if(e.target&&e.target!==window&&e.target.tagName==='SCRIPT')showError('Three.js 依赖加载失败');
+    else if(e.message)showError(e.message);
+  },true);
+  window.addEventListener('unhandledrejection',function(e){showError(e.reason&&e.reason.message||e.reason)},true);
+  setTimeout(function(){if(window.__starshipStatus!=='ready'&&!shown)showError('加载超时，可能无法连接静态资源服务');},16000);
+})();
+</script>
 <script type="module">
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -61,6 +80,33 @@ function addCyl(parent,m,p,r1,r2,length,segments=12,rotation=[0,0,0]){const mesh
 function addSphere(parent,m,p,r=.12){const mesh=new THREE.Mesh(new THREE.SphereGeometry(r,10,8),mats[m]||m);mesh.position.set(...p);parent.add(mesh);return mesh;}
 function bar(parent,m,a,b,width,depth){const p1=new THREE.Vector3(...a),p2=new THREE.Vector3(...b);const mesh=new THREE.Mesh(new THREE.BoxGeometry(width,p1.distanceTo(p2),depth),mats[m]||m);mesh.position.copy(p1).add(p2).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),p2.clone().sub(p1).normalize());parent.add(mesh);return mesh;}
 function detailRows(parent,x1,x2,y,zs,shade='metal',count=7){for(const z of zs)for(let i=0;i<count;i++){const x=x1+(x2-x1)*i/(count-1);addBox(parent,shade,[x,y,z],[.16,.035,.48]);}}
+
+function armor(parent,color,center,size,edgeColor='dark'){
+  addBox(parent,edgeColor,[center[0],center[1]-.055,center[2]],[size[0]+.035,size[1]+.085,size[2]+.035]);
+  return addBox(parent,color,center,size);
+}
+function strut(parent,color,a,b,width=.17,depth=.15){return bar(parent,color,a,b,width,depth)}
+function joint(parent,x,y,z,r=.28){
+  addCyl(parent,'dark',[x,y,z],r*1.13,r*1.13,.32,12,[Math.PI/2,0,0]);
+  addCyl(parent,'trim',[x,y,z+.20],r*.61,r*.61,.04,12,[Math.PI/2,0,0]);
+}
+function sideLamp(parent,x,y,z,color='cyan',scale=1){
+  addBox(parent,'dark',[x,y,z],[.33*scale,.11*scale,.21*scale]);
+  const b=addBox(parent,color,[x,y+.065*scale,z],[.20*scale,.035*scale,.11*scale]);
+  if(color==='amber')lights.push(b);
+}
+function vent(parent,p,width=.9){
+  addBox(parent,'dark',p,[width,.054,.44]);
+  for(let i=0;i<5;i++)addBox(parent,'trim',[p[0]-width*.39+i*width*.195,p[1]+.042,p[2]],[.036,.014,.34]);
+}
+function nozzle(parent,p,scale=1){
+  const [x,y,z]=p;
+  addCyl(parent,'metal',[x,y,z],.39*scale,.49*scale,.62*scale,20,[0,0,-Math.PI/2]);
+  addCyl(parent,'dark',[x-.31*scale,y,z],.38*scale,.38*scale,.20*scale,18,[0,0,-Math.PI/2]);
+  addCyl(parent,'trim',[x+.32*scale,y,z],.36*scale,.36*scale,.07*scale,18,[0,0,-Math.PI/2]);
+  const fire=addCyl(parent,'amber',[x+.37*scale,y,z],.28*scale,.28*scale,.065*scale,18,[0,0,-Math.PI/2]);
+  lights.push(fire);
+}
 // V0.3 — photo-anchored planform, calibrated against 1000068803.jpg.
 // Original image orientation: two blue forward forks = bottom of photo; raised T-array = top.
 // 1 unit ~82 reference pixels. Only X/Z centers are photo-anchored; height inferred from oblique shots.
@@ -231,7 +277,7 @@ $('stealth').onclick=()=>{stealth=!stealth;const painting=stealth?{blue:0x344a60
 function inspect(key){activeSelection=key;document.querySelectorAll('[data-module]').forEach(el=>el.classList.toggle('active',el.dataset.module===key));if(selectedBox){scene.remove(selectedBox);selectedBox.geometry.dispose();selectedBox.material.dispose();selectedBox=null;}if(key && groups[key]){selectedBox=new THREE.BoxHelper(groups[key],0x69d6ff);scene.add(selectedBox);$('module-title').textContent=info[key][0];$('module-desc').textContent=info[key][1];}else{$('module-title').textContent='◈ INTERACTIVE INSPECTOR';$('module-desc').textContent='拖动旋转 · 滚轮缩放 · 点击舰体检查部件';}}
 document.querySelectorAll('[data-module]').forEach(el=>el.onclick=()=>{inspect(el.dataset.module);controls.autoRotate=false;setToggle('auto',false)});
 const presets={iso:[-18,17,22],top:[0,28,.001],front:[-29,4,.001],side:[0,7,29],under:[0,-28,.001]};let cameraDest=null;
-function setView(name){camera.up.set(...(name==='top'?[1,0,0]:name==='under'?[-1,0,0]:[0,1,0]));cameraDest=new THREE.Vector3(...presets[name]);controls.autoRotate=false;setToggle('auto',false);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));}
+function setView(name){camera.up.set(...(name==='top'?[-1,0,0]:name==='under'?[1,0,0]:[0,1,0]));cameraDest=new THREE.Vector3(...presets[name]);controls.autoRotate=false;setToggle('auto',false);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));}
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
 let pointerDown=null;canvas.addEventListener('pointerdown',e=>{pointerDown={x:e.clientX,y:e.clientY}});canvas.addEventListener('pointerup',e=>{if(!pointerDown||Math.hypot(e.clientX-pointerDown.x,e.clientY-pointerDown.y)>7)return;const point=new THREE.Vector2((e.clientX-canvas.getBoundingClientRect().left)/canvas.clientWidth*2-1,-(e.clientY-canvas.getBoundingClientRect().top)/canvas.clientHeight*2+1);const rc=new THREE.Raycaster();rc.setFromCamera(point,camera);let hits=rc.intersectObjects(Object.values(groups),true);if(hits.length){let o=hits[0].object;while(o&&!o.userData.moduleKey)o=o.parent;if(o)inspect(o.userData.moduleKey)}else inspect(null);});
 function reset(){camera.up.set(0,1,0);camera.position.set(...presets.iso);controls.target.set(-.55,.55,0);controls.autoRotate=true;setToggle('auto',true);cameraDest=null;controls.update();$('explode').value=0;updateExplode(0);if(wire)$('wire').click();if(stealth)$('stealth').click();if(!enginesOn)$('engines').click();inspect(null);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view==='iso'));}
@@ -239,7 +285,7 @@ $('reset').onclick=reset;window.addEventListener('keydown',e=>{if(e.key.toLowerC
 $('capture').onclick=()=>{renderer.render(scene,camera);const link=document.createElement('a');link.href=canvas.toDataURL('image/png');link.download='ORIGIN-01-view.png';link.click();};
 $('export').onclick=async()=>{const btn=$('export'),old=btn.textContent;btn.disabled=true;btn.textContent='正在生成 GLB…';try{const exportRoot=ship.clone(true);exportRoot.traverse(obj=>{if(obj.isMesh){obj.material=obj.material.clone();obj.material.wireframe=false;}});const exporter=new GLTFExporter();const data=await exporter.parseAsync(exportRoot,{binary:true,onlyVisible:true,trs:true});const link=document.createElement('a'),url=URL.createObjectURL(new Blob([data],{type:'model/gltf-binary'}));link.href=url;link.download='ORIGIN-01-procedural.glb';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch(err){console.error(err);alert('GLB 导出失败，请查看控制台：'+err.message)}finally{btn.disabled=false;btn.textContent=old}};
 function resize(){const w=viewer.clientWidth,h=viewer.clientHeight;if(w<1||h<1)return;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false);}const ro=new ResizeObserver(resize);ro.observe(viewer);resize();
-let last=performance.now();function loop(now){requestAnimationFrame(loop);if(document.hidden)return;const dt=Math.min((now-last)/1000,.08);last=now;frame+=dt;if(cameraDest){camera.position.lerp(cameraDest,Math.min(.11,dt*6));if(camera.position.distanceTo(cameraDest)<.04)cameraDest=null;}if(enginesOn){for(let i=0;i<lights.length;i++)lights[i].scale.setScalar(1+.09*Math.sin(frame*9+i));}controls.update();if(selectedBox)selectedBox.update();stars.rotation.y+=dt*.0008;renderer.render(scene,camera);}requestAnimationFrame(loop);
+let last=performance.now();function loop(now){requestAnimationFrame(loop);if(document.hidden)return;const dt=Math.min((now-last)/1000,.08);last=now;frame+=dt;if(cameraDest){camera.position.lerp(cameraDest,Math.min(.11,dt*6));if(camera.position.distanceTo(cameraDest)<.04)cameraDest=null;}if(enginesOn){for(let i=0;i<lights.length;i++)lights[i].scale.setScalar(1+.09*Math.sin(frame*9+i));}controls.update();if(selectedBox)selectedBox.update();stars.rotation.y+=dt*.0008;renderer.render(scene,camera);window.__starshipStatus='ready';}requestAnimationFrame(loop);
 window.addEventListener('error',ev=>{console.error(ev.error||ev.message)});
 </script>
 </body>
