@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source": "intel",
+  "count": 1,
+  "items": [
+    {
+      "path": "mydesk-data/opportunities/2026-11-04.json",
+      "revision": "d751d69848574fc70570d426d21bc07e98232948"
+    }
+  ]
+}
