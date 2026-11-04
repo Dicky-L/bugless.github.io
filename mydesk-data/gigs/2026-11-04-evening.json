@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-04-evening",
+  "category": "gig",
+  "date": "2026-11-04",
+  "slot": "evening",
+  "title": "晚间·Vue/React 外包首单雷达｜2026-11-04",
+  "summary": "今晚未核实到12:20后新增且符合首单标准的可投递Vue/React项目；推荐0个。搜索结果多为卖方服务商品或旧求职帖，不算客户订单。部分平台及午间去重核验受限。",
+  "body": "# 晚间远程外包首单雷达｜2026-11-04（北京时间）\n\n**结论：本轮可核实、建议联系的午后新增项目为0个；GO 0、条件GO 0。** 未找到符合近期原帖可核验、范围清晰、允许兼职且回款可控的具体Vue/React项目。不能断言各平台没有新订单，也不能证明与午间全部候选完全去重。\n\n## 检索与核验\n- 检索了Upwork的React、Dashboard、Figma相关公开页面，以及V2EX、电鸭相关公开搜索线索；结果主要是开发者主动出售服务的Upwork Project Catalog商品、旧求职帖或与日期无关的页面，**不是甲方当日招聘原帖**，故全部不计入推荐。\n- 公开搜索未取得可确认2026-11-04北京时间12:20以后发布或发生实质招募更新的合格项目；猿急送、程序员客栈、BOSS和海外华人渠道本轮没有获得可独立核验的具体合格原帖。\n- 公开搜索结果示例（仅用于说明排除原因，**不是推荐订单**）：[Upwork React/Next.js UI bug fixes商品](https://www.upwork.com/services/product/development-it-react-or-next-js-bug-fixes-for-your-website-ui-and-api-workflows-2116721255524386478)，卖方服务商品，标价$50起，不能视为客户需求；[V2EX前端求职帖](https://v2ex.com/t/1204001)，2026-04-07求职信息，非客户招募。\n\n## 结算与执行判断\n没有合格项目，因此不虚构发布日期、客户预算、Codex编码覆盖率、总人工工时或个性化联系话术。未来合格候选需先核实源码/Figma/API、验收清单、修改轮次、远程兼职资格和付款托管；Codex编码覆盖率≥70%仅为优先筛选目标，实际需看代码估算。继续优先Vue/React前端小模块，首单回款后再扩展轻全栈与AI Agent。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
