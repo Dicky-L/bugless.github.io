@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-03-noon",
+  "category": "gig",
+  "date": "2026-11-03",
+  "slot": "noon",
+  "title": "远程外包首单雷达｜11月3日午间",
+  "summary": "实际筛选结果：新增符合首单标准 0 个，建议立即投递 0 个。排除预算与交付范围不匹配的旧线索。",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 0,
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "body": "## 本期结论\n本轮检索 Upwork、程序员客栈、电鸭及 V2EX 等公开来源，未找到能同时确认预算、远程业余交付、明确范围及可核实申请状态的新项目。公开索引不完整，不代表平台没有订单。\n\n## 排除项目\n- [React/Next.js 全栈开发（Upwork）](https://www.upwork.com/freelance-jobs/apply/Full-Stack-Web-Developer-Next-React-Node-MongoDB-for-Custom-Web-App_~022115020050221891269/)：10月27日发布、固定预算20美元，却涉及后端、认证、部署、SEO；**NO-GO**。\n- [政府信息管理平台 Vue/Nuxt 前端（Upwork）](https://www.upwork.com/freelance-jobs/apply/Vue-Nuxt-frontend-for-government-web-information-system-dashboard-map-languages_~022116141040227993331/)：固定预算7600美元，旧线索，涉及多模块和 WebSocket，11月25日交付，**不重复推荐**。\n- [React/TypeScript 开发者门户（Upwork）](https://www.upwork.com/freelance-jobs/apply/Frontend-Engineer-React-TypeScript-Developer-Portal-from-Figma_~022106550640782508480/)：旧线索，固定预算550美元且多页面权限复杂，**NO-GO**。\n\n## 建议\n继续找有代码、Figma及API、7–14天可交付的独立 Vue/React 模块；成交前确认范围、首付款或托管。此为历史筛选记录，链接当前招募状态未重新核验。"
+}
