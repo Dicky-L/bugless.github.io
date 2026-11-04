@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-03-evening",
+  "category": "gig",
+  "date": "2026-11-03",
+  "slot": "evening",
+  "title": "晚间 Vue/React 外包首单雷达｜11月3日",
+  "summary": "12:20 之后未核实符合要求的新增可投递项目，推荐 0 个。两条旧线索标记为 NO-GO。",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 0,
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "body": "## 本期结论\n未核实到北京时间12:20之后新增且范围清晰、适合1–2周兼职完成并具备合理回款安全性的可投递项目。部分平台没有取得足以核验的具体项目，不能断言没有机会。\n\n## 值得关注但不推荐的旧项目\n- [React/TypeScript 开发者门户 UI（Upwork）](https://www.upwork.com/freelance-jobs/apply/Frontend-Engineer-React-TypeScript-Developer-Portal-from-Figma_~022106550640782508480/)：10月4日发布，固定预算550美元，涉及Backstage、FinOps图表、Kubernetes资源、权限及API，已有招募竞争；**NO-GO**，非今日新增。\n- [四页 Dashboard 设计与开发（Upwork）](https://www.upwork.com/freelance-jobs/apply/Designer-Front-End-Developer-Figma-HTML_~022116155880272882725/)：10月30日发布，固定预算40美元，需四页高保真设计及交互前端，预算与工作量失衡；**NO-GO**，非今日新增。\n\n## 下一步\n继续优先寻找已具备源码、Figma、API且验收边界清楚的 Vue/React 模块。上述岗位的最新开放状态与付款托管尚未再次确认。此为历史推送摘要而非实时岗位清单。"
+}
