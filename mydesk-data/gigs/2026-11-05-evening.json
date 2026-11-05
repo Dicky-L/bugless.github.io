@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-05-evening",
+  "category": "gig",
+  "date": "2026-11-05",
+  "slot": "evening",
+  "title": "晚间·Vue/React 外包首单雷达｜2026-11-05",
+  "summary": "本轮未核实到11月5日12:20后新增且符合首单条件的可投递项目，推荐0个。核实一条11月4日发布的React Native+Web后台项目，因550美元预算对应双端开发、上架及90天售后而排除；午间完整清单及部分平台状态未能核实。",
+  "body": "# 晚间·Vue/React 外包首单雷达｜2026-11-05\n\n**结论：确认12:20后新增且合格的项目0个；建议立即联系0个。** 本轮公开检索未发现可同时核实发布时间、前端独立交付边界、兼职可行性和合理付款条件的新增订单。未取得今日午间完整候选清单，无法保证所有潜在线索已去重；也不能把搜索未命中解释为平台没有订单。\n\n## 已核实原帖，但排除\n\n### React Native双端应用及Web后台（NO-GO）\n- 原帖：https://www.upwork.com/freelance-jobs/apply/Frontend-Mobile-App-Web-Developer-React-Native-iOS-Android-Web-Admin_~022117922847208829533/\n- 发布：2026-11-04（不是已确认11月5日午后新增）；预算：$550固定价；Upwork标示Worldwide。\n- 需求：完整iOS/Android React Native应用、6模块Web管理后台、API联调、应用商店上架、90天售后。后端与Figma由客户提供。\n- 技术匹配：React/Web后台部分匹配，但移动端发布与复杂业务范围超出前端小模块首单策略。\n- 风险：30天核心开发加90天支持，预算与责任严重不匹配；涉及身份核验、支付UI及平台上架，验收和长期维护风险高。**NO-GO**。\n- Codex编码覆盖率与总人工工时：不估算，范围远超首单边界且无可审阅详细设计。\n- 招募状态、资金托管、实际是否允许中国开发者申请：未独立核验。该项目不是本轮推荐。\n\n### 旧项目：React Dashboard短测试任务（NO-GO/历史）\n- 原帖：https://www.upwork.com/freelance-jobs/apply/React-Dashboard-Developer-Needed_~022109960857849358306/\n- 发布：2026-10-13；预算$35固定价。单页React响应式Dashboard、静态数据、表格和搜索，技术较匹配，但旧帖且显示已有1人雇用，不能算午后新机会；低预算也需谨慎。Codex/工时不作新项目估算。\n\n## 平台与核验限制\n公开搜索覆盖Upwork、V2EX、电鸭、程序员客栈相关关键词；未获得猿急送、BOSS及海外华人渠道满足原帖核验条件的新项目。没有确认任何12:20之后发布的合格项目。未取得午间完整清单，去重仅能排除已知历史线索。无合格项目，因此无个性化投递话术。\n\n## 执行原则\n坚持Vue2/3、React/TS、Element、Ant Design、vxe-table、ECharts、B端现有模块、UI还原与性能优化优先；1–2周可兼职交付、验收明确、托管/里程碑付款；Codex编码覆盖率≥70%仅为合格任务的初步目标，需看源码后估算。先完成首单收款，再扩展轻全栈与AI Agent。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 0
+}
