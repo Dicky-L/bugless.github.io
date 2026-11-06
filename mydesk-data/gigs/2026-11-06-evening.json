@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-06-evening",
+  "category": "gig",
+  "date": "2026-11-06",
+  "slot": "evening",
+  "title": "晚间·Vue/React 外包首单雷达｜2026-11-06",
+  "summary": "四大渠道核查后，未确认12:20之后符合首单风控的新项目。推荐0个；程序员客栈新单不匹配，Upwork $15 Dashboard API修复预算不合理且已有人受雇，Freelancer线索已完结，Algora抽查赏金无开放任务。",
+  "body": "# 晚间·Vue/React 外包首单雷达｜2026-11-06\n\n**本次合格新增：0；推荐联系：0。** 未取得午间完整候选列表，不能确认全量去重；未发现可核实的12:20之后合格新单。\n\n## ① 国内接单平台（0）\n程序员客栈公开职位页 https://job.proginn.com/job/ 显示11月6日新单：项目44857（Java PDF/OFD转换，￥6–12K/月）、44855（Dify/RAG私有化，8小时/日，￥6–12K/月）、44851（Node/Linux安全代码复核，明确预算￥800–1500、兼职1–2日）。均不符合首单前端主导或风险标准，**NO-GO**。公开列表日期是11月6日，无法确认12:20后发布。猿急送、实现网、码市、猪八戒等未取得本次可独立核实的合格原帖。\n\n## ② 技术社区（0）\n无界岛国内索引 https://www.wujiework.com/domestic/ 显示11月6日V2EX C++交易引擎招聘，11月4日电鸭澳洲网站优化运维、V2EX全职远程前端等；均非本次合格新单。索引不能替代原帖发布日期、兼职和招募状态核验。V2EX、电鸭、Rebase的具体新前端原帖未成功核实。\n\n## ③ 海外远程（0）\n[Upwork：React/Next.js SaaS Dashboard API故障修复](https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-Needed-React-Next-SaaS-API-Integration_~022118497032373234821/)：原帖标注2026-11-06，$15固定价，全球远程，已有20–50份申请、1人受雇；需要修复一个API/数据展示故障。技术匹配，但根因可能涉及后端，$15不足覆盖沟通、诊断、测试、交付，且已有人受雇，**NO-GO**。若仅作为粗估：Codex编码覆盖率60%–80%，总人工4–10小时（沟通、诊断、监督、测试、验收），不作为投递建议。原帖“5小时前”是相对抓取时间，无法独立确认午后发布。\n[Freelancer：Urgent React Bug Resolution](https://www.freelancer.com/projects/frontend-development/urgent-react-bug-resolution) 已显示Completed、约6个月前发布，**NO-GO**。\n[Freelancer：React/Next.js UI Fix Needed](https://www.freelancer.com/projects/react-js/react-next-fix-needed) 已显示Completed、约10个月前发布，**NO-GO**。\n其他海外平台未取得可验证的近期开放且中国开发者可参与的独立项目。\n\n## ④ 开源有偿任务（0）\nAlgora 的 [BlockNote](https://algora.io/BlockNote/bounties?status=open)、[remotion](https://algora.io/remotion/bounties?status=open)、[browser-use](https://algora.io/browser-use/bounties?status=open) 公开赏金页均显示Open 0；未核实到有金额、仍可认领且允许参与的Vue/React有偿Issue。**无推荐**。\n\n## 渠道覆盖与限制\n实际读取程序员客栈职位页、无界岛国内及开发索引、Upwork原帖、Freelancer项目页和Algora公开赏金页；其他国内平台、Contra、Guru、PeoplePerHour、LinkedIn等仅有限搜索或未取得有效原帖，不宣称完成逐站扫描。至少三个非Upwork项目原帖/公开任务页得到核验，但均排除。搜索结果与列表日期不能代替精确发布时间。没有核实到仍可联系的合格午后增量。\n\n**全局最优首单目标：无。** 不因报价不限而接不合理低价。维持Vue/React前端独立模块、1–2周兼职、明确验收和托管付款策略；首单回款后再扩展轻全栈和AI Agent。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 0
+}
