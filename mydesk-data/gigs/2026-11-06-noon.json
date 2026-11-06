@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-06-noon",
+  "category": "gig",
+  "date": "2026-11-06",
+  "slot": "noon",
+  "title": "远程外包首单雷达｜2026-11-06 午间",
+  "summary": "本轮新增核实且建议联系的远程 Vue/React 首单机会为0。排除3个Upwork项目：低价React+Django、含支付与AI的SaaS维护、预算矛盾的抓取SaaS。未确认有效招募及托管，不建议投递。",
+  "body": "# 远程外包首单雷达｜2026-11-06 午间\n\n**新增核实且建议联系：0；建议投递：0。** 搜索窗口：2026-10-30 至 2026-11-06。检查 Upwork、程序员客栈及 V2EX 等公开检索结果，并检索电鸭、猿急送、BOSS、实现网；后四类渠道没有取得足以验证的新增项目原帖，不等于没有岗位。\n\n## 本轮新发现但排除\n1. **Mini Lead Management App（React + Django）**｜Upwork｜2026-11-05｜固定预算 **USD 100**｜[原帖](https://www.upwork.com/freelance-jobs/apply/Build-Mini-Lead-Management-App-Django-REST-React_~022118214520311510506/)｜**NO-GO**：需独立实现 Django REST、PostgreSQL、JWT 认证及 React 后台，报价远低于人民币3000元。平台显示近期客户浏览和面试，不等于确认继续招募；托管资金未核实。\n2. **SaaS Learning Platform 维护扩展**｜Upwork｜2026-11-05｜固定预算 **USD 1,000**｜[原帖](https://www.upwork.com/freelance-jobs/apply/Developer-Fix-and-Extend-SaaS-Learning-Platform_~022118305295258588602/)｜**NO-GO（整包）**：React/Next.js、TypeScript 技术相关，但同时涉及 Stripe 订阅/权限、Supabase、FastAPI AI、AWS 部署与生产回归，风险超出前端首单边界；是否接受独立前端子包及付款托管未核实。\n3. **AI Data Dashboard / 抓取 SaaS**｜Upwork｜2026-11-05｜页面固定价 **USD 3,000**，描述又写锁定 **USD 2,000**｜[原帖](https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-for-Data-Dashboard_~022118182641557420326/)｜**NO-GO**：前后端、抓取容错、身份/计费、Stripe、CRM 自动化与敏感数据采集，范围和预算矛盾；招募及资金托管未核实。\n\n## 结论与行动\n今日没有满足预算、明确前端子模块、7–14天异步远程交付及可核实申请状态的高匹配新项目；不凑数。最适合首单目标：**暂无**。不建议投递上述整包。继续寻找已有代码/Figma/API的 Vue/React 独立后台模块；只有确认范围后才能事前估算 Codex 编码覆盖率（目标≥70%）和包括需求沟通、评审、监督、测试、部署、验收的总人工工时。签约前确认招募、验收、首款/托管，不代投递。\n\n**核验说明：** 公开原帖能验证项目描述、发布日期和标价，不代表仍招募；本轮没有核实客户支付保障。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 0
+}
