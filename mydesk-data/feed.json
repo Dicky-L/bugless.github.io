@@ -1,11 +1,15 @@
 {
   "schema_version": 1,
   "source": "gig",
-  "count": 9,
+  "count": 10,
   "items": [
     {
       "path": "mydesk-data/gigs/2026-11-07-noon.json",
       "revision": "0d83e1c4de5fa924c28e727734db0abf3445875f"
+    },
+    {
+      "path": "mydesk-data/gigs/2026-11-07-evening.json",
+      "revision": "2bd215358f04244320ede5b853eb60028dbac2f6"
     },
     {
       "path": "mydesk-data/gigs/2026-11-06-noon.json",
