@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-07-noon",
+  "category": "gig",
+  "date": "2026-11-07",
+  "slot": "noon",
+  "title": "远程外包首单雷达｜2026-11-07 午间",
+  "summary": "四大渠道各最多3个，本期合格新增0个。核查程序员客栈、电鸭/V2EX公开索引、Upwork、Freelancer、PeoplePerHour及开源赏金。排除交易Dashboard高频Web3风险、评论系统后端/日期不明、已关闭SPA和低价全栈项目；不建议投递。",
+  "body": "# 远程外包首单雷达｜2026-11-07 午间\n\n**四大渠道合格新增0个；建议投递0个。** 检索窗口优先2026-10-31至11-07。仅把有可核实原帖、合理预算、真正异步远程、前端主导且回款风险可控的新项目计入推荐；不能以搜索摘要或页面可打开推断仍招募。\n\n## ①国内接单平台：0/3\n实际检索程序员客栈公开原帖和职位索引，其他国内平台以公开搜索结果补扫，但没有足够可核验的近期合格原帖。典型排除：\n- 杭州势然网络React/Vue前端｜程序员客栈｜2026-11-03｜¥6000–12000/月｜https://job.proginn.com/d/5af3107aa1be ｜**NO-GO（未确认兼职可交付）**：职位范围覆盖公司核心产品、工程化、线上维护，未确认独立1–2周模块、每日工时、当前招募、托管/付款，且11-04已报告，不作为新增。\n- Node.js/Linux安全审计｜程序员客栈｜2026-11-05｜¥800–1500固定｜https://job.proginn.com/d/5af3107aa1d5 ｜**NO-GO**：低于¥3000、偏安全审计，已在此前试跑提及，不重复推荐。\n\n## ②技术社区：0/3\n检查电鸭公开列表 https://eleduck.com/ ，搜索V2EX外包及React/Vue帖子。电鸭索引出现最近3天发布的高级前端全职远程职位、近期线上兼职UI设计师、澳洲网站兼职优化运维，但未取得对应完整原帖、明确项目范围和符合首单报价的核验材料；**均不计入**。电鸭原站读取超时。V2EX搜索混入2024年旧帖及求职帖，不能当2026年11月外包需求。\n\n## ③海外远程：0/3\n- Updating Existing Dashboard｜Upwork｜2026-11-06（搜索索引明确标注）｜USD1500固定｜https://www.upwork.com/freelance-jobs/apply/Updating-Existing-Dashboard_~022118618304142863493/ ｜**NO-GO**：React/Next/TS和Figma、交易图表匹配，但要求高频WebSocket行情、Web3钱包和智能合约交互；初次首单不宜承接支付/钱包风险及高频性能责任。原站返回403，不能核实当前招募/托管。\n- Enhance Marketplace Service Ads Presentation｜Freelancer｜页面展示USD25–50/小时、Open、Remote｜https://www.freelancer.com/projects/frontend-development/enhance-marketplace-service-ads ｜**NO-GO（本期未核实近期）**：原帖标题带03/11/2026，但搜索索引还显示8个月前发布，页面相对发布时间“17 minutes ago”与索引冲突，无法确认属于近7天；180份投标；虽React/Vue组件匹配，仍需购买后评论验证、图片安全上传、后端和数据库修改，范围不清，未确认可仅接前端子包、总合同金额和托管。\n- React SPA Dashboard Build｜Freelancer｜USD250–750｜https://www.freelancer.com/projects/tailwind-css/react-spa-dashboard-build ｜**NO-GO**：页面明确Closed，不能投递。\n- Frontend Developer React/Next｜PeoplePerHour｜USD41/小时，页面显示4周前｜https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/frontend-developer-react-next-js-4488727 ｜**NO-GO**：岗位范围宽泛，近期性不足，网站JavaScript/反机器人限制。\n- Full Stack Dev for Lead Aggregation Dashboard｜PeoplePerHour｜USD100｜https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/full-stack-dev-for-lead-aggregation-dashboard-4494670 ｜**NO-GO**：低价、全栈和爬虫。\n\n## ④开源有偿任务：0/3\n通过公开检索尝试Algora和Opire的React/TS赏金，未取得同时满足2026年11月近期、金额≥¥3000、公开可认领、明确付款保障的有效原帖；0条，不能把普通Issue当付费单。\n\n## 结论与行动\n**今天没有通过严格核验的新增可投递首单；不虚构Codex覆盖率、总人工工时或付款保障。** 无全局首选目标。若客户明确允许前端子包，可再评估Upwork Dashboard或Freelancer评价组件，但前者Web3/高频风险高、后者日期与后端范围不清，当前不建议投递。未来合格项目再估算Codex编码覆盖≥70%（事前估计）及含沟通、评审、监督、测试、部署、验收的人工工时。签约和首阶段托管后开发，不代投递。渠道限制：国内多个平台仅检索索引，电鸭读取超时，Upwork原站403，PeoplePerHour反机器人，公开检索不能证实仍在招募。\n",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 0
+}
