@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-08-noon",
+  "category": "gig",
+  "date": "2026-11-08",
+  "slot": "noon",
+  "title": "远程外包首单雷达｜2026-11-08 午间",
+  "summary": "四大渠道各最多3个，本轮没有满足预算、前端独立交付、近期原帖、可核实招募及付款条件的新机会。程序员客栈分镜画布整包过大，Freelancer移动App涉及跨端发布，Upwork行情Web3看板为旧线索；建议投递0。",
+  "body": "# 远程外包首单雷达｜2026-11-08 午间（北京时间）\n\n**本轮新增经核验、建议联系的项目：0；四组各0/3。** 优先筛选11月1日至8日发布的远程Vue/React独立前端任务。部分公开搜索结果的抓取日期、页面相对发布时间和搜索索引相互矛盾，未将其当作准确发布日期或仍招募证明。未取得同时具备原帖直达、近期日期、远程业余交付、预算>=¥3000、可联系入口及可接受付款风险的新增机会。\n\n## ① 国内接单平台｜0/3\n程序员客栈前端列表 https://job.proginn.com/qianduan 出现项目编号44863：11月7日展示、React/JS、¥1–6K/月，AI分镜无限画布、素材拖拽、图层、时轴及模型集成，页面称远程非驻场；**NO-GO（整包）**：标价区间下限低于底线，开发范围大、预计不止1–2周，缺少可确认的独立模块/付款托管。只取得列表页，未取得可核验的具体原帖直达URL，不计合格。程序员客栈44826（11月3日、React/Vue、¥6–12K/月）为已报告旧线索，未确认异步模块及招募，不重复。其它国内平台未取得可完整核验的新原帖，不能断言没有项目。\n\n## ② 技术社区｜0/3\n检索V2EX、电鸭相关公开搜索索引，未取得可同时确认近期发布日期、项目报价、真实远程业余交付及当前联系状态的原帖。搜索结果混有求职帖、旧帖和非项目帖。**0推荐，不代表没有订单**。\n\n## ③ 海外远程｜0/3\n- Upwork **Updating Existing Dashboard**，原帖 https://www.upwork.com/freelance-jobs/apply/Updating-Existing-Dashboard_~022118618304142863493/ ，2026-11-06、固定US$1500、React/Next.js/TS/Figma/WebSocket实时行情、Web3钱包与合约交互；**NO-GO**：风险超出第一单范围，且11月7日已报告，无实质进展不重复计数。\n- Freelancer **Simple Business Info Mobile App**，原帖 https://www.freelancer.com/projects/flutter/simple-business-info-mobile-app ，页面显示Open、US$15–25/小时、React Native/Flutter跨平台应用、APK/IPA/TestFlight交付、154份竞标；页面仅给相对发布时间，绝对日期未确认，需移动端打包发布且总预算/付款保障未确定，**NO-GO**。\n- PeoplePerHour **Frontend Developer (React/Next.js)**，原帖 https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/frontend-developer-react-next-js-4488727 ，$41/h、远程但检索结果显示约4周前发布，超过7天且项目范围不清，**NO-GO**。另一 **Full Stack Dev for Lead Aggregation Dashboard** https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/full-stack-dev-for-lead-aggregation-dashboard-4494670 显示$100、抓取+后端+前端，低于底线且索引陈旧，**NO-GO**。\n- Freelancer其他近期公开项目涉及完整支付、认证、网站及移动应用，未纳入。\n\n## ④ 开源有偿任务｜0/3\n尝试检索Algora、Opire、GitHub公开有偿任务关键词；本次没有取得金额>=¥3000、明确开放认领、允许中国开发者参与、支付保障明确、符合前端短周期范围的具体赏金原帖，**0推荐**。不把无偿Issue当订单。\n\n## 结论与下一步\n**今日首单目标：暂无。** 不建议投递上述项目。继续寻找¥5000–15000、7–14天、已有Figma/源码/API的Vue/React后台独立模块；对条件不足的项目先核验招募、范围、时区/异步协作、预付/平台里程碑托管，再决定报价。由于没有合格新单，本期不编造Codex覆盖率、人工工时或客户成交概率；若有后续合格项目，编码覆盖目标>=70%仅作事前估算，人工工时需包括沟通、评审、Codex监督、测试、部署、验收。**未代为投递。**",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
