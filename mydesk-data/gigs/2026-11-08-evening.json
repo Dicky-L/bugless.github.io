@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-08-evening",
+  "category": "gig",
+  "date": "2026-11-08",
+  "slot": "evening",
+  "title": "晚间·Vue/React 外包首单雷达｜2026-11-08",
+  "summary": "四大渠道本轮未核实到午后新增且符合首单风控的可投递项目，推荐0个。Freelancer有技术匹配的React仪表盘但已关闭；Upwork为旧线索；Algora部分赏金页显示0开放。国内原帖核验不足，MYDESK保留真实检索限制。",
+  "body": "# 晚间·Vue/React 外包首单雷达｜2026-11-08\n本轮未核实到北京时间12:20之后新增或实质更新且满足全部首单条件的可联系项目。推荐0，GO 0，条件GO 0。未获取午间完整项目清单，不能保证全部去重。\n\n## ① 国内接单平台｜推荐0\n针对程序员客栈等国内平台检索Vue/React远程兼职、前端模块关键词，但本轮没有取得符合日期与状态要求的可独立核验原帖；其他国内平台未完成逐站核查，不宣称全面扫描。\n\n## ② 技术社区｜推荐0\n尝试检索V2EX、电鸭相关2026-11-08前端外包帖子，未取得合格原帖；Rebase及无界岛未完成独立原帖核验。\n\n## ③ 海外远程｜推荐0\n- [Freelancer：React SPA Dashboard Build](https://www.freelancer.com/projects/tailwind-css/react-spa-dashboard-build)：原帖标示约一个月前发布，预算USD 250–750，React/TypeScript/ECharts三视图、纯前端、后端另供；**NO-GO（本期）**，页面状态Closed，186份投标，非午后新增。技术匹配较高，但不能作为仍可投递项目。来源：Freelancer原帖。\n- [Freelancer：React Dashboard With Authentication](https://www.freelancer.com/projects/react-js/react-dashboard-with-authentication)：原帖约一个月前发布，USD 15–25/小时，Closed；要求Node/Express、MongoDB、JWT认证和权限管理，**NO-GO**，安全及全栈责任超界。\n- [PeoplePerHour：Frontend Developer React/Next.js](https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/frontend-developer-react-next-js-4488727)：旧帖（页面讨论为2026年4月），USD 41/小时，原始页面状态可能过时，无法证实当前可投递，**NO-GO（本期）**。\n- [Upwork：Updating Existing Dashboard](https://www.upwork.com/freelance-jobs/apply/Updating-Existing-Dashboard_~022118618304142863493/)：11月6日发布，USD 1500固定价，React/Next.js实时交易图表、WebSocket、Web3钱包；此前晚间已提及，**NO-GO**，非本日新增，金融交互及验收风险高。\n- [Upwork：React SaaS API Integration](https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-Needed-React-Next-SaaS-API-Integration_~022118497032373234821/)：11月6日发布，USD 15固定价，现有API问题但需后端诊断，已有雇佣，**NO-GO**，旧线索、预算不足。\n以上原帖的预算为页面标示，当前客户实际招募、托管资金及中国开发者资格均未核实。\n\n## ④ 开源有偿任务｜推荐0\n- [Algora Upstash](https://algora.io/upstash/bounties)：检索页显示Open 0，但抓取数据可能非实时。\n- [Algora browser-use](https://algora.io/browser-use/bounties?status=open)：检索页显示Open 0，非实时核验。\n未取得可确认金额、开放认领资格和付款条件的最新赏金；Opire未取得可独立核实的具体合格任务。\n\n## 渠道覆盖与限制\n尝试了国内平台/技术社区、Freelancer、PeoplePerHour、Upwork、Algora与Opire四组搜索；可直接阅读的有效原帖以Freelancer、PeoplePerHour、Upwork为主。国内/中文检索未取得可核验新单，部分平台需登录或检索索引不足。未完成所有平台逐站遍历，也未拿到午间完整清单。搜索结果中的“Posted X ago”可能是缓存，不能替代明确发布日期。\n\n## 全局结论\n本轮合格新增0；全局最优首单目标暂无。保持Vue/React独立模块、1–2周兼职、Codex初步编码覆盖率目标≥70%、明确验收与付款托管的筛选标准。无合格新单，不虚构工时、覆盖率及联系话术。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
