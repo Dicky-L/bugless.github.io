@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-09-evening",
+  "category": "gig",
+  "date": "2026-11-09",
+  "slot": "evening",
+  "title": "晚间·Vue/React 外包首单雷达｜2026-11-09",
+  "summary": "四类渠道本轮核实后，未确认12:20以后新增且符合首单要求的项目。推荐0个。程序员客栈新列表存在WordPress二开及人脸核验H5项目，因技术方向或安全责任排除；Freelancer小型UI修复为旧帖且竞争激烈。",
+  "body": "# 晚间·Vue/React 外包首单雷达｜2026-11-09\n\n结论：本轮没有确认北京时间12:20后新增或实质更新且满足全部首单门槛的项目；四类合计推荐0个。未取得午间完整候选清单，无法保证全量去重。\n\n## ① 国内接单平台：0\n核查程序员客栈11月9日职位列表及两条原帖。项目192803（https://job.proginn.com/d/5af3107aa1e7）报价5000元、1–2周，属于WordPress产品目录数据迁移、后台维护和搜索详情页二开，偏离Vue/React首单优先方向且数据迁移范围未明确，NO-GO。项目192807（https://job.proginn.com/d/5af3107aa1e8）预算3000–5000元，公众号H5订单系统涉及人脸核验、身份证资料、审计日志和两个月维护，安全责任过高，NO-GO。两条仅显示11月9日，未确认12:20之后发布。\n\n## ② 技术社区：0\n尝试检索V2EX、电鸭、Rebase相关线索，未获得可核实的11月9日晚间合格客户原帖；未逐站遍历。\n\n## ③ 海外远程：0\nFreelancer原帖 https://www.freelancer.com/projects/css/job-portal-updates-fixes ，页面显示Open、5天前发布、预算₹1500–12500、约2–3小时、176份投标，React/Next.js为加分项；与小型UI修复匹配，但不是确认午后增量，竞争激烈，需求清单和资金托管未确认，NO-GO（本期）。Upwork旧线索 https://www.upwork.com/freelance-jobs/apply/React-Next-Developer-SaaS-Bug-Fixes-Add-Features-API-Integration_~022117219558067250200/ ，11月2日发布、$250、涉及Stripe/认证/后端且已有雇用，NO-GO。PeoplePerHour项目 https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/full-stack-dev-for-lead-aggregation-dashboard-4494670 为旧索引，数据抓取及后端范围大，NO-GO。其余海外站点未完成逐站核验。\n\n## ④ 开源有偿任务：0\n核查Algora browser-use和Algora组织公开赏金页面，均显示Open 0，但抓取时间偏旧，不能认定实时无赏金；Opire未获得可核验且可认领的具体付费任务。\n\n## 结论与限制\n推荐0，GO 0，条件GO 0；没有合格新增项目，不虚构Codex编码覆盖率、人工工时或申请话术。部分原帖只提供日期无准确时间，不能认定午后新增；付款托管、跨境资格和现招状态均需登录核实。优先已有Vue/React源码或Figma+API、可在1–2周内交付的独立前端模块，安全回款优先。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 0
+}
