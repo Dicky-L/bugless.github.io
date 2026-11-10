@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-10-evening",
+  "category": "gig",
+  "date": "2026-11-10",
+  "slot": "evening",
+  "title": "晚间·Codex快速接单雷达｜2026-11-10",
+  "summary": "晚间四类渠道未核实到12:20后新增或实质更新的可行动订单：GO 0、条件GO 0。程序员客栈出现OCR设备诊断线索但环境和原帖待核；Upwork旧综合修复及PeoplePerHour已获标项目均不推荐。午间候选不重复计数。",
+  "body": "# 晚间·Codex快速接单雷达｜2026-11-10\n截至北京时间20:00附近公开检索。午间报告已从同仓库读取并按原帖URL对照。**新增可行动GO 0、条件GO 0**；未证实午后有符合要求的新发或实质更新项目。没有将午间4条条件GO重复计数。\n\n## ① 国内接单平台：推荐0\n程序员客栈首页11月10日列出项目192836：Python+Android画面采集、OCR、策略计算、多设备控制；首阶段诊断一个真实问题，但需要硬件/环境和多线程知识，具体原帖URL、支付和独立环境无法确认，列观察。首页 https://job.proginn.com/ 。项目192823为AI广告设计工作台，功能范围大；192810为微信商家转账V3，支付安全责任高，NO-GO。以上仅首页列表核查，不能当作完整原帖已验证。午间已列的WordPress产品目录迁移项目 https://job.proginn.com/d/5af3107aa1e7 无已证实新变化，不重复推荐。\n\n## ② 技术社区：推荐0\nV2EX 11月10日帖 https://s.v2ex.com/t/1255696 为开发者分享外包面试经历，并非客户发包。电鸭/Rebase未取得本时段可核验的新增付费原帖。\n\n## ③ 海外远程：推荐0\nUpwork https://www.upwork.com/freelance-jobs/apply/React-Frontend-Backend-Bug-Fixing-Developer-Needed_~022110994401213733237/ ：10月16日发布，$25固定价，React/Next.js及数据库、鉴权、API综合故障，问题细节签约后提供，页面已有1 hire；NO-GO，非午后新单。\nUpwork https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-Needed-for-Business-Dashboard-Development_~022114716181675524394/ ：10月26日发布，$1000，5天内完成完整认证、后台、客户/任务管理、数据库、部署，50+申请且已1 hire；NO-GO，非新单。\nPeoplePerHour https://www.peopleperhour.com/freelance-jobs/design/web-design/wix-site-to-be-finished-4495601 ：£40，页面显示Awarded且缓存时间较早；NO-GO，不是可投递新单。\n午间已列Upwork React单面板、WordPress两页网站、WP按年份删帖均无证实新变化，不重复计数。海外中国地域准入、托管及平台实时开放状态尚待登录确认。\n\n## ④ 开源有偿任务：推荐0\nAlgora https://algora.io/browser-use/bounties?status=open 公开索引显示Open 0，抓取非实时；未确认有可认领新赏金。Opire未确认可核验当期任务。\n\n## 渠道覆盖、差异与限制\n本次实际检索程序员客栈首页、V2EX公开帖子、Upwork具体原帖、PeoplePerHour具体页面及Algora公开赏金索引；还以搜索索引尝试电鸭、Freelancer等，未获得可确认新增原帖。可直接核对的具体项目页面至少3条（Upwork两条、PeoplePerHour一条），另有程序员客栈列表但非完整原帖。GO 0、条件GO 0；观察2条（程序员客栈192836、旧Upwork低价综合修复），其余NO-GO。无今日新增合格项目，无法确认全平台覆盖或精确12:20之后发布时间。搜索摘要和页面缓存不能证明实时开放。未取得实际付款、手续费或地域准入核验，故不计算净收入与人工时薪；不虚构Codex覆盖率。下次优先从真实小额Bug/数据处理试单中核验源码、验收与托管。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
