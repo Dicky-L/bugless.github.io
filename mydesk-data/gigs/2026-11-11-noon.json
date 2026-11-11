@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-11-noon",
+  "category": "gig",
+  "date": "2026-11-11",
+  "slot": "noon",
+  "title": "午间·Codex快速接单雷达｜2026-11-11",
+  "summary": "本轮四大渠道均无满足风控与可联系条件的新GO/条件GO，推荐0。核验了Freelancer的React/Node旧系统项目（已关闭）、O2O卖家后台（开放但涉及订阅支付）、访客登记（敏感证件信息）等；国内程序员客栈新项目仍缺乏独立小单边界。",
+  "body": "# 午间·Codex快速接单雷达｜2026-11-11（北京时间）\n\n**本轮合格GO 0、建议立即澄清的条件GO 0，recommended_count=0。** 执行了公开网页搜索与部分原帖复核；不能将未覆盖的平台说成已核查。重点近30天，跨平台未发现符合风险底线的当日新单。\n\n## ① 国内接单平台：0/3\n程序员客栈当前列表 https://job.proginn.com/ 显示11月11日新项目：人工智能图片图形趋势识别（项目44897，月标价¥1000–6000）但需数千张图片的规则/标注/准确率和可行性验证，未有明确小试单范围；**观察**。11月10日Python旧代码诊断项目192836，涉及安卓画面采集、多设备控制、OpenCV/OCR，依赖实际设备/封闭环境，**NO-GO**。11月9日小程序192809重点为微信多商户支付与退款，**NO-GO**。独立项目原帖与付款方式未完全核验；仅列表不能视为仍可申请。\n## ② 技术社区：0/3\n检索V2EX及电鸭公开索引；未找到能同时核实发布日期、仍招募、远程兼职、直接联系入口的新单。搜索结果混有2025年旧帖及求职帖，不能充当2026年订单。\n## ③ 海外远程：0/3\n核查Freelancer原帖：\n- [Enhance Node.js & React App](https://www.freelancer.com/projects/react-js/enhance-node-react-app)：React/Node存量系统、₹750–1250/小时，页面相对发布7天、135份投标；**当前Closed**，尽管有最近活跃记录也不等于可投标；**NO-GO**。\n- [O2O Seller Module Development](https://www.freelancer.com/projects/web-development/seller-module-development)：**Open for bidding**，页面显示5天前发布、₹750–1250/小时、88份投标、远程；涉及订阅付款、权限、后台、API、部署，且偏好Ahmedabad当地开发者。整包超过首单可控风险，**观察/整包NO-GO**；若明确允许拆出独立无支付前端模块且托管，可重新评估，但目前不计推荐。\n- [Registro de personas](https://www.freelancer.com/projects/data-entry/registro-personas)：页面Open，显示相对发布时间、$250–750、远程；访客出入登记含照片与身份证件，涉及隐私与存储安全，需求没有明确数据保护和技术边界，**观察**，不直接推荐。\n- [AI Predictive Analytics on Social Media](https://www.freelancer.com/projects/python/predictive-analytics-social-media)：页面Open、6天前、₹1500–12500，涉及Instagram/YouTube/Meta预测建模及平台数据许可，范围不明确，**NO-GO**。\n- [Copart/IAAI Auction AI Integration](https://www.freelancer.com/projects/full-stack-development/copart-iaai-auction-integration)：页面Open、约5小时前、$250–750，涉及第三方拍卖API及开放式研究、224份竞标，SDK/访问权限不清，**观察**。\n- [Basbug API Product Upload](https://www.freelancer.com/projects/api/basbug-api-product-upload)：页面Open、3天前、$10–30，专有BasBUG与Ideasoft API，费用低且接口权限不明，**观察**。\n未能核实Freelancer账户侧对中国开发者的实际投标资格、资金托管、费率、税费和汇兑，因此不得计算到手收益。\n## ④ 开源有偿任务：0/3\n本轮未获取到可核实的Algora/Opire/GitHub近期赏金原帖（金额、开放认领、地域及托管条件同时明确），不将普通Issue算付费项目。\n\n## 行动与核验\n无当日建议投递对象；无须虚构Codex覆盖率、人工总工时、时薪。可以继续追踪O2O项目是否愿意把纯前端仪表盘拆成固定价子包，但当前**不建议联系作为可成交首单**。未向客户发消息、未投标、未签约。渠道限制：国内部分只核查到列表；社区原帖不足；海外主要取得Freelancer原帖，其他平台没有有效核验；开源赏金无合格原帖。相比上一午间批次，扩大了Freelancer对比，但没有新增推荐。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 0
+}
