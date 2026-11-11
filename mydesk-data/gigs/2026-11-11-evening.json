@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-11-evening",
+  "category": "gig",
+  "date": "2026-11-11",
+  "slot": "evening",
+  "title": "晚间·Codex 快速接单雷达｜2026-11-11",
+  "summary": "晚间对负责的12个来源逐一尝试检索或访问，实际核查3篇招聘原帖，均不符合首单要求；GO 0、条件GO 0、推荐0。午间2条条件GO无核实的新变化，不重复推荐。部分平台403、超时或只能查索引。",
+  "body": "# 晚间·Codex 快速接单雷达｜2026-11-11\n数据时点：北京时间晚间。午间归档已读取，午间条件GO为Freelancer React UI Bug Fixes与实现网AI专业出题；晚间没有核实其状态发生实质变化，不重复推荐。\n## ① 国内接单平台（GO 0，条件GO 0）\n- 猪八戒：官方首页及任务入口已打开，但没有核实到具体近期客户发包原帖。\n- 一品威客：官网访问超时，未取得有效原帖。\n- 开源众包：入口不可访问，未取得有效原帖。\n## ② 技术社区（GO 0，条件GO 0）\n- Rebase：核验[FineStar公开招聘](https://github.com/rebase-network/who-is-hiring/issues/1344)，11月9日发布、仍显示Open，但要求非中国大陆、约每日9小时、USDT薪资；NO-GO。该帖不是午后新单。\n- BOSS远程项目制：进行了定向搜索，未取得可核实的短期项目原帖。\n- 海外华人团队/社群：定向搜索，未确认真实项目制发包；不把招聘或聚合索引当原帖。\n## ③ 海外远程（GO 0，条件GO 0）\n- Guru：官方jobs入口403；无可核实项目。\n- Contra：官方自由职业机会说明页可读，但未取得单个项目原帖；不计候选。\n- LinkedIn：核查[Data Actions React/Next合同职位](https://in.linkedin.com/jobs/view/senior-react-next-js-engineer-contract-at-data-actions-4470574979)，40小时/周、3个月、印度岗位，NO-GO；[Nex Wellfound前端合同](https://wellfound.com/jobs/4463633-frontend-engineer-marketing-digital-experience-contract)为美国地域限制、3个月合同，NO-GO。\n- Wellfound：上述Nex原帖已查，不符合中国兼职项目制。\n- Hacker News：主页已打开，未找到可核验的本期项目制小单；Freelancer/Who is Hiring专题未完整逐帖核查。\n## ④ 开源有偿任务（GO 0，条件GO 0）\n- Opire：[赏金列表](https://app.opire.dev/home)已打开；页面显示可用赏金0，但下方仍列历史赏金条目，数据状态不一致，无法确认可认领、付款条件，不推荐。\n## 候选池/观察\n- [Nex营销前端合同](https://wellfound.com/jobs/4463633-frontend-engineer-marketing-digital-experience-contract)：美国限定，NO-GO。\n- [Data Actions React/Next合同](https://in.linkedin.com/jobs/view/senior-react-next-js-engineer-contract-at-data-actions-4470574979)：印度、全职40小时/周，NO-GO。\n- [FineStar远程招聘](https://github.com/rebase-network/who-is-hiring/issues/1344)：不接受中国大陆且工作日约9小时，NO-GO。\n- [Opire赏金列表](https://app.opire.dev/home)：可用性与支付不明，观察。\n## 平台覆盖审计（晚间负责12来源）\n|平台/来源|状态|直接核验原帖|GO/条件GO|\n|---|---|---:|---:|\n|猪八戒|仅首页/任务入口|0|0|\n|一品威客|访问超时|0|0|\n|开源众包|访问受限|0|0|\n|Rebase|原帖已查|1|0|\n|BOSS短期远程|仅外部索引|0|0|\n|海外华人团队社群|仅外部索引|0|0|\n|Guru|访问受限403|0|0|\n|Contra|仅平台说明页|0|0|\n|LinkedIn合同制|原帖已查|1|0|\n|Wellfound|原帖已查|1|0|\n|HN Freelancer/Who is Hiring|仅首页，专题欠扫|0|0|\n|Opire|赏金列表已查，非具体可认领原帖|0|0|\n合计：12/12来源尝试定向访问/检索；实际直接打开具体招聘原帖3篇，涉及3个平台；GO 0，条件GO 0，观察1（Opire状态不明），NO-GO 3。不能把其余入口/索引视为原帖核验。晚间无确认12:20后新合格项目。海外中国准入、付款路径、手续费税费均未核实，不能估算到手收入。午间两条条件GO没有新证据，不重复计数。下一步优先复核午间Freelancer React UI修复的源码范围、竞标状态和托管；这不是晚间新增。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
