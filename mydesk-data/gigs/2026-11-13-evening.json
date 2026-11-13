@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-13-evening",
+  "category": "gig",
+  "date": "2026-11-13",
+  "slot": "evening",
+  "title": "晚间·Codex快速接单雷达｜2026-11-13",
+  "summary": "晚间12个指定来源组均尝试定向检索或访问，直接核查4个平台6条具体历史/岗位原帖；没有确认午后新增的合格订单。GO 0、条件GO 0、观察3。午间2条条件GO未确认实质更新，不重复计数。海外地域限制、旧帖、国内需求模糊及赏金可领状态不足。",
+  "body": "# 晚间·Codex快速接单雷达｜2026-11-13（北京时间）\n本轮已读取午间归档，午间条件GO 2条（程序员客栈uni-app家政小程序 https://job.proginn.com/d/5af3107aa1fd；V2EX Agent工作流 https://www.v2ex.com/t/1256604），未核实午后实质变化，均不重复计数。晚间新增GO 0、条件GO 0；观察3条、NO-GO 2条。未核实任何12:20之后新增的合格项目。\n## ① 国内接单平台：0\n猪八戒直接核验两条历史需求：小程序服务采购 https://www.zbj.com/xq/OWOgE8NIq5W9kKNB.html ，2026-09-01发布，页面标“进行中”，预算¥500–1000、全国可参与，但需求仅笼统写小程序服务，超过70天且当前发包真实性/细节未核，C观察；教育积分兑换小程序 https://www.zbj.com/xq/FWnGlwwVMtgKBomM.html ，2026-04-23发布，涉及学生积分、库存、核销、权限等，过旧且范围较大，NO-GO（本批）。一品威客及开源众包仅定向搜索，未得到可核验的新开发原帖。\n## ② 技术社区：0\nRebase招聘列表 https://github.com/rebase-network/who-is-hiring/issues 已查；近期列出的2026-11-09 AI Agent+Smart Contract岗位 https://github.com/rebase-network/who-is-hiring/issues/1345 ，项目制、具体付款与地域不明，且智能合约风险较高，仅列表/待核，不推荐。BOSS短期远程及公开华人社群仅定向外部搜索，未核实原帖。\n## ③ 海外远程：0\nGuru原帖 https://www.guru.com/jobs/web-developer-needed/2119151 ，预算$1000–2500，截止2026-09-16，旧项目，C观察（历史、不可作为新增）；https://www.guru.com/jobs/react-sql-server-iis-php-mysql-dev/2120524 截止2026-09-28、限印度/巴基斯坦并要求美东固定时间，NO-GO。LinkedIn https://www.linkedin.com/jobs/view/react-engineer-freelance-at-protech-talent-4464328804 为欧洲限定、40小时/周、医疗领域，NO-GO。Wellfound https://wellfound.com/jobs/4881186-backend-software-engineer-remote-worldwide-120k-160k-per-year-equity-clone-clone 页面虽自称全球远程，但列明招募国家不含中国且全职，NO-GO。Contra仅定向索引、未发现可核验项目。Hacker News Freelancer/Who is Hiring定向搜索无合格具体原帖。\n## ④ 开源有偿任务：0\nOpire官方 https://app.opire.dev/home 页面显示 available 0 / $0，但仍列出2024/2026历史赏金；无法核实当前可领取及支付保障，C观察，不计推荐。\n## 平台覆盖审计（晚间12来源）\n|来源|状态|具体原帖核查数|GO/条件GO|\n|---|---|---:|---:|\n|猪八戒|原帖已查（历史）|2|0|\n|一品威客|仅外部索引|0|0|\n|开源众包|仅外部索引|0|0|\n|Rebase|招聘列表已查，具体新帖未核|0|0|\n|BOSS短期远程|仅外部索引|0|0|\n|海外华人团队/社群|仅外部索引|0|0|\n|Guru|原帖已查（历史）|2|0|\n|Contra|仅外部索引|0|0|\n|LinkedIn合同制|原帖已查|1|0|\n|Wellfound|原帖已查|1|0|\n|Hacker News|仅外部索引|0|0|\n|Opire|赏金列表已查|0|0|\n实际定向搜索或打开12/12来源组；直接打开具体项目原帖涉及4个平台、6篇；另检查Rebase和Opire列表（不算项目原帖）。GO 0、条件GO 0、观察3、NO-GO 2（其余不匹配历史帖不计入候选统计）。缺少午后精确更新时间、国内站点详情与登录后联系方式、海外对中国准入及付款托管，不能据此认定全网无新单。未计算人工工时、Codex覆盖率或到手收益，因为没有合格可行动项目。\n## 当晚建议\n无新增可联系目标。午间两条条件GO继续优先澄清单模块/单工作流试单、预算、预付或托管、远程异步及验收；不重复推荐，不代表已经联系。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
