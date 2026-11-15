@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-15-noon",
+  "category": "gig",
+  "date": "2026-11-15",
+  "slot": "noon",
+  "title": "午间·Codex快速接单雷达｜2026-11-15",
+  "summary": "实际定向检索午间10个平台；直接核查程序员客栈及Freelancer共6条原帖。GO 0、条件GO 0、观察4。国内法律网站采集及uni-app维护范围/结算不清；Freelancer安全审查和Play Store发布风险较高，Tailwind网站已关闭。未发现可立即询盘的合格新增单。",
+  "body": "# 午间·Codex快速接单雷达｜2026-11-15（北京时间）\n**推荐0（GO 0、条件GO 0）；观察4；NO-GO 3。** 本轮未找到同时能确认原帖、当前可联系且适合立即询盘的新增低风险机会。仅按实际检查记录，不声称完成10个平台。\n\n## ①国内接单平台 0/3\n程序员客栈公开职位列表 https://job.proginn.com/ 可打开。11月14日法律网站内容/PDF采集需求（项目192933，https://job.proginn.com/d/5af3107aa208）：范围为100个法律网站，接口和文件服务器接入，标价¥6000–12000/月，存在网站许可、反爬、样本、工作量及月薪性质不确定；**观察**，不建议直接承接整包。\n11月13日uni-app小程序维护（项目44919，https://job.proginn.com/d/5af3107aa1ff）：Bug、内容修改、版本发布和服务器巡检，标价¥1000–6000/月，可能需要持续待命；**观察**，仅能在固定次数/工时和远程异步条件确认后再考虑。\n11月14日AI英语网页内测（项目192942，https://job.proginn.com/d/5af3107aa20a）：要求一人独立全栈开发、部署调优且不分包，**NO-GO**。\n\n## ②技术社区 0/3\n电鸭：定向外部搜索未取得可核验的新原帖；V2EX：定向外部搜索结果主要为历史/非外包讨论，未取得可核验新单。两平台本轮均不能宣称已核实项目原帖。\n\n## ③海外远程 0/3\nFreelancer原帖已核实：\n- Tailwind Housing Compliance Firm https://www.freelancer.com/projects/tailwind-css/Build-Tailwind-Website-for-Compliance ，£250–750，页面显示Closed，**NO-GO（已关闭）**。\n- TypeScript/React PWA Security Review https://www.freelancer.com/projects/typescript/security-review-web-app-sign ，$250–750页面区间但描述约$250，页面显示Open for bidding、截止11月16日，审查OAuth、邀请和账户删除，属于专业安全审计，240份投标，**观察**，不建议将安全审计作为首单。\n- Google Play发布协助 https://www.freelancer.com/projects/android-app-development/Play-Store-Upload-Assistance ，₹600–1500，页面显示Open，但Android签名/发布政策及账户权限责任高，**观察**。\nUpwork定向搜索得到11月13日React/Next/Node健身预约系统修复 https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-for-Bug-Fixing-React-Node-Next-Web-Application_~022121237594442353109/ ，$500，含Stripe付款遗漏、MongoDB性能和重复通知，**NO-GO（支付及复杂遗留系统风险）**；仅搜索内容，未完成直接打开原帖的核验。\nPeoplePerHour定向搜索结果为2025年已过期项目 https://www.peopleperhour.com/freelance-jobs/artificial-intelligence/artificial-intelligence-website-development/freelance-web-developer-reactjs-nextjs-ai-integration-4408227 ，不推荐。\n\n## ④开源有偿任务 0/3\nGitHub paid issue与Algora做了定向公开搜索，但未取得能核验金额、开放认领及付款保障的具体新赏金原帖；不把普通issue计为订单。\n\n## 平台覆盖审计（本轮午间负责10个平台）\n|平台|状态|本轮具体原帖已打开|推荐|\n|---|---|---:|---:|\n|程序员客栈|列表+原帖已查|3|0|\n|猿急送|仅外部索引检索|0|0|\n|实现网|仅外部索引检索|0|0|\n|电鸭|仅外部索引检索|0|0|\n|V2EX|仅外部索引检索|0|0|\n|Upwork|仅外部索引检索|0|0|\n|Freelancer|原帖已查|3|0|\n|PeoplePerHour|仅外部索引检索|0|0|\n|GitHub付费Issue|仅外部索引检索|0|0|\n|Algora|仅外部索引检索|0|0|\n\n实际定向检索10/10；直接打开具体项目原帖2个平台、6条；推荐0；观察4（法律网站采集、小程序维护、安全审查、Play Store发布），NO-GO 3（AI英语整包、已关闭Tailwind网站、Stripe健身预约系统）。平台页面发布时间与搜索引擎相对时间可能不一致，未把索引视为原帖；原帖可打开不等于当前有付款保障。相比11月14日午间1条条件GO，本轮无新增条件GO，昨日项目不重复推送。\n\n## 今日行动\n无达到可立即询盘门槛的新项目。可自主查看程序员客栈法律采集和uni-app维护原帖的联系方式，但必须先确认固定范围、允许采集、异步交付、付款托管、验收后才报价。尚未投递或联系。净到手、人工小时收益和Codex覆盖率均不对不合格整包虚构。\n",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
