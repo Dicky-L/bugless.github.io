@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-15-evening",
+  "category": "gig",
+  "date": "2026-11-15",
+  "slot": "evening",
+  "title": "晚间·Codex快速接单雷达｜2026-11-15",
+  "summary": "晚间12个指定来源均尝试检索或访问，具体核查Rebase和Wellfound共4篇原帖。新增GO 0、条件GO 0、观察3。Wellfound发现中国可远程的React/FastAPI合同和AI Agent合同岗位，但项目制、工时、付款未明确；其他渠道无可核验新增。",
+  "body": "# 晚间·Codex快速接单雷达｜2026-11-15（北京时间）\n**新增GO 0、条件GO 0；观察3；NO-GO 2。** 已读取同日午间归档（推荐0），按规范化原帖URL去重。未确认12:20以后发布或实质变更且符合小额项目制与回款条件的新增订单。检索日期及搜索摘要不能当作原帖发布时间。\n\n## ① 国内接单平台：0/3\n猪八戒 https://www.zbj.com/ 首页及任务入口已查，未发现可独立核验的今日开发需求；一品威客 https://task.epwk.com/ 任务分类列表已查，未找到具备详情与可承接状态的开发项目；开源众包 https://www.oschina.net/ 页面无可读任务。三个来源没有核验合格原帖。\n\n## ② 技术社区：0/3\nRebase招聘Issues https://github.com/rebase-network/who-is-hiring/issues 已查，最新可见条目以Web3/全职为主；未确认11月15日新增项目制。BOSS远程兼职、海外华人创业社群做定向搜索但未取得独立可核实的原帖。Rebase旧帖 https://github.com/rebase-network/who-is-hiring/issues/1343 为11月6日全职，NO-GO（非项目制）。\n\n## ③ 海外远程：0/3\n- **C·观察** Wellfound genieX 前端为主全栈合同 https://wellfound.com/jobs/4791892-full-stack-developer-frontend-focused-with-fastapi-experience ，页面显示“Posted today”（精确原始日期待核），中国可远程，React/Next.js/TS/FastAPI、CRM/库存/供应商系统，正文$10–15/小时、合同有转全职机会。岗位同时标Full Time，无法确认接受短期按模块交付，需先确认工时、固定范围、付款与税费；不列可行动首单。若允许独立小模块，Codex编码覆盖率事前估计70–90%，人工8–20小时（沟通、旧代码、审查、测试、部署、验收），并非已确定工作量；净到手待核。\n- **C·观察** Wellfound Finch AI Agents & Skills FDE https://wellfound.com/jobs/4965410-forward-deployed-engineer-fde-ai-agents-skills ，页面显示1周前、Contract、可从全球远程、中国时区可接受，涉及AI工具、Agent Skill集成与客户PoC；缺明确单次交付、预算、付款节点，可能为持续合同，不当作已发包项目。\n- **C·观察** Wellfound CREADEVS Front-End Developer https://wellfound.com/jobs/4823541-product-designer-ui-ux-for-a-creative-sharing-platform-clone ，页面显示约1个月前、Contract、全球远程，但要求太平洋时间9:00–19:00协作，工作量及项目制待核；不建议首单。\n- **NO-GO** LinkedIn Hired React APAC合同 https://www.linkedin.com/jobs/view/frontend-developer-react-remote-at-hired-4446554493 搜索索引显示$30–100/小时，但直接打开404，发布日期及当前招聘状态未核实，不得当可联系机会。\nGuru https://www.guru.com/d/jobs 返回403；Contra https://contra.com/discover 是作品展示而非雇主发包页；LinkedIn岗位原帖访问失败；Wellfound原帖已核验3篇；Hacker News Freelancer https://news.ycombinator.com/item?id=50338744 已查，主要为SEEKING WORK（开发者求职）而非雇主发包，不能计入订单。\n\n## ④ 开源有偿任务：0/3\nOpire https://app.opire.dev/home 官方列表显示Bounties available 0 / $0，但下方仍显示历史金额任务，状态不一致；没有确认仍可认领及资金保障的新任务。\n\n## 平台覆盖审计（晚间负责12个来源）\n|来源|状态|直接核验具体原帖|GO/条件GO|\n|---|---|---:|---:|\n|猪八戒|首页与任务入口已查|0|0|\n|一品威客|任务列表已查|0|0|\n|开源众包|入口可打开但无可读任务|0|0|\n|Rebase|Issues列表已查，旧原帖已查|1|0|\n|BOSS短期远程|仅外部索引|0|0|\n|海外华人创业社群|仅外部索引|0|0|\n|Guru|访问受限403|0|0|\n|Contra|仅作品展示页|0|0|\n|LinkedIn合同制|仅索引，具体岗位404|0|0|\n|Wellfound|原帖已查|3|0|\n|Hacker News Freelancer|专题已查，未见合格发包|0|0|\n|Opire|赏金列表已查|0|0|\n\n**实际检索或访问12/12来源组；直接打开具体招聘原帖涉及2个平台、4篇（Rebase 1、Wellfound 3）；GO 0、条件GO 0、观察3、NO-GO 2。** 有的来源仅查入口或索引，不能声称完成任务核验。与午间相比，新增发现Wellfound三条合同职位但均非确认可短期项目制，未形成可联系首单。所有Codex与工时均为事前情景估算，不能据此计算净到手。无实际投递或成交。\n",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
