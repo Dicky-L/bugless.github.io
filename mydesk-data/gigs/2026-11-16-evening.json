@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-16-evening",
+  "category": "gig",
+  "date": "2026-11-16",
+  "slot": "evening",
+  "title": "晚间·Codex快速接单雷达｜11月16日",
+  "summary": "晚间指定12个来源组均有访问或定向检索尝试，直接核查Rebase旧帖与Wellfound岗位共2条；GO0、条件GO0。Guru 403、一品威客超时、LinkedIn搜索受限，未核实12:20后合格新增订单。",
+  "body": "# 晚间·Codex快速接单雷达｜2026-11-16（北京时间）\n## 结论\n午间归档已读取：午间GO0、条件GO0。晚间针对12个指定来源组均有访问或定向搜索尝试，但本轮未确认12:20后新增、重新开放或实质更新且具备原帖及可用联系入口的小型项目。GO0、条件GO0、recommended_count=0。不能据此推断所有平台没有订单。\n## 四大渠道\n### ① 国内接单平台：0\n猪八戒首页及任务入口已查，旧养生馆小程序详情 https://www.zbj.com/xq/qfINdtJLLl9cIqaW.html 本次直开失败，无法确认变化；一品威客任务入口超时；开源众包OSCHINA项目页可打开但无可读有偿任务。均未核实新原帖。\n### ② 技术社区：0\nRebase Issues列表及旧帖 https://github.com/rebase-network/who-is-hiring/issues/1343 已查：11月6日全职Web3招聘，非项目制，NO-GO。BOSS首页已查，具体远程短期项目及联系入口未核。海外华人团队公开帖定向搜索未找到合格原帖。\n### ③ 海外远程：0\nGuru任务入口403；Contra discover https://contra.com/discover 是创作者作品展示而非雇主发包；LinkedIn合同制搜索受限，外部结果 https://www.linkedin.com/jobs/view/frontend-developer-react-remote-at-hired-4448130723 的发布时间及中国准入不能本轮核实，仅观察；Wellfound职位列表及 https://wellfound.com/jobs/5079523-software-engineer-ai-agent-qa-observability 已打开，属招聘岗位而非明确短期项目；Hacker News Ask版 https://news.ycombinator.com/ask 已查，但本轮未定位到可核验付费项目原帖。\n### ④ 开源有偿任务：0\nOpire https://app.opire.dev/home 官方公开列表显示Bounties available=0、Money available=$0.00，但下方仍列旧赏金金额，存在展示矛盾；未核实可认领和托管，不推荐。\n## 平台覆盖审计（晚间12个来源）\n|来源|状态|具体原帖数|推荐|\n|---|---|---:|---:|\n|猪八戒|首页已查，旧详情访问失败|0|0|\n|一品威客|任务入口超时|0|0|\n|开源众包|OSCHINA项目入口无可读有偿任务|0|0|\n|Rebase|Issues列表及旧原帖已查|1|0|\n|BOSS远程短期|仅首页已查|0|0|\n|海外华人团队社群|仅外部定向搜索|0|0|\n|Guru|403访问受限|0|0|\n|Contra|仅作品展示列表|0|0|\n|LinkedIn合同制|仅外部索引，搜索访问受限|0|0|\n|Wellfound|职位列表及岗位原帖已查|1|0|\n|Hacker News Freelancer/Who is Hiring|Ask列表已查，专题未完成逐帖核查|0|0|\n|Opire|赏金列表已查，未确认可认领任务|0|0|\n本轮尝试12/12，直接打开具体招聘原帖涉及2个平台共2条（Rebase旧帖及Wellfound岗位）；GO0、条件GO0、观察2（LinkedIn索引职位、Wellfound非项目岗位）。已与午间归档按可见原帖链接核对，没有重复推荐；无法确认其他来源的全部增量。没有可用预算与明确交付边界，不虚构Codex比例、人工工时、净到手或每小时收益。\n## 后续行动\n继续优先获取可公开核验的Bug修复、独立页面、CSV/Excel自动化和小型API集成任务；先询问现有源码、可复现问题、验收标准、固定价、预付款或托管、异步交付与中国开发者签约条件。未联系客户或投递。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
