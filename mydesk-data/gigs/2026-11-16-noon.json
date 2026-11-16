@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-16-noon",
+  "category": "gig",
+  "date": "2026-11-16",
+  "slot": "noon",
+  "title": "午间·Codex快速接单雷达｜11月16日",
+  "summary": "午间定向检索10/10来源，直接核查1条程序员客栈原帖；GO 0、条件GO 0、观察3。Upwork原帖403、PeoplePerHour反机器人，未取得可确认联系与付款条件的新增订单。",
+  "body": "# 午间·Codex快速接单雷达｜2026-11-16（北京时间）\n## 结论\n本轮新增GO 0、条件GO 0；推荐联系0。四类：国内0/3、技术社区0/3、海外0/3、开源有偿0/3。没有把列表、索引、旧帖当作可接订单。\n## 观察与排除\n1. [程序员客栈：技术型产品经理，医美3D面诊软件](https://job.proginn.com/job/detail/5af3107aa1dd)：2026-11-12 11:00发布；原帖明确国内远程长期兼职、每工作日3小时、约65小时/月，正文薪酬8000–12000元/月（页面标题6000–12000元/月）。有“立即沟通”入口。非一次性项目、固定工作日投入且涉及医美业务；观察，不作为首单推荐。原帖仍显示沟通入口，不等于当前仍招聘。\n2. [程序员客栈最新列表](https://job.proginn.com/job/)：2026-11-16展示项目44949（个人持仓决策助手，React/Next+Python/Node，包含持仓同步、风险模型、AI追问、鉴权和部署，1–6K/月列表价），仅列表查到，缺原帖和可核实付款条件；观察，整包交付与金融数据风险高。项目44948/44947涉及棋牌支付、风控与实时后端；不推荐。2026-11-14 AI英语网页项目要求单人完成全部后端、部署和合规预留，整包范围大；不推荐。\n3. [Upwork：React/Node加密交易平台修复](https://www.upwork.com/freelance-jobs/apply/Frontend-developer-needed-Fix-bugs-Crypto-trading-Platform_~022120528972404113878/)：索引标示2026-11-11，US$2500；原帖403，交易平台风险、竞争和付款未核；观察，非可行动推荐。\n4. [PeoplePerHour：30分钟WordPress CSS调整](https://www.peopleperhour.com/freelance-jobs/30-minutes-of-basic-wordpress-edits-4483412)：索引页显示Awarded，直接打开需JS反机器人；已授标，不推荐。\n5. [Upwork：React Native医疗应用Bug修复](https://www.upwork.com/freelance-jobs/apply/React-Native-developer-needed-for-healthcare-app-Bug-Fixing_~022121269351570913257/)：索引标示2026-11-13、US$5，涉及健康敏感数据及移动端崩溃，不推荐。\n## 平台覆盖审计（午间10个）\n- 程序员客栈：职位列表已查，直接打开1条原帖（医美产品经理）；推荐0。\n- 猿急送：定向外部检索，未取得具体可核验原帖；推荐0。\n- 实现网：定向检索，得到历史全职岗位及列表，未取得本轮新增合格原帖；推荐0。\n- 电鸭：定向外部检索，无可核验本轮原帖；推荐0。\n- V2EX：定向外部检索，命中旧帖，未取得本轮合格原帖；推荐0。\n- Upwork：定向索引检索，具体原帖直开403；推荐0。\n- Freelancer：定向检索仅返回已完成项目/人才介绍列表，未核实可投标原帖；推荐0。\n- PeoplePerHour：定向检索，具体页反机器人；推荐0。\n- GitHub有偿Issues/Discussions：定向搜索未取得有明确开放认领和付款的原帖；推荐0。\n- Algora：定向搜索并打开赏金页，所查页面显示0开放或仅历史已支付；推荐0。\n本轮实际定向检索10/10，打开具体原帖涉及程序员客栈1个平台、1条原帖；Upwork和PeoplePerHour原帖打开失败；GO0、条件GO0、观察3（医美产品经理、持仓助手、加密平台），其余为排除/历史。检索结果不能证明所有平台无订单。\n## 当日动作\n优先继续搜已有源码的Vue/React单Bug、CSS修复和独立模块，只有看到原帖及有效联系入口才投递。可对医美产品经理岗位询问是否接受按独立PRD/交互迭代项目结算及非固定工作日交付，但该岗位不计入可行动推荐。任何报价须先明确范围、托管或定金、验收、回款；Codex覆盖和人工工时需有具体交付范围才可估算，不编造到手收入。未联系或投递。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
