@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-17-noon",
+  "category": "gig",
+  "date": "2026-11-17",
+  "slot": "noon",
+  "title": "午间·Codex快速接单雷达｜11月17日",
+  "summary": "本轮新增1条条件GO：Freelancer React UI Bug Fixes，原帖显示开放竞标，预算US$30–250。建议先核实复现范围、平台托管及中国开发者收款资格。GO0，条件GO1；其他渠道未找到足够核验的可行动新单。",
+  "body": "# 午间·Codex快速接单雷达｜2026-11-17（北京时间）\n本轮GO 0、条件GO 1、观察3；唯一建议询盘项目为Freelancer React UI Bug Fixes。其原帖可直接打开，显示Open for bidding、Remote project、Bid入口；页面相对发布时间“less than 20 seconds ago”不是可独立确认的绝对日期，需登录核对。预算US$30–250，具体报价建议US$100–150（非客户承诺），交付预估人工5–9小时（需求沟通、代码熟悉、Codex监督、浏览器测试、提交、验收），Codex编码覆盖事前估计80%–90%；净收入/小时收益因手续费、税费、汇率及付款托管未核实而待核。原帖 https://www.freelancer.com/projects/frontend-development/react-bug-fixes 。技术React18、hooks、styled-components；修复文字遮挡、图片缩放、Chrome/Firefox/Safari兼容并交付变更说明。风险：客户无评价、资金托管不明、源代码规模未知、地域及收款资格待核。询盘：确认可提供复现截图/仓库分支、明确受影响页面数量、测试范围和里程碑托管，确认后固定报价。\n## 四大渠道\n①国内接单平台：0；②技术社区：0；③海外远程：条件GO 1（Freelancer）；④开源有偿任务：0。\n## 观察及排除\n- Upwork Full Stack Developer Needed for Bug Fixing & Troubleshooting，US$15，2026-11-12发布，前后端范围过大且低价：观察/不投递 https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-Needed-for-Bug-Fixing-Troubleshooting_~022120863941721644878/\n- Upwork Mobile App & Website Bug Fixing Developer，US$100，2026-11-16发布，Flutter+Android+iOS+React四端范围过大：NO-GO https://www.upwork.com/freelance-jobs/apply/Mobile-App-Website-Bug-Fixing-Developer-Flutter-Android-iOS-React_~022122227277684765480/\n- Freelancer Small Web App Bug Fix & Feature Update，US$10–30，搜索索引有信息但直开404：观察 https://www.freelancer.com/projects/frontend-development/small-web-app-bug-fix\n- GitHub Verdikta bounty，2026-10-15，活动到11月4日，已过期且加密链付款：观察/不推荐 https://github.com/verdikta/verdikta-applications/issues/76\n## 平台覆盖审计\n程序员客栈仅定向外部索引0原帖；猿急送仅定向外部索引0；实现网仅定向外部索引0；电鸭仅定向外部索引0；V2EX仅定向外部索引0；Upwork搜索索引多条、未完成登录后投递核验0直接原帖；Freelancer直接打开2条具体项目页面（其中1条404另有取消项目），合格1；PeoplePerHour外部索引仅历史项目0；GitHub paid issues外部检索及原帖1条（已过期）0；Algora公开赏金索引多条均显示0 open，未核验新增有效赏金。10/10定向搜索，成功打开原帖涉及Freelancer及GitHub 2个平台，核实有效原帖2条（Freelancer React UI和GitHub旧赏金），GO0条件GO1。与11月16日午间0推荐相比新增1条。所有金额与工时估算非成交事实；未代投递。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 1
+}
