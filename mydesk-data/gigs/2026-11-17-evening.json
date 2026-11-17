@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-17-evening",
+  "category": "gig",
+  "date": "2026-11-17",
+  "slot": "evening",
+  "title": "晚间·Codex快速接单雷达｜11月17日",
+  "summary": "晚间12个来源组均开展定向搜索，核实1条Wellfound项目原帖：UpSunday Next.js按项目付费，条件GO，预算和付款方式待核。GO0、条件GO1，午间Freelancer项目未重复推荐。",
+  "body": "# 晚间·Codex快速接单雷达｜2026-11-17（北京时间）\n## 结论\n本轮GO 0、条件GO 1、观察2；与午间Freelancer React UI Bug Fixes按原帖URL去重，未重复推荐。尚无法证明本条是12:20以后新发布或更新，属于晚间补扫发现，不称为当晚新增。\n## ①国内接单平台：0\n猪八戒、一品威客、开源众包分别定向外部搜索，未取得可打开并核实的具体近期付费原帖。\n## ②技术社区：0\nRebase、BOSS远程项目制、海外华人创业团队分别定向搜索，未取得可核实的具体短期外包原帖。\n## ③海外远程：条件GO 1\n**UpSunday — Frontend Developer, Next.js (Remote, project based)**。原帖：https://wellfound.com/jobs/4772699-video-editor-remote-project-based-clone 。本轮已打开原帖：标记Posted 1 month ago（绝对发布日期待核）、Remote Everywhere、Contract、按项目付费，有Apply Now及公开申请说明，是否仍接受申请/中国收款渠道待核。范围：Figma→Next.js App Router/TS/Tailwind，GSAP/Lenis动效、视频、LCP/Lighthouse及Vercel部署。预算未公开；平台费、税费、支付路径及到手时薪均待核。技能：React/TS匹配，GSAP动画及视觉性能需补学。Codex可承担页面结构、组件、样式、测试和部署脚本；编码覆盖率事前估算70%–85%（复杂动画可能更低）。若以单个落地页里程碑估算，人工12–24小时（沟通、Figma拆解、监督、调试、性能、部署、验收），非整份合同工时。风险：动画精度/性能、作品集要求、未公布单价及付款保障。**条件GO：先询问是否接受单页固定报价试单、可否分阶段验收及使用托管/预付**。开场：Hello, I build production React/TypeScript interfaces and have experience with pixel-accurate UI, performance and deployment. Would you consider a paid, fixed-scope landing-page trial from a finished Figma file? I can share relevant live work and propose a milestone-based quote once the motion and performance acceptance criteria are clear.\nGuru定向搜索仅见2026年7月截止的旧全栈帖，不推荐；Contra定向搜索只找到服务展示页；LinkedIn检索到合同制职位索引，但原帖打开失败且中国资格/项目制不清；Wellfound已打开1条原帖；HN已打开2026年11月Freelancer讨论，内容主要为SEEKING WORK而非可核验雇主项目。\n## ④开源有偿任务：0\nOpire定向搜索未找到可核实的近期有偿可认领任务。\n## 观察\n- LinkedIn Hired APAC React remote contract：https://www.linkedin.com/jobs/view/frontend-developer-react-remote-at-hired-4446554493 ，搜索索引显示US$30–100/h，但原帖直开失败、发布日期及中国可参与性不明，观察，不计推荐。\n- HN November Freelancer讨论：https://news.ycombinator.com/item?id=50338744 ，原帖可打开，但未核验到符合条件的雇主付费小单，观察。\n- Wellfound GradNode React前端：https://wellfound.com/jobs/4787213-frontend-engineer ，原帖显示仅印度远程且申请截止2026-10-11，NO-GO。\n## 平台覆盖审计\n本轮12/12来源组开展针对性搜索：猪八戒、一品威客、开源众包、Rebase、BOSS、海外华人团队、Guru、Contra、LinkedIn、Wellfound、HN、Opire。原帖已查：Wellfound 1、HN 1（HN是讨论帖，不算具体付费项目）；仅外部索引：猪八戒、一品威客、开源众包、Rebase、BOSS、海外华人团队、Guru、Contra、LinkedIn、Opire。具体有效项目原帖核实1条，打开原帖涉及2个平台；GO0、条件GO1、观察2、NO-GO1。其余各平台具体原帖0，不能称为逐站点内部遍历。午间归档已读取，午间1条Freelancer不重复计数。工时和Codex覆盖率均为事前估算，未联系雇主、未签约、未核验付款。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 1
+}
