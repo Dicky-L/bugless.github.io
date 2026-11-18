@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-18-evening",
+  "category": "gig",
+  "date": "2026-11-18",
+  "slot": "evening",
+  "title": "晚间·Codex 快速接单雷达｜2026-11-18",
+  "summary": "本轮针对晚间12组来源定向检索，核实Wellfound职位3条，新增发现UpSunday全球远程Next.js按项目付费合作招募1条条件GO（并非午后新发）；其他渠道未核实合格项目。午间Freelancer线索不重复。",
+  "body": "# 晚间首单雷达｜2026-11-18（北京时间）\n## ① 国内接单平台：0\n猪八戒仅发现服务商出售服务的商品页，非雇主发包；一品威客已打开任务分类页和列表，显示部分11月截止任务，但未核实可投递的具体适配订单；开源众包定向搜索无有效原帖。\n## ② 技术社区：0\nRebase官网及招聘列表已查，主要旧招聘、全职及Web3岗位；BOSS与海外华人团队仅定向外部搜索，无可核实项目原帖。\n## ③ 海外远程：1条条件GO\n**UpSunday — Frontend Developer, Next.js (Remote, project based)**｜Wellfound｜https://wellfound.com/jobs/4772699-video-editor-remote-project-based-clone\n- 原帖已打开；显示Posted 1 month ago（绝对日期待核）、Remote Everywhere、Contract、paid per project，有Apply Now和公开申请方式；目前是否仍招募及中国居民收款方式待确认。\n- Next.js App Router、TypeScript、Tailwind，按已完成Figma还原网站，GSAP/Lenis动效、LCP/Lighthouse与Vercel部署。报价/币种未知；非单个已定价项目，而是项目制合作招募。\n- **B·条件GO，仅建议先询盘**：询问是否有可拆分的1–3页项目、固定报价/里程碑、异步时区、中国开发者收款方式、设计素材与动效验收。GSAP动效性能是主要交付风险；付款未验证。\n- Codex预计编码覆盖率70%–85%（事前估计，动效调试可能降低）；人工总工时单个小型项目估计12–25小时（沟通、代码审查、测试、部署、验收均含）；学习成本GSAP/Lenis约2–5小时已计入区间。平台费/税/汇率/到手及人工时薪均待核。\n- 询盘：I build React/Next.js interfaces from Figma with attention to performance and responsive fidelity. Are you currently assigning small fixed-scope projects to individual remote contractors in China? Could you share one sample brief, milestone terms and payment method?\n- 这不是11月18日12:20后新发布的帖子，属于本轮新发现的存量招募；不能声称是当日下午新增。\n- Guru仅外部索引找到过期项目（2026-07-26截止），Contra仅平台服务商列表，LinkedIn部分岗位原帖不可打开或有地域/全职限制，Wellfound已查具体职位，HN 11月Who wants to be hired为求职者自荐而非雇主发包。\n## ④ 开源有偿任务：0\nOpire定向检索未找到可确认金额、开放状态和付款条件的具体赏金。\n## 观察/NO-GO\n- Wellfound GradNode React管理后台：https://wellfound.com/jobs/4787213-frontend-engineer ：印度地域限定、申请截止10月11日，NO-GO。\n- Wellfound Nex合同前端：https://wellfound.com/jobs/4463633-frontend-engineer-marketing-digital-experience-contract ：美国地域限定，NO-GO。\n- LinkedIn UK React：https://uk.linkedin.com/jobs/view/react-developers-at-netrolynx-ai-4488712474 ：强制UK SC安全许可，NO-GO。\n- 一品威客任务分类：https://task.epwk.com/903358/ ：仅分类页，11月截止任务未追到独立原帖，观察不计推荐。\n## 平台覆盖审计（晚间负责12组）\n猪八戒：仅外部索引/商品页，原帖0推荐0；一品威客：列表已查，具体原帖0推荐0；开源众包：仅外部索引0；Rebase：招聘列表已查0；BOSS：仅外部索引0；华人团队/社群：仅外部索引0；Guru：仅外部索引0；Contra：仅外部索引0；LinkedIn：外部索引及部分原帖结果，直开受限0推荐；Wellfound：原帖已查3（UpSunday、GradNode、Nex），推荐1；HN：原帖已查1（求职者自荐合集，不算具体雇主项目），推荐0；Opire：仅外部索引0。\n本轮针对12/12组开展定向检索或打开页面；打开项目原帖涉及Wellfound 1个平台，核实具体职位原帖3条；GO 0、条件GO 1、观察1、NO-GO 3（含LinkedIn许可限制）；其他索引候选不算已核验。仅1条为本轮新增发现的存量线索，未证实午间后新发布/更新。午间已归档Freelancer网站建设条件GO 1条，未重复推荐。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 1
+}
