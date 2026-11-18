@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-18-noon",
+  "category": "gig",
+  "date": "2026-11-18",
+  "slot": "noon",
+  "title": "午间·Codex 快速接单雷达｜2026-11-18",
+  "summary": "本轮定向尝试10个平台，新增1条Freelancer企业网站建设条件GO；需先核实页面范围、托管付款与中国开发者收款。国内与开源渠道尚无可核实的新推荐。",
+  "body": "# 午间首单雷达｜2026-11-18（北京时间）\n\n## ①国内接单平台：0\n程序员客栈、猿急送、实现网：本轮仅外部定向检索，没有完成有效原帖核验。\n\n## ②技术社区：0\nV2EX外包节点已打开，当前列表主要为开发者自荐、非匹配招聘及旧帖；电鸭仅外部检索，未核实原帖。\n\n## ③海外远程：1 条条件GO\n**Build My New Website**｜Freelancer｜https://www.freelancer.com/projects/html/build-new-website-40822772\n- 原帖页面显示Open for bidding、Remote project，项目ID 40822772；绝对发布日期待核，页面相对时间及活跃时间存在异常。\n- 预算 INR 12,500–37,500；需要从零设计与建设响应式企业网站，支持WordPress或React，包含线框、开发、部署及简单说明。\n- 条件GO（仅询盘）：必须先核实页面数量、素材与文案责任、修改轮次、主机费用、验收标准、托管里程碑及中国开发者收款资格。原帖写Paid on delivery，未确认已托管资金。\n- Codex编码覆盖率预估75%–90%（仅开发部分）；人工总投入预估15–30小时，含沟通、设计审查、代码复核、测试、部署及验收；到手及人工时薪因费用、税务及汇率未知而待核。\n- 下一步：先提出3–5页模板化网站固定范围、两次修改、里程碑托管的方案。\n\n## ④开源有偿任务：0\nGitHub有偿Issues及Algora仅完成定向检索，没有核实开放且有可靠付款条件的赏金。\n\n## 观察（不计推荐）\n1. HRMS Overtime Feature Development｜Freelancer｜https://www.freelancer.com/projects/react-js/hrms-overtime-feature-development ｜USD 30–250，原帖开放；.NET工资核算与现有薪酬模块耦合，结算及范围风险偏高。\n2. React UI Bug Fixes｜Freelancer｜https://www.freelancer.com/projects/frontend-development/react-bug-fixes ｜此前已推送，不重复计入；页面仍显示Open，但发布时间动态文本异常。\n3. React Native healthcare bugfix｜Upwork｜https://www.upwork.com/freelance-jobs/apply/React-Native-developer-needed-for-healthcare-app-Bug-Fixing_~022121269351570913257/ ｜USD 5，敏感健康数据，NO-GO。\n\n## 平台覆盖审计\n程序员客栈仅索引0原帖；猿急送仅索引0；实现网仅索引0；电鸭仅索引0；V2EX原始列表已查0条具体合格原帖；Upwork搜索原帖结果可见但均旧帖/高风险，0推荐；Freelancer原帖已查3条（含已推送旧项目），1推荐；PeoplePerHour仅索引0；GitHub付费Issues仅索引0；Algora仅索引0。实际尝试10/10；打开具体项目原帖涉及2个平台（Freelancer、Upwork）；符合可推荐条件1条，GO 0、条件GO 1。核验的项目不等于付款与招募资格已确认。\n\n与前一批相比，新增网站建设条件GO一条；昨日React UI项目不重复推荐。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 1
+}
