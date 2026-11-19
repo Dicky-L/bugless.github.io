@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-19-noon",
+  "category": "gig",
+  "date": "2026-11-19",
+  "slot": "noon",
+  "title": "午间·Codex 快速接单雷达｜11月19日",
+  "summary": "10个平台完成针对性索引检索，原帖核验0条；GO 0、条件GO 0。Upwork发现3条线索，但原帖403，不能认定仍招募；国内与开源渠道暂无已核实可联系项目。",
+  "body": "# 2026-11-19 午间 Codex 首单雷达\n## 结果\n国内接单平台 0；技术社区 0；海外远程 0；开源有偿任务 0。GO 0、条件GO 0、观察 3。未取得可同时验证原帖内容、当前招募及可联系入口的项目，不建议立即投递。\n## 平台覆盖审计\n- 程序员客栈、猿急送、实现网：仅外部索引检索；未找到可核验的近期原帖。\n- 电鸭、V2EX：仅外部索引检索；未找到可核验的近期原帖。\n- Upwork：外部索引发现具体项目，尝试打开三个原帖均返回 HTTP 403；原帖核验 0。\n- Freelancer、PeoplePerHour：仅外部索引检索；未找到可核验的近期原帖。\n- GitHub Paid Issues/Discussions：外部索引和 React issues 列表，未找到明确付费、可认领的具体任务；不能把普通 issue 当赏金。\n- Algora：仅外部索引检索，未取得可核验的赏金原帖。\n合计：针对性检索 10/10 个平台；原帖成功打开 0 个平台、核验 0 条；本轮只完成索引发现，非完整平台扫描。\n## 待核线索（不计推荐）\n1. Upwork Restaurant Admin Dashboard，2026-11-10，$1000 固定价，React+TS、现有 REST API、2周；50+ proposals；索引显示 Worldwide，招募/支付及原帖访问未核实。https://www.upwork.com/freelance-jobs/apply/Frontend-Developer-Needed-Restaurant-Admin-Dashboard_~022120304282465092054/\n2. Upwork SaaS Dashboard Saved Filters，索引显示 2026-11-17，$20 固定价，Next.js/Supabase；50+ proposals；预算与数据库权限工作量明显不匹配，观察不推荐。https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-for-SaaS-Dashboard-Enhancement_~022122656263577080384/\n3. Upwork Fitness Booking Platform Bug Fixes，2026-11-13，$500 固定价，React/Next/Node，包含 Stripe webhook 支付故障，支付风险高，NO-GO。https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-for-Bug-Fixing-React-Node-Next-Web-Application_~022121237594442353109/\n## 估算与行动\n第一条若能重新核实并拆成独立模块，Codex 编码覆盖率事前估计 70%–85%，人工总投入约 20–35 小时；按 $1000 毛收入估算每人工小时 $29–50（未扣平台费、税、汇兑），但现阶段不得当作可投递项目。其余两条不建议接。\n待恢复原帖访问后，优先核实客户仍招募、分模块交付、验收标准、托管/预付款、对中国开发者开放及异步工作条件。未联系任何客户。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
