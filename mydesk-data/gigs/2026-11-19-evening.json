@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-19-evening",
+  "category": "gig",
+  "date": "2026-11-19",
+  "slot": "evening",
+  "title": "晚间·Codex 快速接单雷达｜11月19日",
+  "summary": "晚间定向检索12/12来源组，原帖核实2条，GO 0、条件GO 0；UpSunday为昨日已推荐旧帖，不重复计数；LinkedIn职位已关闭，另有Wellfound原帖410。新增可联系推荐0。",
+  "body": "# 2026-11-19 晚间 Codex 首单雷达\n## 结论\nGO 0；条件GO 0；观察 2；本批新增可推荐 0。检索12/12来源组（多数仅外部索引），打开具体原帖涉及Wellfound和LinkedIn共2个平台；成功核查3条具体职位页面（UpSunday、Quik Hire Staffing、genieX尝试但410不计）。没有核实到11月19日12:20以后新增且可立即接的项目制订单。午间归档推荐0，跨时段无可推荐重复。\n## 四渠道\n- 国内接单平台：0。猪八戒、一品威客、开源众包：定向外部索引，未取得可核实原帖。\n- 技术社区：0。Rebase、BOSS远程短期、海外华人团队/社群：定向外部索引，未取得可核实原帖。\n- 海外远程：0。Guru、Contra、LinkedIn合同制、Wellfound、Hacker News Freelancer/Who is Hiring已定向检索。Wellfound UpSunday职位原帖仍可打开，全球远程、按项目付费，Next.js/TypeScript/Tailwind/GSAP、Figma/Vercel，但11月18日晚间已推荐，今日无核实状态变化，去重不重复推荐。原帖 https://wellfound.com/jobs/4772699-video-editor-remote-project-based-clone ，页面显示约1个月前发布，预算未知，支付渠道和中国收款待核。LinkedIn Quik Hire Staffing TypeScript合同岗位原帖显示不再接受申请，NO-GO，https://www.linkedin.com/jobs/view/frontend-developer-typescript-remote-at-quik-hire-staffing-4463300568 。Wellfound genieX React/Next.js/FastAPI岗位索引显示中国可远程、时薪10-15美元，但原帖返回410，且主要为长期岗位，观察不推荐：https://wellfound.com/jobs/4791892-full-stack-developer-frontend-focused-with-fastapi-experience\n- 开源有偿任务：0。Opire仅定向索引，未核实具体赏金原帖。\n## 平台覆盖审计\n| 平台/来源 | 深度 | 已核实原帖 | GO/条件GO |\n|---|---|---:|---:|\n| 猪八戒 | 仅外部索引 | 0 | 0 |\n| 一品威客 | 仅外部索引 | 0 | 0 |\n| 开源众包 | 仅外部索引 | 0 | 0 |\n| Rebase | 仅外部索引 | 0 | 0 |\n| BOSS直聘 | 仅外部索引 | 0 | 0 |\n| 海外华人社群 | 仅外部索引 | 0 | 0 |\n| Guru | 仅外部索引 | 0 | 0 |\n| Contra | 仅外部索引及平台介绍 | 0 | 0 |\n| LinkedIn | 原帖已查 | 1 | 0 |\n| Wellfound | 原帖已查；另1条410 | 1 | 0 |\n| Hacker News | 仅外部索引 | 0 | 0 |\n| Opire | 仅外部索引 | 0 | 0 |\n核实原帖2条，原帖涉及2个平台；没有发现本批符合可推荐标准的新增。页面中的相对发布时间不能证明当日新发。\n## 风险和估算\nUpSunday为历史已推荐项目，不重复计数；若今后有新项目分配，Codex编码覆盖率事前估计70%–85%，人工总投入12–25小时，实际需根据动效复杂度、Figma和验收调整；费用、税费、汇率、到手和时薪均待核。genieX为长期岗位且页面不可用，不按小单估工时。未联系客户。\n## 下一步\n优先重新核验可拆分、按项目结算、可向中国开发者合法付款的小型真实需求；对旧候选UpSunday可询问是否有单页固定范围试单、付款里程碑、异步协作与收款方式，但本批不重复推荐。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
