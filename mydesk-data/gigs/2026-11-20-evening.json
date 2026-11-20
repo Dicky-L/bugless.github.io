@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-20-evening",
+  "category": "gig",
+  "date": "2026-11-20",
+  "slot": "evening",
+  "title": "晚间·Codex快速接单雷达｜11月20日",
+  "summary": "定向检索12/12个晚间来源组，仅成功打开Wellfound具体原帖1条；GO 0、条件GO 0、观察2、NO-GO 1。未发现12:20后经核验的新增可收款小单。午间归档已读取并按原帖URL核对；历史UpSunday不重复推荐。",
+  "body": "# 2026-11-20 晚间首单雷达（北京时间20:00批次）\n\n## 结论\n已对12/12指定来源组逐项开展定向搜索；成功打开具体项目原帖1条，涉及Wellfound一个平台。GO 0、条件GO 0、观察2、NO-GO 1（不计重复历史）。本轮新增可联系推荐0。未核实11月20日12:20后新增或重新开放的可收款小单。午间归档已读取：午间GO/条件GO均0，候选为Freelancer两条和GitHub赏金两条，与本轮URL无重复；不能证明晚间索引线索的首次发布时间。\n\n## 四大渠道推荐池\n国内0；技术社区0；海外0；开源有偿0。未核实适合当天直接联系且有明确付款路径的项目。\n\n## 观察与待核线索（非推荐）\n1. [UpSunday — Frontend Developer, Next.js (Remote, project based)](https://wellfound.com/jobs/4772699-video-editor-remote-project-based-clone)：Wellfound原帖于本轮打开，显示全球远程、Contract、按项目付款、申请入口；发布时间相对显示约1个月，绝对日期待核。Next.js/TypeScript/Tailwind、Figma还原、GSAP动效、Vercel。预算未知；中国跨境收款及预付款未知。历史已推荐，无新增变化，不计推荐。Codex编码覆盖估计65–85%；人工总工时约15–35小时（依页面与动效范围而变，含沟通审查测试部署验收）。到手与时薪未知。C观察（历史延续）。\n2. [Hired — Frontend Developer React Remote APAC](https://www.linkedin.com/jobs/view/frontend-developer-react-remote-at-hired-4448135749)：LinkedIn搜索索引显示合同制、$30–100/h，原帖直接打开返回404，发布时间及是否仍招、地域与付款均未核实；仅索引线索，不可推荐。Codex与工时因工作范围不明确而不估。C观察。\n\n## NO-GO\n[Nex — Frontend Engineer Marketing & Digital Experience (Contract)](https://wellfound.com/jobs/4463633-frontend-engineer-marketing-digital-experience-contract)：索引明确标注Remote United States、3个月合同，不符合中国远程地域条件；不推荐。原帖本轮未成功直接打开，按索引限制判断。\n\n## 平台覆盖审计\n- 猪八戒：仅外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n- 一品威客：仅外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n- 开源众包：仅外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n- Rebase：仅外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n- BOSS短期远程：仅外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n- 海外华人创业社群：仅外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n- Guru：仅外部索引；旧帖403；本轮成功打开具体原帖0；GO/条件GO 0。\n- Contra：仅平台介绍/外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n- LinkedIn合同制：仅外部索引；具体链接404；本轮成功打开具体原帖0；GO/条件GO 0。\n- Wellfound：原帖已查1；另1条410；本轮成功打开具体原帖1；GO/条件GO 0。\n- Hacker News：仅外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n- Opire：仅外部索引；本轮成功打开具体原帖0；GO/条件GO 0。\n\n## 估值、支付与风控\n本轮没有足够具体范围和付款条款的新增项目，无法可靠计算人工总工时、手续费、税费、汇率、净到手或每人工小时收益。UpSunday的编码覆盖和人工工时仅为事前区间估计，非承诺。海外平台中国可接单、异步沟通、里程碑托管均待确认。未联系、未投递、未成交。相比午间，本轮实际核验原帖更少（1 vs 4），新增推荐均0；仅外部索引不算原帖核验。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
