@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-20-noon",
+  "category": "gig",
+  "date": "2026-11-20",
+  "slot": "noon",
+  "title": "午间·Codex快速接单雷达｜11月20日",
+  "summary": "已针对性检索10个平台，打开Freelancer和GitHub共4个具体原帖；GO 0、条件GO 0、观察3、NO-GO 1。两条Freelancer项目预算与范围不匹配，GitHub小赏金存在认领权限限制。无符合当日优先投递条件的新增项目。",
+  "body": "# 2026-11-20 午间首单雷达（北京时间）\n## 结论\n针对性搜索10/10指定来源；原帖打开涉及Freelancer、GitHub两个平台，实际核查4个具体原帖（Freelancer 2、GitHub 2）。GO 0，条件GO 0，观察 3，NO-GO 1；recommended_count=0。没有核实适合当天直接投递并有合理回款路径的新增项目。原帖的相对发布时间由网站动态显示，精确日期待核；平台费用、跨境提现、税费及可接中国地区均待核。\n## 四渠道\n- 国内：程序员客栈、猿急送、实现网——仅搜索引擎索引检索，未核实项目原帖；推荐0。\n- 社区：电鸭、V2EX——仅索引检索，V2EX发现旧帖但不属于近期付费项目；推荐0。\n- 海外：Upwork、PeoplePerHour——仅索引检索且无本次可核验新帖；Freelancer——打开列表和2个原帖；推荐0。\n- 开源：GitHub——打开2个赏金Issue；Algora——仅索引检索；推荐0。\n## 候选池（不计推荐）\n1. [Neo-Egyptian Solar Website Motion Upgrade](https://www.freelancer.com/projects/web-design/neo-egyptian-solar-website-motion)，Freelancer，原帖显示Open、可投标，€30–250，发布时间页面相对显示、绝对日期待核；React/GSAP/Framer Motion、Higgsfield动效、设计、部署。Codex预计编码覆盖60–80%，人工约18–35小时（事前估计）。复杂视觉与私有仓库、低报价、付款托管状态未确认，C观察。\n2. [Premium Responsive Website Development](https://www.freelancer.com/projects/react-js/premium-responsive-website-development)，Freelancer，原帖显示Open、可投标，₹600–1500，发布时间相对显示、绝对日期待核；响应式整站、CMS、SEO、部署，范围大且预算偏低。Codex预计编码覆盖70–90%，人工约15–30小时（事前估计）。C观察。\n3. [Enable JavaScript inputs in the JSX lint recipe](https://github.com/ubiquity/ts-template/issues/106)，GitHub，2026-10-02发布，Issue仍Open，标价$18；文档及TSConfig lint配置修复。Codex预计编码覆盖85–95%，人工约2–5小时（事前估计）；但维护者机器人明确提示只有核心成员/管理员能启动任务，且已有多个PR，外部认领与支付不可确认。C观察，不建议投入编码。\n## NO-GO\n[USDC-quoted pairs not having the correct marketcap displayed in tools](https://github.com/blake-guthrie/GLASS/issues/1)，GitHub，2026-10-23发布，Issue仍Open，声称$100费用奖励；已有多个竞争PR，资金/验收/付款不明且涉加密资产估值，NO-GO。\n## 核验与风险\nFreelancer页面显示“Paid on delivery”，不等于已托管或保证付款；需核实里程碑。未核实中国地区账户接单、手续费、税费和汇率，到手与每人工小时净收入均未知。没有联系客户或提交申请。上一批次完整数据未逐项读取，跨批次去重不完整，不能断言这些是新增。\n## 平台覆盖审计\n程序员客栈：仅外部索引，原帖0，推荐0。\n猿急送：仅外部索引，原帖0，推荐0。\n实现网：仅外部索引，原帖0，推荐0。\n电鸭：仅外部索引，原帖0，推荐0。\nV2EX：仅外部索引，原帖0，推荐0，旧帖不计。\nUpwork：仅外部索引，原帖0，推荐0。\nFreelancer：原帖已查2，推荐0。\nPeoplePerHour：仅外部索引，原帖0，推荐0。\nGitHub Paid Issues：原帖已查2，推荐0。\nAlgora：仅外部索引，原帖0，推荐0。\n## 下一步\n继续优先查国内可回款小单；海外仅在中国可参与、平台托管及明确范围后询盘。无当日符合推荐门槛对象。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
