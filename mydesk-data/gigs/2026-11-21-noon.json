@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-21-noon",
+  "category": "gig",
+  "date": "2026-11-21",
+  "slot": "noon",
+  "title": "午间·Codex快速接单雷达｜11月21日",
+  "summary": "定向检索10个平台；0条原帖完成直接核实，GO 0、条件GO 0。Upwork出现若干小单索引，但原帖403或支付/范围风险高；不计可推荐订单。",
+  "body": "# 2026-11-21 午间首单雷达（北京时间12:20批次）\n## 结论\n本次针对10个平台开展定向公开检索；直接打开原帖涉及0个平台，完整核实原帖0条。GO 0、条件GO 0、观察线索4、NO-GO 2。无可确认当日立即联系并合理收款的新单。公开搜索索引不能替代原帖核验。未确认前日批次全部URL，不能断言候选是新增。\n## 平台覆盖审计\n|渠道|平台|状态|核实原帖|推荐|备注|\n|---|---|---|---:|---:|---|\n|国内|程序员客栈|仅外部索引|0|0|未取得可核查具体新单|\n|国内|猿急送|仅外部索引|0|0|未取得可核查具体新单|\n|国内|实现网|仅外部索引|0|0|未取得可核查具体新单|\n|社区|电鸭|仅外部索引|0|0|未取得可核查具体新单|\n|社区|V2EX|仅外部索引|0|0|搜索出现旧合作帖，不是发包|\n|海外|Upwork|仅外部索引、原帖访问受限(403)|0|0|搜索摘要有候选，但直达原帖无法打开|\n|海外|Freelancer|仅外部索引|0|0|未取得可核查具体新单|\n|海外|PeoplePerHour|仅外部索引|0|0|未取得可核查具体新单|\n|开源|GitHub付费Issues/Discussions|仅外部索引|0|0|检索到历史/不适合赏金|\n|开源|Algora|仅外部索引|0|0|未取得可核查具体新赏金|\n## 观察线索（均非可推荐订单）\n1. [Upwork: Flutter异步状态同步修复](https://www.upwork.com/freelance-jobs/apply/Senior-Mobile-Developer-Needed-Flutter-React-Native-Technical-Challenge_~022120899388187646107/)：搜索结果称2026-11-12发布，$5固定价，Worldwide；范围较小但报酬偏低、20–50竞争，原帖403，日期/状态/中国收款待核。Codex编码辅助预计50–75%，人工3–6小时（事前估计）。\n2. [Upwork: React/Next.js/Node现有健身预约平台修复](https://www.upwork.com/freelance-jobs/apply/Full-Stack-Developer-for-Bug-Fixing-React-Node-Next-Web-Application_~022121237594442353109/)：搜索结果称2026-11-13发布，$500固定价，包含移动端日历、Stripe webhook、MongoDB性能、邮件重复等；支付故障涉及资金链路，整单NO-GO，若拆分纯前端页面才可重新评估；原帖403。人工整单超过20小时可能性高，无法可靠估算。\n3. [Upwork: React/Next.js短任务](https://www.upwork.com/freelance-jobs/apply/Full-Stack-Next-Developer-Needed-for-Short-Task-Hours-OpenAI-Stripe_~022116130827500464094/)：搜索结果称2026-10-30发布，$100固定价、预期3–4小时，涉及OpenAI或Stripe；支付路径高风险且已显示1 hire、50+申请，原帖403。仅作为历史观察。\n4. [Upwork: 小型React Bug修复](https://www.upwork.com/freelance-jobs/apply/Fix-Bugs-Small-React-Application_~022099876441521922783/)：搜索结果显示2026-09-15发布，$50–100、1–3天，50+申请，超出近30天优先范围；原帖403，状态待核。Codex编码辅助预计70–90%、人工4–10小时（事前估计）。\n## 排除\n- [Upwork: 医疗应用React Native故障](https://www.upwork.com/freelance-jobs/apply/React-Native-developer-needed-for-healthcare-app-Bug-Fixing_~022121269351570913257/)：$5、敏感健康数据及多平台故障，NO-GO。\n- [GitHub: GMV/USDC竞赛赏金](https://github.com/NSPG13/agent-bounties/issues/1387)：要求资金交易/GMV操作，且仅6 USDC，NO-GO。\n## 费用与回款\n所有候选的平台实际手续费、税费、汇率、提现可行性、里程碑托管状态均未核实；到手报酬及每人工小时收益不能可靠计算。没有任何客户已被联系，也没有成交。\n## 下一步\n优先寻找可分割的React/Vue页面修复、CSV/Excel处理、自动化脚本；须确认原帖、联系人、范围、验收与预付款/托管后才升级GO。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
