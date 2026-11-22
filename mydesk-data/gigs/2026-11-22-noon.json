@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-22-noon",
+  "category": "gig",
+  "date": "2026-11-22",
+  "slot": "noon",
+  "title": "午间·Codex快速接单雷达｜11月22日",
+  "summary": "定向检索10/10平台，V2EX核实非外包原帖1条；Upwork原帖403。GO0、条件GO0，观察2条（USD500架构审查、USD350 Next.js/n8n修复），NO-GO1。无已核验可直接投递新单。",
+  "body": "# 午间首单雷达｜2026-11-22（北京时间）\n## 结论\n本轮10/10指定平台均进行了定向搜索，但搜索结果主要集中于Upwork索引。直接打开原帖涉及V2EX 1个平台、核验原帖1条（非项目制外包）；GO 0，条件GO 0，C观察2，NO-GO 1。推荐数0。Upwork具体原帖访问403，故不得当成已核验可投递。\n## 四类渠道\n- 国内接单：程序员客栈、猿急送、实现网——仅外部索引，未核验具体原帖，推荐0。\n- 技术社区：电鸭仅外部索引；V2EX原帖已查1条，为全职/长期远程招聘，不符合项目制接单。https://www.v2ex.com/t/1258763 推荐0。\n- 海外：Upwork仅外部索引，原帖403；Freelancer、PeoplePerHour仅外部索引；推荐0。\n- 有偿开源：GitHub Paid Issues/Discussions、Algora仅外部索引，无可核验新付费Issue，推荐0。\n## C观察（索引线索，不能视为可接单）\n1. React/Next.js现有产品架构审查，2026-11-21，标价USD500；审查范围需进一步核实，竞争50+，中国开发者可收款及当前招募未核实。https://www.upwork.com/freelance-jobs/apply/React-Developer-Full-Stack-Developer-for-Architecture-Review-Node-Next-Python-Development_~022124071684044677575/ 。若限定单工作流，人工预估8–16小时，Codex编码辅助（该任务以审查为主）40%–65%，均为事前估计。\n2. Next.js/Node应用5处Bug及n8n工作流修复，2026-11-18，标价USD350；竞争50+，原帖403，范围与交付风险未核实。https://www.upwork.com/freelance-jobs/apply/Fix-Bugs-Next-Node-Web-App-Repair-Broken-n8n-Automation-Workflow_~022122977558706774470/ 。人工预估12–25小时，Codex编码辅助65%–85%，事前估计。\n以上平台费、税费、汇率、付款保障及实际到手均待核，不计算每小时净收入。\n## NO-GO\nV2EX 2026-11-21左右发布远程岗位，要求长期全职式职责、夜间oncall，且提及链上结算/出海流量业务，不适合短期合法项目制外包：https://www.v2ex.com/t/1258763\n## 覆盖审计\n程序员客栈：仅外部索引0；猿急送：仅外部索引0；实现网：仅外部索引0；电鸭：仅外部索引0；V2EX：原帖已查1，推荐0；Upwork：仅外部索引、打开403，推荐0；Freelancer：仅外部索引0；PeoplePerHour：仅外部索引0；GitHub Paid Issues：仅外部索引0；Algora：仅外部索引0。\n检索10/10，打开原帖涉及1个平台，核验原帖1（非可行动外包），GO0、条件GO0、观察2、NO-GO1。相较前一批次仍无可行动推荐；本次新发现2026-11-21架构审查线索，未验证可申请。未联系客户。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
