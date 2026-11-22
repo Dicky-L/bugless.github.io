@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-22-evening",
+  "category": "gig",
+  "date": "2026-11-22",
+  "slot": "evening",
+  "title": "晚间·Codex快速接单雷达｜11月22日",
+  "summary": "定向检索晚间12/12来源；LinkedIn核验1条但UK限定且停止申请，Rebase官网列表已查；GO0、条件GO0、观察2、NO-GO1。午间两条Upwork索引线索不重复计数。",
+  "body": "# 晚间首单雷达｜2026-11-22（北京时间）\n## 结论\n定向搜索12/12个晚间来源组；打开具体职位原帖涉及LinkedIn 1个平台，核验1条但为NO-GO；Rebase官网列表已查。GO 0，条件GO 0，C观察2，NO-GO1。recommended_count=0。未证实12:20后新增且可接单项目。\n## 四类渠道\n- 国内：猪八戒、一品威客、开源众包均仅外部索引，无核实原帖，推荐0。\n- 技术社区：Rebase官网列表已查（近期招聘信息停留在2026-04-28）；BOSS远程短期、海外华人创业社群仅外部索引，推荐0。\n- 海外：Guru仅索引且项目页403；Contra仅列表/索引（非具体订单）；LinkedIn打开1条具体职位原帖，因UK-only且停止申请排除；Wellfound仅官网列表；Hacker News仅外部索引，推荐0。\n- 开源：Opire仅外部索引，无核实付费任务，推荐0。\n## C观察（非可行动推荐）\n1. LinkedIn Hired APAC React远程合同职位，索引报价USD30–100/小时，原始发布日期待核；具体链接直接访问404，联系与中国开发者资格、付款未核实：https://www.linkedin.com/jobs/view/frontend-developer-react-remote-at-hired-4446554493 。属于历史类似岗位线索，不能确认新单。\n2. Guru AI-Forward SaaS项目，原帖仅搜索索引，详情访问403，显示美国W9要求、截止2026-10-01、客户历史已付0；不推荐：https://www.guru.com/jobs/full-stack-developer-ai-forward-saas/2120586 。\n## NO-GO\nLinkedIn interAct Consulting Lead Front End Architect Contract，£800/天，6–12个月，明确Must be UK based且页面显示No longer accepting applications；非适合中国开发者的小单：https://uk.linkedin.com/jobs/view/lead-front-end-architect-contract-remote-at-interact-consulting-4490092993 。页面可打开，发布日期页面为相对时间，不推算绝对日期。\n## 覆盖审计\n猪八戒：仅外部索引0；一品威客：仅外部索引0；开源众包：仅外部索引0；Rebase：官网列表已查0；BOSS：仅外部索引0；海外华人创业社群：仅外部索引0；Guru：仅外部索引、具体链接403，0；Contra：仅列表/索引0；LinkedIn：原帖已查1，推荐0；Wellfound：仅官网列表0；Hacker News：仅外部索引0；Opire：仅外部索引0。数字为核实具体原帖数，不是索引结果数。\n## 午晚去重与成本\n已读取2026-11-22-noon.json：午间GO0/条件GO0，观察2条Upwork（USD500架构审查、USD350 Next.js/n8n修复），均不重复计入晚间。本轮无可核实新增GO，无法合理估算人工工时、Codex覆盖率、净收入和单位工时收益；平台手续费、税费、跨境收款等均待核。未联系客户或投递。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
