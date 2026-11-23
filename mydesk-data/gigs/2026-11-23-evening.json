@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-23-evening",
+  "category": "gig",
+  "date": "2026-11-23",
+  "slot": "evening",
+  "title": "晚间·Codex快速接单雷达（11月23日）",
+  "summary": "12个指定来源组定向检索，LinkedIn核实1条已关闭合同岗位；其他平台多数仅索引或列表。GO 0、条件GO 0、观察2、NO-GO 2；未确认午间后可行动新增，午间Freelancer候选不重复计数。",
+  "body": "# 2026-11-23 晚间首单雷达（北京时间20:00）\n\n## 结果\n本轮12/12来源组定向检索，原帖成功打开1个平台、1条具体岗位；GO 0，条件GO 0，观察2，NO-GO 2。新增推荐0。未能确认12:20后发布/重新开放的可行动订单。午间已推荐Freelancer React UI Bug Fixes（https://www.freelancer.com/projects/frontend-development/react-bug-fixes），未复核状态变化，不重复推荐。\n\n## 候选与排除\n- C观察：Nex Frontend Engineer Marketing & Digital Experience（合同，US remote，USD120k–150k年薪，3个月合同），https://wellfound.com/jobs/4463633-frontend-engineer-marketing-digital-experience-contract；索引显示仅美国招聘，详情410，日期待核，不符合中国项目制首单。\n- C观察：Guru AI-Forward SaaS，https://www.guru.com/jobs/full-stack-developer-ai-forward-saas/2120586；索引显示W9 required for US，截止2026-10-01，页面403；非本日新增，不推荐。\n- NO-GO：Quik Hire Staffing TypeScript Remote合同岗位，https://www.linkedin.com/jobs/view/frontend-developer-typescript-remote-at-quik-hire-staffing-4463300568；原帖打开，USD30–80/h，页面显示No longer accepting applications，发布时间仅相对显示1 month ago，非项目制短单。\n- NO-GO：GradNode React前端合同，https://wellfound.com/jobs/4787213-frontend-engineer；索引显示India only、2026-10-11截止申请，详情410，不适合中国开发者。\n\n## 平台覆盖审计\n|来源|状态|核实原帖|推荐|\n|---|---|---:|---:|\n|猪八戒|仅外部索引|0|0|\n|一品威客|仅外部索引|0|0|\n|开源众包|仅外部索引|0|0|\n|Rebase|官网列表已查|0|0|\n|BOSS远程短期|仅外部索引|0|0|\n|海外华人创业社群|仅外部索引|0|0|\n|Guru|仅外部索引，具体项目403|0|0|\n|Contra|仅外部索引|0|0|\n|LinkedIn合同制|原帖已查，已停止申请|1|0|\n|Wellfound|仅外部索引，详情410|0|0|\n|Hacker News Freelancer|仅外部索引|0|0|\n|Opire|官网已查，未查到具体赏金|0|0|\n\n本轮12/12来源组开展定向搜索或站点打开；仅LinkedIn具体原帖成功核验1条；其他平台仅索引或列表，不能计入原帖核验。海外地区限制、支付、收款与人工工时无法核定，故不估算收益或Codex覆盖率。午间归档已读取，午间GO0、条件GO1；本轮未发现可核实状态变化。",
+  "source": "ChatGPT 晚间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": false,
+  "recommended_count": 0
+}
