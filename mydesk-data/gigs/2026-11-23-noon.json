@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "gig-2026-11-23-noon",
+  "category": "gig",
+  "date": "2026-11-23",
+  "slot": "noon",
+  "title": "午间·Codex快速接单雷达（11月23日）",
+  "summary": "10个平台定向检索，Freelancer核实React UI修复开放项目1条，列B·条件GO；预算USD 30–250，须确认Bug数量、付款托管和中国开发者资格。GO 0，条件GO 1，另有低价观察及已关闭项目。",
+  "body": "# 2026-11-23 午间首单雷达（北京时间12:20）\n\n## 可联系推荐池\n\n### B·条件GO：React UI Bug Fixes — Freelancer\n- 原帖：https://www.freelancer.com/projects/frontend-development/react-bug-fixes\n- 发布日期：页面显示“less than 20 seconds ago”，相对时间不能精确转换为日期；本轮2026-11-23发现。状态：Open / Open for bidding；1 proposal（读取时动态值）。\n- 预算：USD 30–250；项目为Paid on delivery，不等于托管资金已入账。\n- 范围：React18 + styled-components，多屏文本/图片显示、响应式布局修复；Chrome/Firefox/mobile Safari验证；代码变更说明和Loom演示。\n- 预计Codex编码覆盖率：80–90%（事前估算，定位CSS与组件修改、生成测试）；人工总工时：6–12小时（沟通、阅读、审查、联调、跨浏览器测试、验收）。\n- 学习成本：低；费用、税汇、实际到手和每人工小时收益均待核，不能按预算上限计算。\n- 风险：客户公开页0评价/0记录，支付验证状态未见确认；须先确认具体Bug数量、复现材料、验收浏览器设备、Milestone预存、是否允许中国开发者投标及收款。\n- 建议：仅发送澄清投标，确认托管后再开发。开场：I can trace the React 18 styled-components rendering issues and deliver focused fixes with cross-browser verification. Could you share screenshots, affected routes, and the expected number of issues? I would propose a funded milestone after reviewing the scope.\n\n## C·观察与排除\n- React Native App Bug Fix — https://www.freelancer.com/projects/react-native/react-native-app-bug-fix-39662683 — 页面Open，NZD 14–30，范围不明，29 proposals；人工估计4–12小时，Codex 50–75%；低价与原生环境风险，观察不推荐。\n- React / Next.js Architecture Review — https://www.upwork.com/freelance-jobs/apply/React-Developer-Full-Stack-Developer-for-Architecture-Review-Node-Next-Python-Development_~022124071684044677575/ — 2026-11-21，USD 500，索引可见但原帖403；前批次已有，非新增，观察不推荐。\n- React UI Interaction Bug Fix — https://www.freelancer.com/projects/frontend-development/react-interaction-bug-fix — EUR 8–30，已Completed且Awarded，NO-GO。\n- Instant Freelancer Discovery Platform — https://www.freelancer.com/projects/backend-development/instant-freelancer-discovery-platform — USD 15–25/h，页面Closed，NO-GO。\n\n## 平台覆盖审计（10/10定向检索）\n| 来源 | 状态 | 本轮核实具体原帖 | 推荐 |\n|---|---|---:|---:|\n| 程序员客栈 | 仅外部索引，无可核实新帖 | 0 | 0 |\n| 猿急送 | 仅外部索引，无可核实新帖 | 0 | 0 |\n| 实现网 | 仅外部索引，无可核实新帖 | 0 | 0 |\n| 电鸭 | 仅列表已查，项目原帖未核实 | 0 | 0 |\n| V2EX | 仅外部索引，结果偏旧 | 0 | 0 |\n| Upwork | 仅外部索引，原帖403 | 0 | 0 |\n| Freelancer | 原帖已查，4条具体项目（含关闭项目） | 4 | 1 |\n| PeoplePerHour | 仅外部索引，无合格原帖 | 0 | 0 |\n| GitHub有偿Issues | 仅外部索引，未核实有偿Issue | 0 | 0 |\n| Algora | 仅外部索引，未核实赏金 | 0 | 0 |\n\n统计：10/10检索；直接核实原帖涉及Freelancer 1个平台、4个不同具体项目；GO 0，条件GO 1，观察2（含前批次旧线索），NO-GO 2；推荐数1。国内3个平台、PeoplePerHour、GitHub/Algora无法完成真实项目原帖核验。发布相对时间可能随页面缓存变化，需再次检查。海外中国账户实际投标和提现能力未核实。对比11月22日午间：从0推荐到1条条件GO；不代表成交。",
+  "source": "ChatGPT 午间外包首单雷达实际执行结果",
+  "importance": "normal",
+  "verified": true,
+  "recommended_count": 1
+}
